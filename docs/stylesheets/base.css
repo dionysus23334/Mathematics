@@ -594,3 +594,6 @@ body {
   line-height: 1.5;
 }
 .mchip mjx-container { color: inherit !important; }
+
+/* English route titles need to wrap */
+html[lang="en"] .route-title { font-size: 1.18rem; white-space: normal; }
