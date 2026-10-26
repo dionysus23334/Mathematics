@@ -1,16 +1,13 @@
-# 古典学术体系
+# 数学
 
-> 古典学术体系包含**常规体系**与 **Rudin 体系**，另附一套按学习阶段组织的教育路线。
->
-> 不是某本教材的现成目录；它是一张可以逐页补全的地图。
-
-古典学术体系与教育阶段体系是两个入口：
+> 数学总页。  
+> 两个入口：**古典学术体系** 与 **教育阶段体系**；古典学术体系内部包含**常规体系**与 **Rudin 体系**。
 
 <div class="route-grid">
   <a class="route-card route-card--theory" href="theory/">
     <span class="route-kicker">ROUTE A · CLASSICAL</span>
     <span class="route-title">古典学术体系</span>
-    <span class="route-foot">按主题与章节阅读 <span>→</span></span>
+    <span class="route-foot">常规体系 + Rudin 体系 <span>→</span></span>
   </a>
   <a class="route-card route-card--stage" href="stages/">
     <span class="route-kicker">ROUTE B · LEARNING</span>
