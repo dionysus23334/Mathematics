@@ -1,14 +1,14 @@
 # 第 1 章 · 实数系与复数系
 
-> **出处**：Walter Rudin, *Principles of Mathematical Analysis*，第 1 章；本站数系（数系）。
+> **出处**：Walter Rudin, *Principles of Mathematical Analysis*，第 1 章；常规体系的数系章。
 >
-> **Rudin 路线**：本章是分析路线的第 1 章；第 2–11 章将在后续逐章补入。  
+> **Rudin 路线**：本章是分析路线的第 1 章；第 2–11 章已展开。  
 > **前置**：命题逻辑、集合与映射、有序域的基本语言。  
 > **本章目标**：把“实数完备、复数可运算、欧氏空间有内积”从直观提升为可证明的定理。
 
 <div class="book-nav">
   <a href="../../">← 理论总览</a>
-  <a href="../../05-spaces/">空间 · 空间</a>
+  <a href="../../05-spaces/">空间、极限与连续</a>
   <a href="../../proofs/">证明状态</a>
 </div>
 
@@ -301,15 +301,13 @@ x\cdot y=\sum_{i=1}^n x_iy_i,\qquad \|x\|=\sqrt{x\cdot x}.
 - 能独立证明复数逆元公式与 Cauchy–Schwarz。
 
 
-## 全书导航
-
 <div class="book-nav">
   <a href="../../">← 理论总览</a>
-  <a href="../../05-spaces/">空间 · 空间</a>
+  <a href="../../05-spaces/">空间、极限与连续</a>
   <a href="../../proofs/">证明状态</a>
 </div>
 
-> 下一章：[第 2 章 · 基础拓扑](02-basic-topology.md)（计划中）。
+> 下一章：[第 2 章 · 基础拓扑](02-basic-topology.md)。
 
 ## 参考 {#r1-ref}
 - Walter Rudin, *Principles of Mathematical Analysis*（中文版），第 1 章。

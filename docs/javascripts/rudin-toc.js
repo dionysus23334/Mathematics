@@ -25,6 +25,10 @@
       source.querySelectorAll(':scope > .md-nav__item'),
       function (node) {
         var clone = node.cloneNode(true);
+        // Only show chapter sections (h2); theorem-level h3 stays in the right TOC.
+        Array.prototype.forEach.call(clone.querySelectorAll('nav.md-nav'), function (nav) {
+          nav.remove();
+        });
         Array.prototype.forEach.call(clone.querySelectorAll('a'), function (a) {
           a.classList.remove('md-nav__link--active');
           a.removeAttribute('aria-current');
