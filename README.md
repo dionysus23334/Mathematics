@@ -1,6 +1,6 @@
-# Mathematics · 经典传统体系
+# Mathematics · 古典学术体系
 
-Personal mathematics knowledge base under **经典传统体系**, with two parallel routes:
+Personal mathematics knowledge base under **古典学术体系**, with two parallel routes:
 
 - **常规体系** — topic-by-topic: logic, sets, numbers, algebra, spaces, branches, advanced.
 - **Rudin 体系** — chapter-by-chapter analysis route, Rudin chapters 1–11.

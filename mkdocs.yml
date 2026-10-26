@@ -1,5 +1,5 @@
-site_name: 经典传统体系
-site_description: 经典传统体系：常规体系与 Rudin 体系；另附教育阶段体系。
+site_name: 古典学术体系
+site_description: 古典学术体系：常规体系与 Rudin 体系；另附教育阶段体系。
 site_author: dionysus23334
 site_url: https://dionysus23334.github.io/Mathematics/
 repo_url: https://github.com/dionysus23334/Mathematics
@@ -39,7 +39,7 @@ theme:
 nav:
   - ← 个人主页: https://dionysus23334.github.io/study-blogs/
   - 首页: index.md
-  - 经典传统体系:
+  - 古典学术体系:
       - 常规体系:
           - 总览: theory/index.md
           - 逻辑语言与证明: theory/01-logic.md
