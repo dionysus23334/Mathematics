@@ -9,7 +9,7 @@
 
 一个代数结构 = 集合 + 若干运算 + 这些运算满足的公理。
 
-## 4.2 群
+## 4.2 群 {#algebra-groups}
 
 群 \((G,\cdot)\) 满足：
 
@@ -23,7 +23,7 @@
 
 **子群**：\(H\subseteq G\) 非空，且对乘法与逆元封闭。拉格朗日定理：有限群中子群的阶整除群的阶。
 
-## 4.3 环与域
+## 4.3 环与域 {#algebra-rings}
 
 环 \((R,+,\cdot)\) 满足：\((R,+)\) 是阿贝尔群；乘法结合；乘法对加法分配。
 
@@ -44,7 +44,7 @@
 
 **核**：\(\ker\varphi=\{g:\varphi(g)=e\}\)。群同态基本定理：\(G/\ker\varphi\cong \operatorname{im}\varphi\)。
 
-## 4.5 向量空间
+## 4.5 向量空间 {#algebra-vector}
 
 设 \(F\) 是域。向量空间 \(V\) 是一个阿贝尔群，配有数乘 \(F\times V\to V\)，满足：
 
@@ -57,7 +57,7 @@ a(u+v)=au+av,\qquad (a+b)v=av+bv.
 
 元素叫向量，\(F\) 叫基域。\(\mathbb R^n\) 是最典型的例子。
 
-## 4.6 基、维数与线性映射
+## 4.6 基、维数与线性映射 {#algebra-basis}
 
 - **线性组合**：\(\sum_{i=1}^n a_i v_i\)；
 - **张成**：\(V\) 中每个向量都可写成有限线性组合；
@@ -81,7 +81,7 @@ a(u+v)=au+av,\qquad (a+b)v=av+bv.
 \dim V=\dim\ker T+\dim\operatorname{im}T.
 \]
 
-## 4.8 行列式、特征值与内积
+## 4.8 行列式、特征值与内积 {#algebra-spectral}
 
 - **行列式**：交错多重线性函数，满足 \(\det(AB)=\det A\det B\)；\(\det A\ne0\) 当且仅当 \(A\) 可逆。
 - **特征值/特征向量**：\(Av=\lambda v\)，\(v\ne0\)。特征多项式 \(\det(A-\lambda I)=0\)。
@@ -93,6 +93,55 @@ a(u+v)=au+av,\qquad (a+b)v=av+bv.
 这一层只讲**基础定义与典型例子**。完整的群论（Sylow、可解群）、交换代数（理想、局部化）、域扩张（Galois 理论）属于第 6 层代数分支。
 
 进入分析前，需要的是：实数/复数域、向量空间、内积、范数、线性映射与矩阵；不需要先学完整套高等代数。
+
+
+## 4.9 群同态基本定理
+
+设 \(\varphi:G\to H\) 是群同态，则 \(\ker\varphi\) 是 \(G\) 的正规子群，且
+
+\[
+G/\ker\varphi\cong\operatorname{im}\varphi.
+\]
+
+同构由 \(g\ker\varphi\mapsto\varphi(g)\) 给出。这个定理把“同态的像”转化为“商群”，是群论中最早的结构定理之一。
+
+**推论**：\(\varphi\) 是单射 \(\iff \ker\varphi=\{e\}\)。
+
+## 4.10 秩-零化度定理
+
+设 \(V,W\) 是域 \(F\) 上的有限维向量空间，\(T:V\to W\) 线性，则
+
+\[
+\dim V=\dim\ker T+\dim\operatorname{im}T.
+\]
+
+等价地，\(\operatorname{rank}T+\operatorname{nullity}T=\dim V\)。它说明线性映射“丢失的维数”与“保留的维数”之和等于定义域维数。
+
+**推论**：若 \(\dim V=\dim W\)，则 \(T\) 单射 \(\iff\) 满射 \(\iff\) 可逆。
+
+## 4.11 实对称矩阵的谱定理
+
+若 \(A\) 是实对称矩阵（\(A=A^{\mathsf T}\)），则：
+
+1. \(A\) 的特征值全为实数；
+2. 属于不同特征值的特征向量正交；
+3. 存在正交矩阵 \(Q\) 使
+\[
+A=Q\Lambda Q^{\mathsf T},
+\]
+其中 \(\Lambda\) 是对角矩阵，对角元为特征值。
+
+也就是说，实对称矩阵有一组正交单位特征向量构成 \(\mathbb R^n\) 的基。复厄米特矩阵有类似的酉对角化。
+
+## 4.12 参考
+
+- [Group (mathematics)](https://en.wikipedia.org/wiki/Group_(mathematics))
+- [Ring (mathematics)](https://en.wikipedia.org/wiki/Ring_(mathematics))
+- [Field (mathematics)](https://en.wikipedia.org/wiki/Field_(mathematics))
+- [Vector space](https://en.wikipedia.org/wiki/Vector_space)
+- [Rank–nullity theorem](https://en.wikipedia.org/wiki/Rank%E2%80%93nullity_theorem)
+- [Spectral theorem](https://en.wikipedia.org/wiki/Spectral_theorem)
+- [Isomorphism theorem](https://en.wikipedia.org/wiki/Isomorphism_theorem)
 
 ## 检查点
 

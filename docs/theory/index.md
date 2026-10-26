@@ -73,6 +73,18 @@
   <div class="layer-card"><h3><a href="07-advanced/">7 · 深入理论</a></h3><p>测度论、复分析、泛函分析、微分几何、代数拓扑、代数数论、解析数论等。</p></div>
 </div>
 
+
+## 详细索引（可跳转）
+
+| 层 | 关键节点 |
+|---|---|
+| 1 逻辑 | [命题与联结词](01-logic.md#logic-propositions) · [谓词与量词](01-logic.md#logic-quantifiers) · [证明方法](01-logic.md#logic-proofs) · [推理检查](01-logic.md#logic-check) |
+| 2 集合 | [集合与成员](02-sets.md#sets-basic) · [关系](02-sets.md#sets-relations) · [映射](02-sets.md#sets-maps) · [商集](02-sets.md#sets-quotient) |
+| 3 数系 | [Peano 自然数](03-numbers.md#numbers-peano) · [Dedekind 分割](03-numbers.md#numbers-real) · [基数](03-numbers.md#numbers-cardinality) |
+| 4 代数 | [群](04-algebra.md#algebra-groups) · [环与域](04-algebra.md#algebra-rings) · [向量空间](04-algebra.md#algebra-vector) · [基与线性映射](04-algebra.md#algebra-basis) · [谱理论](04-algebra.md#algebra-spectral) |
+| 5 空间 | [度量空间](05-spaces.md#spaces-metric) · [开集/闭集](05-spaces.md#spaces-open) · [紧致与连通](05-spaces.md#spaces-compact) · [连续映射](05-spaces.md#spaces-continuity) · [一般拓扑](05-spaces.md#spaces-topology) |
+| 6 分支 | [分析](06-branches.md#branch-analysis) · [代数](06-branches.md#branch-algebra) · [数论](06-branches.md#branch-number) · [几何](06-branches.md#branch-geometry) · [拓扑](06-branches.md#branch-topology) · [组合](06-branches.md#branch-combinatorics) · [概率](06-branches.md#branch-probability) |
+
 ## 使用建议
 
 - **第一次读**：先读第 1–2 层，把“定义/证明/映射”的语言建立起来。

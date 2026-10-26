@@ -43,6 +43,64 @@
 
 不允许的是：不标注来源、不说明前置，直接把结论当定义使用。
 
+
+## 7.1 测度与积分：核心结论
+
+测度 \(\mu\) 在可测空间 \((\Omega,\mathcal F)\) 上满足：
+
+1. \(\mu(\varnothing)=0\)；
+2. 非负性；
+3. **可数可加性**：若 \(A_i\) 两两不交，则
+\[
+\mu\left(\bigcup_{i=1}^\infty A_i\right)=\sum_{i=1}^\infty\mu(A_i).
+\]
+
+核心收敛定理：
+
+- **单调收敛定理（MCT）**：若 \(0\le f_n\uparrow f\)，则 \(\int f_n\to\int f\)；
+- **Fatou 引理**：\(\int\liminf f_n\le\liminf\int f_n\)；
+- **控制收敛定理（DCT）**：若 \(f_n\to f\) 且 \(|f_n|\le g\)、\(\int g<\infty\)，则 \(\int f_n\to\int f\)。
+
+这些定理是“积分与极限交换”的正式条件；Riemann 积分没有同等的一般定理。
+
+## 7.2 复分析：核心结论
+
+- **Cauchy 积分定理**：全纯函数在单连通区域内的闭路积分为 0；
+- **Cauchy 积分公式**：\(f(z)=\frac1{2\pi i}\oint_\gamma\frac{f(\zeta)}{\zeta-z}d\zeta\)；
+- **Liouville 定理**：有界整函数为常数（可证代数基本定理）；
+- **留数定理**：\(\oint_\gamma f(z)dz=2\pi i\sum\operatorname{Res}(f,z_k)\)。
+
+复分析的核心是“全纯”比“实可微”强得多：全纯函数自动解析，具有无限阶导数。
+
+## 7.3 泛函分析：核心结论
+
+- **Hahn–Banach 定理**：线性泛函可保范延拓；
+- **开映射定理**：Banach 空间之间的连续线性满射是开映射；
+- **闭图像定理**：闭图像 + 连续线性 => 有界；
+- **一致有界原理（Banach–Steinhaus）**：逐点有界的线性算子族一致有界。
+
+这些定理依赖完备性（Banach 空间），不能只在线性空间层面使用。
+
+## 7.4 几何与拓扑：核心结论
+
+- **Gauss–Bonnet 定理**：紧致曲面的 Euler 示性数由高斯曲率积分决定；
+- **基本群**：\(\pi_1(X,x_0)\) 记录空间的“洞”；
+- **Brouwer 不动点定理**：\(\mathbb R^n\) 中闭单位球到自身的连续映射有不动点；
+- **Mayer–Vietoris**：用子空间覆盖计算同调。
+
+## 7.5 参考
+
+- [Measure (mathematics)](https://en.wikipedia.org/wiki/Measure_(mathematics))
+- [Lebesgue integration](https://en.wikipedia.org/wiki/Lebesgue_integration)
+- [Dominated convergence theorem](https://en.wikipedia.org/wiki/Dominated_convergence_theorem)
+- [Complex analysis](https://en.wikipedia.org/wiki/Complex_analysis)
+- [Residue theorem](https://en.wikipedia.org/wiki/Residue_theorem)
+- [Functional analysis](https://en.wikipedia.org/wiki/Functional_analysis)
+- [Hahn–Banach theorem](https://en.wikipedia.org/wiki/Hahn%E2%80%93Banach_theorem)
+- [Differential geometry](https://en.wikipedia.org/wiki/Differential_geometry)
+- [Algebraic topology](https://en.wikipedia.org/wiki/Algebraic_topology)
+- [Brouwer fixed-point theorem](https://en.wikipedia.org/wiki/Brouwer_fixed-point_theorem)
+
 ## 检查点
 
 - 能说明测度论为什么需要可数运算，而不是仅有限运算。

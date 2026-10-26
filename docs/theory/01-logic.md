@@ -3,7 +3,7 @@
 > **前置**：无。  
 > **这一层的目标**：先学会“数学句子怎样写、怎样否定、怎样证明”，再进入具体对象。
 
-## 1.1 命题与逻辑联结词
+## 1.1 命题与逻辑联结词 {#logic-propositions}
 
 **命题**是一个有明确真值的陈述句。疑问句、命令句、含未定变量的句子本身不是命题。
 
@@ -21,7 +21,7 @@
 - \(P \to Q\) 与 \(Q \to P\) 不等价；前者是后者的**逆命题**。
 - \(\neg(P \land Q)\) 不是 \(\neg P \land \neg Q\)，而是 \(\neg P \lor \neg Q\)（De Morgan）。
 
-## 1.2 谓词与量词
+## 1.2 谓词与量词 {#logic-quantifiers}
 
 **谓词**是含变量的陈述，例如 \(P(x)\)：“\(x\) 是偶数”。给变量指定范围后，它才成为命题。
 
@@ -61,7 +61,7 @@
 
 **定义必须可判定**：不能把“好的”“自然的”“足够大”写进定义而不量化。
 
-## 1.4 基本证明方法
+## 1.4 基本证明方法 {#logic-proofs}
 
 | 方法 | 适用情形 | 结构 |
 |---|---|---|
@@ -74,7 +74,7 @@
 
 **反例**：要否定 \(\forall x,\ P(x)\)，只需给出一个 \(x\) 使 \(\neg P(x)\)。反例必须**具体**，不能只说“可能不成立”。
 
-## 1.5 推理检查
+## 1.5 推理检查 {#logic-check}
 
 证明写完后，检查四件事：
 
@@ -84,6 +84,40 @@
 4. **有没有循环？** 是否用结论证明结论，或用等价于结论的命题作为前提。
 
 > 数学归纳法不放在这里系统展开，因为它需要先建立自然数结构；见第 3 层。
+
+
+## 1.6 常用等值式
+
+| 等值式 | 名称 |
+|---|---|
+| \(\neg(P\land Q)\equiv\neg P\lor\neg Q\) | De Morgan |
+| \(\neg(P\lor Q)\equiv\neg P\land\neg Q\) | De Morgan |
+| \(P\to Q\equiv\neg P\lor Q\) | 蕴含的析取形式 |
+| \(\neg(P\to Q)\equiv P\land\neg Q\) | 蕴含的否定 |
+| \(P\to Q\equiv\neg Q\to\neg P\) | 逆否 |
+| \(\neg\forall x\,P(x)\equiv\exists x\,\neg P(x)\) | 量词否定 |
+| \(\neg\exists x\,P(x)\equiv\forall x\,\neg P(x)\) | 量词否定 |
+
+**证明等值式的方法**：列真值表；或用已知等值式作代数变形。真值表是命题逻辑的判定方法，但变量多时规模指数增长。
+
+## 1.7 可靠性与完备性
+
+把“可证明”记为 \(\vdash\varphi\)，“在所有解释下为真”记为 \(\models\varphi\)。
+
+- **可靠性（soundness）**：若 \(\vdash\varphi\)，则 \(\models\varphi\)。证明系统不会推出假命题。
+- **完备性（completeness）**：若 \(\models\varphi\)，则 \(\vdash\varphi\)。所有逻辑有效的命题都能被证明。
+
+命题逻辑和一阶逻辑都有可靠性与完备性定理；一阶逻辑的完备性由 Gödel 在 1929 年证明。这里只使用“可证明/有效”的区别，不展开证明系统与模型论的细节。
+
+> **注意**：完备性（completeness）与“理论对某个模型完备”（每个句子或其否定可证）不是同一个概念；后者属于模型论/不完全性定理的语境。
+
+## 1.8 参考
+
+- [Propositional calculus](https://en.wikipedia.org/wiki/Propositional_calculus)
+- [First-order logic](https://en.wikipedia.org/wiki/First-order_logic)
+- [Mathematical proof](https://en.wikipedia.org/wiki/Mathematical_proof)
+- [Soundness](https://en.wikipedia.org/wiki/Soundness)
+- [Completeness (logic)](https://en.wikipedia.org/wiki/Completeness_(logic))
 
 ## 检查点
 

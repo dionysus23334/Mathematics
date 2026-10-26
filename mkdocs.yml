@@ -61,6 +61,7 @@ nav:
       - 高等数学: stages/university.md
   - 学习规则: principles.md
   - 术语表: glossary.md
+  - 缩写与英文术语: abbreviations.md
 
 plugins:
   - search:

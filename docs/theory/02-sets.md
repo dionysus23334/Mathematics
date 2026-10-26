@@ -3,7 +3,7 @@
 > **前置**：第 1 层（命题、量词、证明）。  
 > **这一层的目标**：建立后面所有数学分支共同使用的对象语言。
 
-## 2.1 集合与成员关系
+## 2.1 集合与成员关系 {#sets-basic}
 
 集合是一些对象的总体；\(x \in A\) 表示 \(x\) 是 \(A\) 的元素，\(x \notin A\) 表示不是。
 
@@ -53,7 +53,7 @@ A\times B=\{(a,b):a\in A,\ b\in B\}.
 
 一般地，\(A_1\times\cdots\times A_n\) 表示 \(n\) 元有序组。
 
-## 2.5 二元关系
+## 2.5 二元关系 {#sets-relations}
 
 从 \(A\) 到 \(B\) 的二元关系是 \(A\times B\) 的子集。若 \(R\subseteq A\times A\)，称 \(R\) 是 \(A\) 上的关系。
 
@@ -74,7 +74,7 @@ A\times B=\{(a,b):a\in A,\ b\in B\}.
 
 **序关系**通常指偏序（自反、反对称、传递）；全序还要求任意两个元素可比。
 
-## 2.6 映射
+## 2.6 映射 {#sets-maps}
 
 映射 \(f:A\to B\) 给每个 \(x\in A\) 指定唯一的 \(f(x)\in B\)。
 
@@ -98,7 +98,7 @@ A\times B=\{(a,b):a\in A,\ b\in B\}.
 
 复合一般不交换：\(f\circ g\ne g\circ f\)，甚至两边不一定都有定义。
 
-## 2.8 集合族与商集
+## 2.8 集合族与商集 {#sets-quotient}
 
 **集合族** \(\{A_i\}_{i\in I}\) 是用指标集 \(I\) 标记的一族集合；可以取并 \(\bigcup_{i\in I}A_i\) 与交 \(\bigcap_{i\in I}A_i\)。
 
@@ -116,6 +116,39 @@ A/{\sim}=\{[x]:x\in A\}.
 - 映射必须在同构之前；
 - 序关系必须在上确界/下确界之前；
 - 幂集与笛卡尔积必须在关系、函数空间之前。
+
+
+## 2.9 选择公理与 Zorn 引理
+
+**选择公理（Axiom of Choice, AC）**：对任意由非空集合组成的集合族 \(\{A_i\}_{i\in I}\)，存在选择函数 \(f\)，使 \(f(i)\in A_i\) 对每个 \(i\) 成立。
+
+等价形式：
+
+- **Zorn 引理**：若偏序集 \(P\) 的每条链都有上界，则 \(P\) 有极大元；
+- **良序定理**：每个集合都可以被良序化；
+- **Tychonoff 定理**（拓扑）：任意紧空间的乘积紧致。
+
+Zorn 引理常用于“极大理想”“Hamel 基”“代数闭包”等存在性证明。它不构造对象，只保证极大对象存在。
+
+**边界**：AC 与“有限选择”不同；有限个非空集合的选择不需要 AC。ZF 与 ZFC 的差别就在 AC 是否加入。
+
+## 2.10 Cantor–Schröder–Bernstein 定理
+
+若存在单射 \(f:A\to B\) 和单射 \(g:B\to A\)，则存在双射 \(h:A\to B\)。
+
+因此“\(|A|\le|B|\) 且 \(|B|\le|A|\)”推出“\(|A|=|B|\)”。这个定理不依赖 AC；它说明基数比较可以用单射来定义。
+
+**证明思路**：把 \(A\) 中元素按“沿 \(f,g\) 往返”的轨道分类，轨道有有限环、双向无穷链、从 \(A\) 开始的链、从 \(B\) 开始的链；在每类上分段定义双射。
+
+**Cantor 定理**：不存在从 \(A\) 到 \(\mathcal P(A)\) 的满射，因此 \(|A|<|\mathcal P(A)|\)。
+
+## 2.11 参考
+
+- [Zermelo–Fraenkel set theory](https://en.wikipedia.org/wiki/Zermelo%E2%80%93Fraenkel_set_theory)
+- [Axiom of choice](https://en.wikipedia.org/wiki/Axiom_of_choice)
+- [Zorn's lemma](https://en.wikipedia.org/wiki/Zorn%27s_lemma)
+- [Schröder–Bernstein theorem](https://en.wikipedia.org/wiki/Schr%C3%B6der%E2%80%93Bernstein_theorem)
+- [Equivalence relation](https://en.wikipedia.org/wiki/Equivalence_relation)
 
 ## 检查点
 
