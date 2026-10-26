@@ -1,7 +1,7 @@
 # 第 8 章 · 特殊函数
 
 > **状态**：已展开。重点是把指数、对数、三角函数、Fourier 级数、Gamma 函数纳入统一框架。  
-> **所属**：Rudin 体系 · 第八卷 · 特殊函数  
+> **所属**：Rudin 体系 · 第 8 章 · 特殊函数  
 > **出处**：Walter Rudin, *Principles of Mathematical Analysis*，第 8 章。
 
 ## 前置

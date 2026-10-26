@@ -1,9 +1,9 @@
-# Mathematics · 经典数学理论体系
+# Mathematics · 经典传统体系
 
-Personal mathematics knowledge base with **two parallel directories**:
+Personal mathematics knowledge base under **经典传统体系**, with two parallel routes:
 
-- **经典数学理论体系** — organized by proof dependency: logic → sets → numbers → algebra → spaces → branches → advanced.
-- **教育阶段体系** — organized by learning stage: elementary → secondary (basic / advanced / competition / university bridge) → university.
+- **常规体系** — topic-by-topic: logic, sets, numbers, algebra, spaces, branches, advanced.
+- **Rudin 体系** — chapter-by-chapter analysis route, Rudin chapters 1–11.
 
 Live: https://dionysus23334.github.io/Mathematics/
 
@@ -12,7 +12,7 @@ Live: https://dionysus23334.github.io/Mathematics/
 ```text
 docs/
   index.md                     two-route homepage
-  theory/                      dependency route (one chapter per layer)
+  theory/                      classical route (one page per topic)
     01-logic.md
     02-sets.md
     03-numbers.md
@@ -20,7 +20,7 @@ docs/
     05-spaces.md
     rudin/
       01-real-complex.md       chapter 1, with complete proofs
-      02..11                   planned chapters with scope + exercises
+      02..11                   expanded chapters with content + exercises
     06-branches.md
     07-advanced.md
     proofs.md                  proof status + complete core proofs
@@ -40,7 +40,7 @@ docs/
 - Every page lists its prerequisites.
 - A concept is defined at first use, or linked to a completed prerequisite.
 - Proofs may be complete, outlined, or explicitly deferred — never silently assumed.
-- The theory route answers “what must come before this proof”; the stage route answers “what should a learner experience first”.
+- The classical route answers “what must come before this proof”; the stage route answers “what should a learner experience first”.
 
 This is a **knowledge map**, not a finished textbook. Each page can be expanded with full definitions, proofs, examples and exercises.
 

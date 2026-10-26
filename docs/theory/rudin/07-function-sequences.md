@@ -1,12 +1,12 @@
 # 第 7 章 · 函数序列与函数项级数
 
 > **状态**：已展开。一致收敛的核心定理给证明；Arzelà–Ascoli 与 Stone–Weierstrass 给陈述与思路。  
-> **所属**：Rudin 体系 · 第七卷 · 函数序列与函数项级数  
+> **所属**：Rudin 体系 · 第 7 章 · 函数序列与函数项级数  
 > **出处**：Walter Rudin, *Principles of Mathematical Analysis*，第 7 章。
 
 ## 前置
 
-- 第 4–6 卷：连续、微分、积分；
+- 连续、微分、积分；
 - 第 3 章：级数；
 - 第 2 章：紧致。
 

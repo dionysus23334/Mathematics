@@ -1,12 +1,12 @@
 # 第 10 章 · 微分形式的积分
 
 > **状态**：已展开。Stokes 定理给陈述与证明思路；完整证明需第 9 章反函数/隐函数工具。  
-> **所属**：Rudin 体系 · 第十卷 · 微分形式的积分  
+> **所属**：Rudin 体系 · 第 10 章 · 微分形式的积分  
 > **出处**：Walter Rudin, *Principles of Mathematical Analysis*，第 10 章。
 
 ## 前置
 
-- 第 4 卷：线性代数、行列式；
+- 线性代数、行列式；
 - 第 9 章：多元微分、反函数定理；
 - 第 6 章：积分。
 
@@ -136,7 +136,7 @@ d(d\omega)=0.
 
 - 第 9 章：[多元函数](09-multivariable.md)
 - 第 6 章：[Riemann–Stieltjes 积分](06-riemann-stieltjes.md)
-- 第 7 卷：[深入理论](../07-advanced.md)
+- [深入理论](../07-advanced.md)
 - 证明状态：[证明状态与核心证明](../proofs.md)
 
 ## 参考 {#r10-ref}

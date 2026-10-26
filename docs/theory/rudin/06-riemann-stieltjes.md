@@ -1,14 +1,14 @@
 # 第 6 章 · Riemann–Stieltjes 积分
 
 > **状态**：已展开。存在性证明给关键步骤；大定理明确标注。  
-> **所属**：Rudin 体系 · 第六卷 · Riemann–Stieltjes 积分  
+> **所属**：Rudin 体系 · 第 6 章 · Riemann–Stieltjes 积分  
 > **出处**：Walter Rudin, *Principles of Mathematical Analysis*，第 6 章。
 
 ## 前置
 
-- 第 3–5 卷：数列、连续、微分；
+- 数列、连续、微分；
 - 第 2 章：紧致与一致连续；
-- 第 5 卷：度量空间。
+- 空间、极限与连续：度量空间。
 
 ## 6.1 分划与上下和 {#r6-1}
 设 \([a,b]\) 区间，\(f,\alpha:[a,b]\to\mathbb R\) 有界。分划
@@ -177,7 +177,7 @@ L(\gamma)=\sup_{P}\sum_{i=1}^n\|\gamma(x_i)-\gamma(x_{i-1})\|.
 
 - 第 5 章：[微分法](05-differentiation.md)
 - 第 7 章：[函数序列与函数项级数](07-function-sequences.md)
-- 第 5 卷：[空间、极限与连续](../05-spaces.md)
+- 空间、极限与连续：[空间、极限与连续](../05-spaces.md)
 - 证明状态：[证明状态与核心证明](../proofs.md)
 
 ## 参考 {#r6-ref}

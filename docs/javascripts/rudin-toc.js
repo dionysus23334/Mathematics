@@ -13,9 +13,7 @@
     if (!active) return;
 
     var item = active.closest('.md-nav__item');
-    if (!item) return;
-    var volumeItem = (item.parentElement && item.parentElement.closest('.md-nav__item')) || item;
-    if (volumeItem.querySelector('.rudin-subtoc')) return;
+    if (!item || item.querySelector('.rudin-subtoc')) return;
 
     var source = secondary.querySelector('.md-nav__list');
     if (!source) return;
@@ -35,7 +33,7 @@
       }
     );
 
-    if (ul.children.length) volumeItem.appendChild(ul);
+    if (ul.children.length) item.appendChild(ul);
   }
 
   if (document.readyState === 'loading') {

@@ -1,13 +1,13 @@
 # 第 5 章 · 微分法
 
 > **状态**：已展开。核心定理给证明或明确“暂缓”。  
-> **所属**：Rudin 体系 · 第五卷 · 微分法  
+> **所属**：Rudin 体系 · 第 5 章 · 微分法  
 > **出处**：Walter Rudin, *Principles of Mathematical Analysis*，第 5 章。
 
 ## 前置
 
-- 第 3–4 卷：数列、连续；
-- 第 5 卷：极限。
+- 数列、连续；
+- 空间、极限与连续：极限。
 
 ## 5.1 导数 {#r5-1}
 \(f:(a,b)\to\mathbb R\) 在 \(x\) 可导，若
@@ -146,7 +146,7 @@ f(x)=\sum_{k=0}^{n-1}\frac{f^{(k)}(a)}{k!}(x-a)^k
 
 - 第 4 章：[连续性](04-continuity.md)
 - 第 6 章：[Riemann–Stieltjes 积分](06-riemann-stieltjes.md)
-- 第 5 卷：[空间、极限与连续](../05-spaces.md)
+- 空间、极限与连续：[空间、极限与连续](../05-spaces.md)
 - 证明状态：[证明状态与核心证明](../proofs.md)
 
 ## 参考 {#r5-ref}

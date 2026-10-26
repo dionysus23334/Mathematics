@@ -1,7 +1,7 @@
 # 第 11 章 · Lebesgue 理论
 
 > **状态**：已展开。给出测度、可测函数、积分与三大收敛定理的完整陈述；证明标为暂缓/提纲。  
-> **所属**：Rudin 体系 · 第十一卷 · Lebesgue 理论  
+> **所属**：Rudin 体系 · 第 11 章 · Lebesgue 理论  
 > **出处**：Walter Rudin, *Principles of Mathematical Analysis*，第 11 章。
 
 ## 前置
@@ -9,7 +9,7 @@
 - 第 2 章：拓扑、开集；
 - 第 3 章：级数；
 - 第 6–7 章：积分、一致收敛；
-- 第 7 卷：深入理论中的测度概要。
+- 深入理论中的测度概要。
 
 ## 11.1 测度 {#r11-1}
 设 \(\mathcal M\) 是 \(X\) 上的 \(\sigma\)-代数：包含 \(X\)，对补集与可数并封闭。  
@@ -147,7 +147,7 @@ L^2(\mu)=\left\{f:\int|f|^2\,d\mu<\infty\right\},
 
 - 第 6 章：[Riemann–Stieltjes 积分](06-riemann-stieltjes.md)
 - 第 7 章：[函数序列与函数项级数](07-function-sequences.md)
-- 第 7 卷：[深入理论](../07-advanced.md)
+- [深入理论](../07-advanced.md)
 - 证明状态：[证明状态与核心证明](../proofs.md)
 
 ## 参考 {#r11-ref}

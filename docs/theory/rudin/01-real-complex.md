@@ -1,6 +1,6 @@
 # 第 1 章 · 实数系与复数系
 
-> **出处**：Walter Rudin, *Principles of Mathematical Analysis*，第 1 章；本站第 3 层（数系）。
+> **出处**：Walter Rudin, *Principles of Mathematical Analysis*，第 1 章；本站数系（数系）。
 >
 > **Rudin 路线**：本章是分析路线的第 1 章；第 2–11 章将在后续逐章补入。  
 > **前置**：命题逻辑、集合与映射、有序域的基本语言。  
@@ -8,7 +8,7 @@
 
 <div class="book-nav">
   <a href="../../">← 理论总览</a>
-  <a href="../../05-spaces/">第 5 层 · 空间</a>
+  <a href="../../05-spaces/">空间 · 空间</a>
   <a href="../../proofs/">证明状态</a>
 </div>
 
@@ -81,7 +81,7 @@ y &= 0+y=(-x+x)+y\\
 
 **证明**：若 \(u,u'\) 都是上确界，则 \(u\) 是上界，\(u'\) 是最小上界，所以 \(u'\le u\)；同理 \(u\le u'\)。由反对称性 \(u=u'\)。证毕。
 
-**最小上界性质（LUB）**：每个非空有上界的子集都有上确界。Rudin 从有序域出发，把 LUB 作为实数系的完备性公理/构造结果；本站第 3 层用 Dedekind 分割证明它。
+**最小上界性质（LUB）**：每个非空有上界的子集都有上确界。Rudin 从有序域出发，把 LUB 作为实数系的完备性公理/构造结果；本站数系用 Dedekind 分割证明它。
 
 **Archimedean 性质**：对任意 \(x,y>0\)，存在 \(n\in\mathbb N\) 使 \(nx>y\)。
 
@@ -290,7 +290,7 @@ x\cdot y=\sum_{i=1}^n x_iy_i,\qquad \|x\|=\sqrt{x\cdot x}.
 | 复数域 | 完整证明（运算验证 + 逆元公式） |
 | Cauchy–Schwarz | 完整证明 |
 
-> LUB 本身在第 3 层用 Dedekind 分割证明；本章把它作为实数系的完备性性质使用。
+> LUB 本身在数系用 Dedekind 分割证明；本章把它作为实数系的完备性性质使用。
 
 ## 检查点 {#r1-check}
 
@@ -305,7 +305,7 @@ x\cdot y=\sum_{i=1}^n x_iy_i,\qquad \|x\|=\sqrt{x\cdot x}.
 
 <div class="book-nav">
   <a href="../../">← 理论总览</a>
-  <a href="../../05-spaces/">第 5 层 · 空间</a>
+  <a href="../../05-spaces/">空间 · 空间</a>
   <a href="../../proofs/">证明状态</a>
 </div>
 
