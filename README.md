@@ -18,7 +18,9 @@ docs/
     03-numbers.md
     04-algebra.md
     05-spaces.md
-    analysis.md                Rudin chapter 1, with complete proofs
+    rudin/
+      01-real-complex.md       chapter 1, with complete proofs
+      02..11                   planned chapters with scope + exercises
     06-branches.md
     07-advanced.md
     proofs.md                  proof status + complete core proofs

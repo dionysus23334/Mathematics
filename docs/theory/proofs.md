@@ -401,6 +401,25 @@ d(x,y)=d(Tx,Ty)\le q\,d(x,y),
 
 因为 \(0\le q<1\)，只能 \(d(x,y)=0\)，即 \(x=y\)。证毕。
 
+
+## Rudin 章节证明状态
+
+| 章 | 已给证明/提纲 | 暂缓 |
+|---|---|---|
+| 1 实数系 | 有序域、上确界、Archimedean、稠密、n 次根、Schwarz | 完备性其余等价形式 |
+| 2 基础拓扑 | 开球、闭集、紧集闭/有界、闭子集紧、连通区间、连续像连通 | Heine–Borel 完整证明 |
+| 3 数列级数 | 极限唯一、有界、单调收敛、绝对收敛、M 判别 | Cauchy 准则、BW、根/比判别细节 |
+| 4 连续性 | 序列刻画、复合、紧像、介值、一致连续提纲 | 单调函数间断点计数 |
+| 5 微分 | 可导⇒连续、求导法则、Rolle/MVT/Cauchy MVT、Darboux 提纲 | Taylor 余项、L'Hôpital |
+| 6 RS 积分 | 加细、可积准则、连续×单调、性质、分部积分提纲 | 有界变差、换元 |
+| 7 函数列 | 一致收敛保持连续/积分、M 判别、导数交换提纲 | Arzelà–Ascoli、Stone–Weierstrass |
+| 8 特殊函数 | 指数律、对数性质、三角恒等式、Gamma 递推 | Fourier 收敛、Parseval |
+| 9 多元 | 线性变换连续、可微⇒连续、压缩映射（链接） | 反函数/隐函数/秩定理 |
+| 10 微分形式 | d²=0、∂²=0、Stokes 思路 | Poincaré 引理 |
+| 11 Lebesgue | MCT/Fatou/DCT 陈述与关系 | 完整测度论证明、Riesz–Fischer |
+
+> 这张表是“章节级”索引；具体定理页内的状态标记更细。暂缓不等于错误，只表示本站尚未展开完整证明。
+
 ## 参考
 
 - [Propositional calculus](https://en.wikipedia.org/wiki/Propositional_calculus)
