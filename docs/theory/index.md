@@ -85,6 +85,16 @@
 | 5 空间 | [度量空间](05-spaces.md#spaces-metric) · [开集/闭集](05-spaces.md#spaces-open) · [紧致与连通](05-spaces.md#spaces-compact) · [连续映射](05-spaces.md#spaces-continuity) · [一般拓扑](05-spaces.md#spaces-topology) |
 | 6 分支 | [分析](06-branches.md#branch-analysis) · [代数](06-branches.md#branch-algebra) · [数论](06-branches.md#branch-number) · [几何](06-branches.md#branch-geometry) · [拓扑](06-branches.md#branch-topology) · [组合](06-branches.md#branch-combinatorics) · [概率](06-branches.md#branch-probability) |
 
+
+## 分析学（Rudin 路线）
+
+第 6 层“分析分支”的深入版本按 Rudin 逐章展开：
+
+- [分析学总览与章节状态](analysis/index.md)
+- [第 1 章 · 实数系与复数系](analysis/01-real-complex.md)：有序域、上确界、Archimedean、有理数稠密、n 次根、复数、Cauchy–Schwarz，含完整证明。
+
+后续章节按第 3–11 章依次展开；状态表会标明“已展开/计划中”，不把计划中的结论当作已证明。
+
 ## 使用建议
 
 - **第一次读**：先读第 1–2 层，把“定义/证明/映射”的语言建立起来。
