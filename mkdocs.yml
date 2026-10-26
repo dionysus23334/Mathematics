@@ -1,0 +1,107 @@
+site_name: 经典数学理论体系
+site_description: 两套并行目录：按理论依赖组织的经典数学体系，以及按学习阶段组织的通识教育路线。
+site_author: dionysus23334
+site_url: https://dionysus23334.github.io/Mathematics/
+repo_url: https://github.com/dionysus23334/Mathematics
+repo_name: dionysus23334/Mathematics
+edit_uri: edit/main/docs/
+copyright: 个人学习整理 · 非官方教材 · 定义与证明以所列前置为准
+
+theme:
+  name: material
+  language: zh
+  font: false
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+  features:
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+nav:
+  - ← 个人主页: https://dionysus23334.github.io/study-blogs/
+  - 首页: index.md
+  - 经典数学理论体系:
+      - 总览与依赖: theory/index.md
+      - 1 · 逻辑语言与证明: theory/01-logic.md
+      - 2 · 集合、关系与映射: theory/02-sets.md
+      - 3 · 自然数与数系: theory/03-numbers.md
+      - 4 · 代数结构与线性空间: theory/04-algebra.md
+      - 5 · 空间、极限与连续: theory/05-spaces.md
+      - 6 · 核心分支: theory/06-branches.md
+      - 7 · 深入理论: theory/07-advanced.md
+  - 教育阶段体系:
+      - 总览: stages/index.md
+      - 初等数学: stages/elementary.md
+      - 中等数学: stages/secondary.md
+      - 数学竞赛:
+          - 总览: stages/competition/index.md
+          - 几何: stages/competition/geometry.md
+          - 代数: stages/competition/algebra.md
+          - 数论: stages/competition/number-theory.md
+          - 组合: stages/competition/combinatorics.md
+      - 高等数学: stages/university.md
+  - 学习规则: principles.md
+  - 术语表: glossary.md
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - fenced_code
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+      linenums_style: inline
+  - pymdownx.inlinehilite
+  - pymdownx.arithmatex:
+      generic: true
+      inline_syntax: [round]
+      block_syntax: [square]
+  - pymdownx.tabbed:
+      alternate_style: true
+
+exclude_docs: |
+  .DS_Store
+
+validation:
+  links:
+    absolute_links: ignore
+    unrecognized_links: warn
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/table-wrap.js
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
