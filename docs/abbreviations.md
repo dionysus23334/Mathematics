@@ -11,6 +11,7 @@
 | **CH** | Continuum Hypothesis | 连续统假设：\(2^{\aleph_0}=\aleph_1\)，独立于 ZFC | 3 数系 |
 | **PMI** | Principle of Mathematical Induction | 数学归纳法原理 | 3 数系 |
 | **WOP** | Well-Ordering Principle | 良序原理：每个非空自然数集有最小元 | 3 数系 |
+| **LUB** | Least Upper Bound | 上确界；LUB property = 非空有上界子集有上确界 | 3 数系 |
 | **IVT** | Intermediate Value Theorem | 介值定理：连续函数取中间值 | 5 空间 |
 | **EVT** | Extreme Value Theorem | 极值定理：紧集上连续函数取得最大/最小值 | 5 空间 |
 | **MVT** | Mean Value Theorem | 中值定理：\(f(b)-f(a)=f'(\xi)(b-a)\) | 6 分析 |

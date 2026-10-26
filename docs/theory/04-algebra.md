@@ -51,6 +51,7 @@
 \[
 1v=v,\qquad a(bv)=(ab)v,
 \]
+
 \[
 a(u+v)=au+av,\qquad (a+b)v=av+bv.
 \]
@@ -125,11 +126,7 @@ G/\ker\varphi\cong\operatorname{im}\varphi.
 
 1. \(A\) 的特征值全为实数；
 2. 属于不同特征值的特征向量正交；
-3. 存在正交矩阵 \(Q\) 使
-\[
-A=Q\Lambda Q^{\mathsf T},
-\]
-其中 \(\Lambda\) 是对角矩阵，对角元为特征值。
+3. 存在正交矩阵 \(Q\) 使 \(A=Q\Lambda Q^{\mathsf T}\)，其中 \(\Lambda\) 是对角矩阵，对角元为特征值。
 
 也就是说，实对称矩阵有一组正交单位特征向量构成 \(\mathbb R^n\) 的基。复厄米特矩阵有类似的酉对角化。本站**暂缓证明**（需内积空间与归纳）。
 

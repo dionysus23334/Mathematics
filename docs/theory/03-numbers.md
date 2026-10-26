@@ -48,6 +48,7 @@ a=bq+r,\qquad 0\le r<b.
 \[
 [(a,b)]+[(c,d)]=[(a+c,b+d)],
 \]
+
 \[
 [(a,b)]\cdot[(c,d)]=[(ac+bd,\ ad+bc)].
 \]
@@ -87,6 +88,7 @@ a=bq+r,\qquad 0\le r<b.
 \[
 (a,b)+(c,d)=(a+c,b+d),
 \]
+
 \[
 (a,b)\cdot(c,d)=(ac-bd,\ ad+bc).
 \]

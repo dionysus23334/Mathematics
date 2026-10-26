@@ -50,10 +50,7 @@
 
 1. \(\mu(\varnothing)=0\)；
 2. 非负性；
-3. **可数可加性**：若 \(A_i\) 两两不交，则
-\[
-\mu\left(\bigcup_{i=1}^\infty A_i\right)=\sum_{i=1}^\infty\mu(A_i).
-\]
+3. **可数可加性**：若 \(A_i\) 两两不交，则 \(\mu\left(\bigcup_{i=1}^\infty A_i\right)=\sum_{i=1}^\infty\mu(A_i)\)。
 
 核心收敛定理（本站**暂缓证明**，需测度论）：
 

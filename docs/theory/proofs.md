@@ -209,23 +209,33 @@ U=\bigcup_{A\in S} A.
 
 设 \(\varphi:G\to H\) 是群同态，\(K=\ker\varphi\)。
 
-1. **\(K\) 正规**：对 \(k\in K\)、\(g\in G\)，
+**核正规**：对 \(k\in K\)、\(g\in G\)，
+
 \[
 \varphi(gkg^{-1})=\varphi(g)\varphi(k)\varphi(g)^{-1}=e,
 \]
+
 所以 \(gkg^{-1}\in K\)。
-2. **定义** \(\Phi:G/K\to\operatorname{im}\varphi\)，\(\Phi(gK)=\varphi(g)\)。
-3. **良定义**：若 \(gK=hK\)，则 \(h^{-1}g\in K\)，所以
+
+**定义**：令 \(\Phi:G/K\to\operatorname{im}\varphi\)，\(\Phi(gK)=\varphi(g)\)。
+
+**良定义**：若 \(gK=hK\)，则 \(h^{-1}g\in K\)，所以
+
 \[
 \varphi(h)^{-1}\varphi(g)=\varphi(h^{-1}g)=e,
 \]
+
 故 \(\varphi(g)=\varphi(h)\)。
-4. **同态**：
+
+**同态**：
+
 \[
 \Phi(gK\cdot hK)=\Phi(ghK)=\varphi(gh)=\varphi(g)\varphi(h)=\Phi(gK)\Phi(hK).
 \]
-5. **单射**：若 \(\Phi(gK)=e\)，则 \(\varphi(g)=e\)，所以 \(g\in K\)，即 \(gK=K\)。
-6. **满射**：任取 \(y\in\operatorname{im}\varphi\)，存在 \(g\) 使 \(y=\varphi(g)=\Phi(gK)\)。
+
+**单射**：若 \(\Phi(gK)=e\)，则 \(\varphi(g)=e\)，所以 \(g\in K\)，即 \(gK=K\)。
+
+**满射**：任取 \(y\in\operatorname{im}\varphi\)，存在 \(g\) 使 \(y=\varphi(g)=\Phi(gK)\)。
 
 所以 \(\Phi\) 是同构，\(G/K\cong\operatorname{im}\varphi\)。证毕。
 
@@ -247,15 +257,20 @@ v_1,\dots,v_k,v_{k+1},\dots,v_n.
 
 **证明 \(T(v_{k+1}),\dots,T(v_n)\) 是 \(\operatorname{im}T\) 的基**：
 
-- **张成**：任取 \(v=\sum_{i=1}^n a_i v_i\)，则
+**张成**：任取 \(v=\sum_{i=1}^n a_i v_i\)，则
+
 \[
 T(v)=\sum_{i=1}^n a_iT(v_i)=\sum_{i=k+1}^n a_iT(v_i),
 \]
+
 因为前 \(k\) 项在核中。
-- **线性无关**：若 \(\sum_{i=k+1}^n a_iT(v_i)=0\)，则
+
+**线性无关**：若 \(\sum_{i=k+1}^n a_iT(v_i)=0\)，则
+
 \[
 T\left(\sum_{i=k+1}^n a_iv_i\right)=0,
 \]
+
 所以 \(\sum_{i=k+1}^n a_iv_i\in\ker T\)。但它又是 \(v_{k+1},\dots,v_n\) 的组合；核的基是 \(v_1,\dots,v_k\)。由基的线性无关性，所有 \(a_i=0\)。
 
 因此 \(\dim\operatorname{im}T=n-k\)，即
