@@ -1,0 +1,2772 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="数学总页：古典学术体系（常规体系 + Rudin 体系）与教育阶段体系。">
+      
+      
+        <meta name="author" content="dionysus23334">
+      
+      
+        <link rel="canonical" href="https://dionysus23334.github.io/Mathematics/theory/proofs/">
+      
+      
+        <link rel="prev" href="../../principles/">
+      
+      
+        <link rel="next" href="../../glossary/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="zh">
+        
+          <link rel="alternate" href="../../en/theory/proofs/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>证明状态与核心证明 - 数学</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/base.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="数学" class="md-header__button md-logo" aria-label="数学" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            数学
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              证明状态与核心证明
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../en/theory/proofs/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dionysus23334/Mathematics" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dionysus23334/Mathematics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="数学" class="md-nav__button md-logo" aria-label="数学" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    数学
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dionysus23334/Mathematics" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dionysus23334/Mathematics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://dionysus23334.github.io/study-blogs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ← 个人主页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    古典学术体系
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    古典学术体系
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    常规体系
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    常规体系
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逻辑语言与证明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    集合、关系与映射
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-numbers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自然数与数系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-algebra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    代数结构与线性空间
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-spaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    空间、极限与连续
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-branches/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    核心分支
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    深入理论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rudin 体系
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Rudin 体系
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/01-real-complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 1 章 · 实数系与复数系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/02-basic-topology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 2 章 · 基础拓扑
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/03-sequences-series/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 3 章 · 数列与级数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/04-continuity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 4 章 · 连续性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/05-differentiation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 5 章 · 微分法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/06-riemann-stieltjes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 6 章 · Riemann–Stieltjes 积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/07-function-sequences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 7 章 · 函数序列与函数项级数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/08-special-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 8 章 · 特殊函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/09-multivariable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 9 章 · 多元函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/10-differential-forms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 10 章 · 微分形式的积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/11-lebesgue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第 11 章 · Lebesgue 理论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    教育阶段体系
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    教育阶段体系
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/elementary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    初等数学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/secondary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中等数学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/competition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数学竞赛
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/university/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    高等数学
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参考
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    参考
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    学习规则
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    证明状态与核心证明
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    证明状态与核心证明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        状态约定
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        状态总表
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 命题等值式与量词否定
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 命题等值式与量词否定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-de-morgan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 De Morgan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 逆否
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 量词否定
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-equivalence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 等价关系 ↔ 划分
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-cantor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Cantor 定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-sb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Cantor–Schröder–Bernstein
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-zorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 选择公理、Zorn 引理与良序定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-dedekind" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Dedekind 分割的上确界性质
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 实数完备性其余等价形式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-group-iso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 群同态基本定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-rank-nullity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 秩-零化度定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-open-ball" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 开球是开集
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-continuity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. 连续性的两种刻画
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. 连续性的两种刻画">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ε-δ ⇒ 开集原像开
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        开集原像开 ⇒ ε-δ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-compact-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. 紧集的连续像是紧集
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-evt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. 紧集上的极值定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. 暂缓证明的定理：需要补什么
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-banach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Banach 压缩映射原理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rudin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rudin 章节证明状态
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    术语表
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../abbreviations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    缩写与英文术语
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    来源与出处
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        状态约定
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        状态总表
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 命题等值式与量词否定
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 命题等值式与量词否定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-de-morgan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 De Morgan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 逆否
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 量词否定
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-equivalence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 等价关系 ↔ 划分
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-cantor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Cantor 定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-sb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Cantor–Schröder–Bernstein
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-zorn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 选择公理、Zorn 引理与良序定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-dedekind" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Dedekind 分割的上确界性质
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 实数完备性其余等价形式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-group-iso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 群同态基本定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-rank-nullity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 秩-零化度定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-open-ball" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 开球是开集
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-continuity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. 连续性的两种刻画
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. 连续性的两种刻画">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ε-δ ⇒ 开集原像开
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        开集原像开 ⇒ ε-δ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-compact-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. 紧集的连续像是紧集
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-evt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. 紧集上的极值定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. 暂缓证明的定理：需要补什么
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-banach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Banach 压缩映射原理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rudin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rudin 章节证明状态
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">证明状态与核心证明<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>这一页回答两个问题：<strong>哪些定理有完整证明？哪些只是陈述/提纲？</strong></p>
+<p>原则：不能把“证明思路”写成“证明”。完整证明必须能逐步检查；暂缓证明必须明确标注，并列出所需前置。</p>
+</blockquote>
+<h2 id="_2">状态约定<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>状态</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>完整证明</strong></td>
+<td>从定义/公理出发，给出可检查的全部步骤</td>
+</tr>
+<tr>
+<td><strong>证明提纲</strong></td>
+<td>给出关键构造与步骤，省略技术细节；不声称完整</td>
+</tr>
+<tr>
+<td><strong>暂缓证明</strong></td>
+<td>本页只使用结论，证明留给后续分支/教材；必须列前置</td>
+</tr>
+<tr>
+<td><strong>定义/公理</strong></td>
+<td>不作为定理证明，作为出发点</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">状态总表<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>定理/结论</th>
+<th>状态</th>
+<th>位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>De Morgan 等值式、逆否、量词否定</td>
+<td>完整证明</td>
+<td>本页 §1</td>
+</tr>
+<tr>
+<td>命题/一阶逻辑可靠性与完备性</td>
+<td>暂缓证明</td>
+<td>本页 §4；需证明系统与模型论</td>
+</tr>
+<tr>
+<td>等价关系 ↔ 划分</td>
+<td>完整证明</td>
+<td>本页 §2</td>
+</tr>
+<tr>
+<td>Cantor 定理（幂集严格大于原集）</td>
+<td>完整证明</td>
+<td>本页 §3</td>
+</tr>
+<tr>
+<td>Cantor–Schröder–Bernstein</td>
+<td>完整证明</td>
+<td>本页 §4</td>
+</tr>
+<tr>
+<td>ZF/ZFC、AC、Zorn 引理、良序定理</td>
+<td>暂缓证明</td>
+<td>本页 §5；需公理化集合论</td>
+</tr>
+<tr>
+<td>Peano 归纳原理</td>
+<td>公理/定义</td>
+<td>数系</td>
+</tr>
+<tr>
+<td>Dedekind 分割的上确界性质</td>
+<td>完整证明</td>
+<td>本页 §6</td>
+</tr>
+<tr>
+<td>实数完备性五种形式等价</td>
+<td>部分：上确界已证；其余暂缓</td>
+<td>本页 §6、§7</td>
+</tr>
+<tr>
+<td>代数基本定理</td>
+<td>暂缓证明</td>
+<td>数系；需复分析</td>
+</tr>
+<tr>
+<td>群同态基本定理</td>
+<td>完整证明</td>
+<td>本页 §8</td>
+</tr>
+<tr>
+<td>秩-零化度定理</td>
+<td>完整证明</td>
+<td>本页 §9</td>
+</tr>
+<tr>
+<td>实对称矩阵谱定理</td>
+<td>暂缓证明</td>
+<td>代数；需内积空间与归纳</td>
+</tr>
+<tr>
+<td>开球是开集</td>
+<td>完整证明</td>
+<td>本页 §10</td>
+</tr>
+<tr>
+<td>连续映射的 <span class="arithmatex">\(\varepsilon\)</span>-<span class="arithmatex">\(\delta\)</span> 与开集原像等价</td>
+<td>完整证明</td>
+<td>本页 §11</td>
+</tr>
+<tr>
+<td>紧集的连续像是紧集</td>
+<td>完整证明</td>
+<td>本页 §12</td>
+</tr>
+<tr>
+<td>紧集上连续函数取得极值（EVT）</td>
+<td>完整证明</td>
+<td>本页 §13</td>
+</tr>
+<tr>
+<td>Banach 压缩映射原理</td>
+<td>完整证明</td>
+<td>本页 §15</td>
+</tr>
+<tr>
+<td>Heine–Borel、Bolzano–Weierstrass</td>
+<td>暂缓证明</td>
+<td>空间；需实分析</td>
+</tr>
+<tr>
+<td>MCT、Fatou、DCT</td>
+<td>暂缓证明</td>
+<td>深入；需测度论</td>
+</tr>
+<tr>
+<td>Cauchy 积分定理/公式、留数定理</td>
+<td>暂缓证明</td>
+<td>深入；需复分析</td>
+</tr>
+<tr>
+<td>Hahn–Banach、开映射、闭图像、一致有界</td>
+<td>暂缓证明</td>
+<td>深入；需泛函分析</td>
+</tr>
+<tr>
+<td>Gauss–Bonnet、Brouwer、Mayer–Vietoris</td>
+<td>暂缓证明</td>
+<td>深入；需几何/代数拓扑</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>状态表是“诚实性检查表”：看到“暂缓证明”，就不应把该结论当作已经在本站证明。</p>
+</blockquote>
+<hr />
+<h2 id="proof-logic">1. 命题等值式与量词否定<a class="headerlink" href="#proof-logic" title="Permanent link">&para;</a></h2>
+<h3 id="11-de-morgan">1.1 De Morgan<a class="headerlink" href="#11-de-morgan" title="Permanent link">&para;</a></h3>
+<p>要证 <span class="arithmatex">\(\neg(P\land Q)\equiv\neg P\lor\neg Q\)</span>。列真值表：</p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(P\)</span></th>
+<th><span class="arithmatex">\(Q\)</span></th>
+<th><span class="arithmatex">\(P\land Q\)</span></th>
+<th><span class="arithmatex">\(\neg(P\land Q)\)</span></th>
+<th><span class="arithmatex">\(\neg P\lor\neg Q\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr>
+<td>T</td>
+<td>F</td>
+<td>F</td>
+<td>T</td>
+<td>T</td>
+</tr>
+<tr>
+<td>F</td>
+<td>T</td>
+<td>F</td>
+<td>T</td>
+<td>T</td>
+</tr>
+<tr>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+<td>T</td>
+<td>T</td>
+</tr>
+</tbody>
+</table>
+<p>两列相同，故等值。<span class="arithmatex">\(\neg(P\lor Q)\equiv\neg P\land\neg Q\)</span> 同理。</p>
+<h3 id="12">1.2 逆否<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+P\to Q\equiv\neg P\lor Q\equiv Q\lor\neg P\equiv\neg(\neg Q)\lor\neg P\equiv\neg Q\to\neg P.
+\]</div>
+<h3 id="13">1.3 量词否定<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
+<p>按定义，<span class="arithmatex">\(\forall x\in S,\ P(x)\)</span> 为假当且仅当存在 <span class="arithmatex">\(x\in S\)</span> 使 <span class="arithmatex">\(P(x)\)</span> 为假：</p>
+<div class="arithmatex">\[
+\neg\forall x\in S,\ P(x)\equiv\exists x\in S,\ \neg P(x).
+\]</div>
+<p>同理 <span class="arithmatex">\(\neg\exists x\in S,\ P(x)\equiv\forall x\in S,\ \neg P(x)\)</span>。</p>
+<hr />
+<h2 id="proof-equivalence">2. 等价关系 ↔ 划分<a class="headerlink" href="#proof-equivalence" title="Permanent link">&para;</a></h2>
+<p>设 <span class="arithmatex">\(\sim\)</span> 是 <span class="arithmatex">\(A\)</span> 上的等价关系。对每个 <span class="arithmatex">\(x\in A\)</span>，令 <span class="arithmatex">\([x]=\{y\in A:x\sim y\}\)</span>。</p>
+<p><strong>每一步</strong>：</p>
+<ol>
+<li><strong>非空</strong>：由自反性 <span class="arithmatex">\(x\in[x]\)</span>。</li>
+<li><strong>两两不交或相等</strong>：若 <span class="arithmatex">\([x]\cap[y]\ne\varnothing\)</span>，取 <span class="arithmatex">\(z\in[x]\cap[y]\)</span>。则 <span class="arithmatex">\(x\sim z\)</span>、<span class="arithmatex">\(y\sim z\)</span>。由对称性 <span class="arithmatex">\(z\sim y\)</span>，由传递性 <span class="arithmatex">\(x\sim y\)</span>。对任意 <span class="arithmatex">\(w\in[x]\)</span>，<span class="arithmatex">\(w\sim x\sim y\)</span>，所以 <span class="arithmatex">\(w\in[y]\)</span>；故 <span class="arithmatex">\([x]\subseteq[y]\)</span>。同理 <span class="arithmatex">\([y]\subseteq[x]\)</span>，所以 <span class="arithmatex">\([x]=[y]\)</span>。</li>
+<li><strong>并为 <span class="arithmatex">\(A\)</span></strong>：每个 <span class="arithmatex">\(x\)</span> 属于 <span class="arithmatex">\([x]\)</span>，所以 <span class="arithmatex">\(\bigcup_{x\in A}[x]=A\)</span>。</li>
+</ol>
+<p>因此等价类构成一个划分。</p>
+<p>反过来，若 <span class="arithmatex">\(\mathcal P\)</span> 是 <span class="arithmatex">\(A\)</span> 的划分，定义 <span class="arithmatex">\(x\sim y\)</span> 当且仅当 <span class="arithmatex">\(x,y\)</span> 在同一个块中。</p>
+<ul>
+<li>自反：<span class="arithmatex">\(x\)</span> 与自己在同一块；</li>
+<li>对称：同块关系对称；</li>
+<li>传递：若 <span class="arithmatex">\(x,y\)</span> 同块、<span class="arithmatex">\(y,z\)</span> 同块，则 <span class="arithmatex">\(x,z\)</span> 同块。</li>
+</ul>
+<p>所以 <span class="arithmatex">\(\sim\)</span> 是等价关系，且等价类正好是划分的块。证毕。</p>
+<hr />
+<h2 id="proof-cantor">3. Cantor 定理<a class="headerlink" href="#proof-cantor" title="Permanent link">&para;</a></h2>
+<p><strong>定理</strong>：不存在满射 <span class="arithmatex">\(f:A\to\mathcal P(A)\)</span>。</p>
+<p><strong>证明</strong>：反设 <span class="arithmatex">\(f\)</span> 是满射。定义</p>
+<div class="arithmatex">\[
+D=\{x\in A:x\notin f(x)\}.
+\]</div>
+<p>则 <span class="arithmatex">\(D\subseteq A\)</span>，即 <span class="arithmatex">\(D\in\mathcal P(A)\)</span>。由 <span class="arithmatex">\(f\)</span> 满射，存在 <span class="arithmatex">\(d\in A\)</span> 使 <span class="arithmatex">\(f(d)=D\)</span>。</p>
+<p>考察 <span class="arithmatex">\(d\in D\)</span>：</p>
+<ul>
+<li>若 <span class="arithmatex">\(d\in D\)</span>，按 <span class="arithmatex">\(D\)</span> 的定义 <span class="arithmatex">\(d\notin f(d)=D\)</span>，矛盾；</li>
+<li>若 <span class="arithmatex">\(d\notin D\)</span>，则 <span class="arithmatex">\(d\notin f(d)\)</span>，按定义 <span class="arithmatex">\(d\in D\)</span>，矛盾。</li>
+</ul>
+<p>两种情形都矛盾，故不存在这样的满射。证毕。</p>
+<hr />
+<h2 id="proof-sb">4. Cantor–Schröder–Bernstein<a class="headerlink" href="#proof-sb" title="Permanent link">&para;</a></h2>
+<p><strong>定理</strong>：若存在单射 <span class="arithmatex">\(f:A\to B\)</span> 与单射 <span class="arithmatex">\(g:B\to A\)</span>，则存在双射 <span class="arithmatex">\(h:A\to B\)</span>。</p>
+<p><strong>构造</strong>：</p>
+<div class="arithmatex">\[
+C_0=A\setminus g(B),\qquad C_{n+1}=g(f(C_n)),\qquad C=\bigcup_{n=0}^\infty C_n.
+\]</div>
+<p>定义</p>
+<div class="arithmatex">\[
+h(x)=
+\begin{cases}
+f(x), &amp; x\in C,\\
+g^{-1}(x), &amp; x\notin C.
+\end{cases}
+\]</div>
+<p>若 <span class="arithmatex">\(x\notin C\)</span>，则 <span class="arithmatex">\(x\notin C_0=A\setminus g(B)\)</span>，所以 <span class="arithmatex">\(x\in g(B)\)</span>，<span class="arithmatex">\(g^{-1}(x)\)</span> 存在且唯一。</p>
+<p><strong>良定义</strong>：两种情形互斥；<span class="arithmatex">\(g^{-1}(x)\)</span> 唯一。</p>
+<p><strong>单射</strong>：设 <span class="arithmatex">\(h(x)=h(y)\)</span>。</p>
+<ul>
+<li>若 <span class="arithmatex">\(x,y\in C\)</span>，则 <span class="arithmatex">\(f(x)=f(y)\)</span>，由 <span class="arithmatex">\(f\)</span> 单射得 <span class="arithmatex">\(x=y\)</span>。</li>
+<li>若 <span class="arithmatex">\(x,y\notin C\)</span>，则 <span class="arithmatex">\(g^{-1}(x)=g^{-1}(y)\)</span>，得 <span class="arithmatex">\(x=y\)</span>。</li>
+<li>若 <span class="arithmatex">\(x\in C,\ y\notin C\)</span>，则 <span class="arithmatex">\(f(x)=g^{-1}(y)\)</span>，两边作用 <span class="arithmatex">\(g\)</span> 得 <span class="arithmatex">\(g(f(x))=y\)</span>。但 <span class="arithmatex">\(x\in C_n\)</span> 对某个 <span class="arithmatex">\(n\)</span>，所以 <span class="arithmatex">\(g(f(x))\in C_{n+1}\subseteq C\)</span>，与 <span class="arithmatex">\(y\notin C\)</span> 矛盾。</li>
+</ul>
+<p>所以 <span class="arithmatex">\(h\)</span> 单射。</p>
+<p><strong>满射</strong>：任取 <span class="arithmatex">\(y\in B\)</span>。</p>
+<ul>
+<li>若 <span class="arithmatex">\(g(y)\in C\)</span>，则 <span class="arithmatex">\(g(y)\in C_{n+1}=g(f(C_n))\)</span> 对某个 <span class="arithmatex">\(n\)</span>（注意 <span class="arithmatex">\(g(y)\notin C_0\)</span>），于是 <span class="arithmatex">\(g(y)=g(f(c))\)</span> 对某个 <span class="arithmatex">\(c\in C_n\)</span>。由 <span class="arithmatex">\(g\)</span> 单射，<span class="arithmatex">\(y=f(c)=h(c)\)</span>。</li>
+<li>若 <span class="arithmatex">\(g(y)\notin C\)</span>，则 <span class="arithmatex">\(h(g(y))=g^{-1}(g(y))=y\)</span>。</li>
+</ul>
+<p>所以 <span class="arithmatex">\(h\)</span> 满射。证毕。</p>
+<hr />
+<h2 id="5-zorn">5. 选择公理、Zorn 引理与良序定理<a class="headerlink" href="#5-zorn" title="Permanent link">&para;</a></h2>
+<p>这三者是等价的（在 ZF 中）。本站<strong>不证明</strong>这个等价链；它需要序数、超限递归与集合论的公理系统。</p>
+<ul>
+<li><strong>AC</strong>：任意非空集合族有选择函数；</li>
+<li><strong>Zorn</strong>：非空偏序集中，若每条链有上界，则有极大元；</li>
+<li><strong>良序定理</strong>：每个集合可良序化。</li>
+</ul>
+<p>使用 Zorn 时，必须验证“每条链有上界”；只验证有限链不够。</p>
+<hr />
+<h2 id="proof-dedekind">6. Dedekind 分割的上确界性质<a class="headerlink" href="#proof-dedekind" title="Permanent link">&para;</a></h2>
+<p>设 <span class="arithmatex">\(S\)</span> 是一族非空 Dedekind 分割，且被分割 <span class="arithmatex">\(B\)</span> 上界（即每个 <span class="arithmatex">\(A\in S\)</span> 满足 <span class="arithmatex">\(A\subseteq B\)</span>）。令</p>
+<div class="arithmatex">\[
+U=\bigcup_{A\in S} A.
+\]</div>
+<p><strong>证明 <span class="arithmatex">\(U\)</span> 是分割</strong>：</p>
+<ol>
+<li><span class="arithmatex">\(U\ne\varnothing\)</span>：<span class="arithmatex">\(S\)</span> 非空，取 <span class="arithmatex">\(A\in S\)</span>，<span class="arithmatex">\(A\ne\varnothing\)</span>，故 <span class="arithmatex">\(U\)</span> 非空。</li>
+<li><span class="arithmatex">\(U\ne\mathbb Q\)</span>：每个 <span class="arithmatex">\(A\subseteq B\)</span>，所以 <span class="arithmatex">\(U\subseteq B\ne\mathbb Q\)</span>。</li>
+<li>向下封闭：若 <span class="arithmatex">\(q\in U\)</span>，则 <span class="arithmatex">\(q\in A\)</span> 对某个 <span class="arithmatex">\(A\in S\)</span>；若 <span class="arithmatex">\(p&lt;q\)</span>，由 <span class="arithmatex">\(A\)</span> 向下封闭得 <span class="arithmatex">\(p\in A\subseteq U\)</span>。</li>
+<li>无最大元：若 <span class="arithmatex">\(q\in U\)</span>，则 <span class="arithmatex">\(q\in A\)</span> 对某个 <span class="arithmatex">\(A\)</span>；<span class="arithmatex">\(A\)</span> 无最大元，故存在 <span class="arithmatex">\(r\in A\)</span> 使 <span class="arithmatex">\(q&lt;r\)</span>，于是 <span class="arithmatex">\(r\in U\)</span>。</li>
+</ol>
+<p>所以 <span class="arithmatex">\(U\)</span> 是分割。</p>
+<p><strong>上界</strong>：每个 <span class="arithmatex">\(A\in S\)</span> 满足 <span class="arithmatex">\(A\subseteq U\)</span>，所以 <span class="arithmatex">\(U\)</span> 是上界。</p>
+<p><strong>最小上界</strong>：若 <span class="arithmatex">\(C\)</span> 是任意上界，则每个 <span class="arithmatex">\(A\subseteq C\)</span>，所以 <span class="arithmatex">\(U=\bigcup A\subseteq C\)</span>。因此 <span class="arithmatex">\(U\)</span> 是最小上界。证毕。</p>
+<hr />
+<h2 id="7">7. 实数完备性其余等价形式<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
+<p>数系列出五种等价形式。本站只完整证明“Dedekind 分割 ⇒ 上确界性质”（§6）。</p>
+<p>其余 implications 需要实分析中的单调有界定理、区间套定理、Bolzano–Weierstrass 定理；它们在空间与分支分析分支中证明。这里不把“等价”当作已证结论反复引用，只作为路线图。</p>
+<hr />
+<h2 id="proof-group-iso">8. 群同态基本定理<a class="headerlink" href="#proof-group-iso" title="Permanent link">&para;</a></h2>
+<p>设 <span class="arithmatex">\(\varphi:G\to H\)</span> 是群同态，<span class="arithmatex">\(K=\ker\varphi\)</span>。</p>
+<p><strong>核正规</strong>：对 <span class="arithmatex">\(k\in K\)</span>、<span class="arithmatex">\(g\in G\)</span>，</p>
+<div class="arithmatex">\[
+\varphi(gkg^{-1})=\varphi(g)\varphi(k)\varphi(g)^{-1}=e,
+\]</div>
+<p>所以 <span class="arithmatex">\(gkg^{-1}\in K\)</span>。</p>
+<p><strong>定义</strong>：令 <span class="arithmatex">\(\Phi:G/K\to\operatorname{im}\varphi\)</span>，<span class="arithmatex">\(\Phi(gK)=\varphi(g)\)</span>。</p>
+<p><strong>良定义</strong>：若 <span class="arithmatex">\(gK=hK\)</span>，则 <span class="arithmatex">\(h^{-1}g\in K\)</span>，所以</p>
+<div class="arithmatex">\[
+\varphi(h)^{-1}\varphi(g)=\varphi(h^{-1}g)=e,
+\]</div>
+<p>故 <span class="arithmatex">\(\varphi(g)=\varphi(h)\)</span>。</p>
+<p><strong>同态</strong>：</p>
+<div class="arithmatex">\[
+\Phi(gK\cdot hK)=\Phi(ghK)=\varphi(gh)=\varphi(g)\varphi(h)=\Phi(gK)\Phi(hK).
+\]</div>
+<p><strong>单射</strong>：若 <span class="arithmatex">\(\Phi(gK)=e\)</span>，则 <span class="arithmatex">\(\varphi(g)=e\)</span>，所以 <span class="arithmatex">\(g\in K\)</span>，即 <span class="arithmatex">\(gK=K\)</span>。</p>
+<p><strong>满射</strong>：任取 <span class="arithmatex">\(y\in\operatorname{im}\varphi\)</span>，存在 <span class="arithmatex">\(g\)</span> 使 <span class="arithmatex">\(y=\varphi(g)=\Phi(gK)\)</span>。</p>
+<p>所以 <span class="arithmatex">\(\Phi\)</span> 是同构，<span class="arithmatex">\(G/K\cong\operatorname{im}\varphi\)</span>。证毕。</p>
+<hr />
+<h2 id="proof-rank-nullity">9. 秩-零化度定理<a class="headerlink" href="#proof-rank-nullity" title="Permanent link">&para;</a></h2>
+<p>设 <span class="arithmatex">\(V\)</span> 有限维，<span class="arithmatex">\(T:V\to W\)</span> 线性。取 <span class="arithmatex">\(\ker T\)</span> 的一组基</p>
+<div class="arithmatex">\[
+v_1,\dots,v_k.
+\]</div>
+<p>把它扩充为 <span class="arithmatex">\(V\)</span> 的基</p>
+<div class="arithmatex">\[
+v_1,\dots,v_k,v_{k+1},\dots,v_n.
+\]</div>
+<p><strong>证明 <span class="arithmatex">\(T(v_{k+1}),\dots,T(v_n)\)</span> 是 <span class="arithmatex">\(\operatorname{im}T\)</span> 的基</strong>：</p>
+<p><strong>张成</strong>：任取 <span class="arithmatex">\(v=\sum_{i=1}^n a_i v_i\)</span>，则</p>
+<div class="arithmatex">\[
+T(v)=\sum_{i=1}^n a_iT(v_i)=\sum_{i=k+1}^n a_iT(v_i),
+\]</div>
+<p>因为前 <span class="arithmatex">\(k\)</span> 项在核中。</p>
+<p><strong>线性无关</strong>：若 <span class="arithmatex">\(\sum_{i=k+1}^n a_iT(v_i)=0\)</span>，则</p>
+<div class="arithmatex">\[
+T\left(\sum_{i=k+1}^n a_iv_i\right)=0,
+\]</div>
+<p>所以 <span class="arithmatex">\(\sum_{i=k+1}^n a_iv_i\in\ker T\)</span>。但它又是 <span class="arithmatex">\(v_{k+1},\dots,v_n\)</span> 的组合；核的基是 <span class="arithmatex">\(v_1,\dots,v_k\)</span>。由基的线性无关性，所有 <span class="arithmatex">\(a_i=0\)</span>。</p>
+<p>因此 <span class="arithmatex">\(\dim\operatorname{im}T=n-k\)</span>，即</p>
+<div class="arithmatex">\[
+\dim V=\dim\ker T+\dim\operatorname{im}T.
+\]</div>
+<p>证毕。</p>
+<hr />
+<h2 id="proof-open-ball">10. 开球是开集<a class="headerlink" href="#proof-open-ball" title="Permanent link">&para;</a></h2>
+<p>设 <span class="arithmatex">\(y\in B(x,r)\)</span>，令 <span class="arithmatex">\(s=r-d(x,y)&gt;0\)</span>。对任意 <span class="arithmatex">\(z\in B(y,s)\)</span>，由三角不等式</p>
+<div class="arithmatex">\[
+d(x,z)\le d(x,y)+d(y,z)&lt;d(x,y)+s=r,
+\]</div>
+<p>所以 <span class="arithmatex">\(z\in B(x,r)\)</span>。因此 <span class="arithmatex">\(B(y,s)\subseteq B(x,r)\)</span>，即 <span class="arithmatex">\(B(x,r)\)</span> 是开集。证毕。</p>
+<hr />
+<h2 id="proof-continuity">11. 连续性的两种刻画<a class="headerlink" href="#proof-continuity" title="Permanent link">&para;</a></h2>
+<p>设 <span class="arithmatex">\(f:X\to Y\)</span>，<span class="arithmatex">\(X,Y\)</span> 是度量空间。</p>
+<h3 id="-">ε-δ ⇒ 开集原像开<a class="headerlink" href="#-" title="Permanent link">&para;</a></h3>
+<p>设 <span class="arithmatex">\(V\subseteq Y\)</span> 开，<span class="arithmatex">\(x\in f^{-1}(V)\)</span>。则 <span class="arithmatex">\(f(x)\in V\)</span>，存在 <span class="arithmatex">\(\varepsilon&gt;0\)</span> 使 <span class="arithmatex">\(B_Y(f(x),\varepsilon)\subseteq V\)</span>。由连续性，存在 <span class="arithmatex">\(\delta&gt;0\)</span> 使</p>
+<div class="arithmatex">\[
+f(B_X(x,\delta))\subseteq B_Y(f(x),\varepsilon)\subseteq V.
+\]</div>
+<p>所以 <span class="arithmatex">\(B_X(x,\delta)\subseteq f^{-1}(V)\)</span>，即 <span class="arithmatex">\(f^{-1}(V)\)</span> 开。</p>
+<h3 id="-_1">开集原像开 ⇒ ε-δ<a class="headerlink" href="#-_1" title="Permanent link">&para;</a></h3>
+<p>给定 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(\varepsilon&gt;0\)</span>，取 <span class="arithmatex">\(V=B_Y(f(x),\varepsilon)\)</span>。<span class="arithmatex">\(V\)</span> 开，所以 <span class="arithmatex">\(f^{-1}(V)\)</span> 开且包含 <span class="arithmatex">\(x\)</span>。存在 <span class="arithmatex">\(\delta&gt;0\)</span> 使 <span class="arithmatex">\(B_X(x,\delta)\subseteq f^{-1}(V)\)</span>，即 <span class="arithmatex">\(f(B_X(x,\delta))\subseteq V\)</span>。这正是 <span class="arithmatex">\(\varepsilon\)</span>-<span class="arithmatex">\(\delta\)</span> 定义。证毕。</p>
+<hr />
+<h2 id="proof-compact-image">12. 紧集的连续像是紧集<a class="headerlink" href="#proof-compact-image" title="Permanent link">&para;</a></h2>
+<p>设 <span class="arithmatex">\(f:X\to Y\)</span> 连续，<span class="arithmatex">\(X\)</span> 紧。取 <span class="arithmatex">\(f(X)\)</span> 的任意开覆盖 <span class="arithmatex">\(\{V_i\}_{i\in I}\)</span>。则</p>
+<div class="arithmatex">\[
+\{f^{-1}(V_i)\}_{i\in I}
+\]</div>
+<p>是 <span class="arithmatex">\(X\)</span> 的开覆盖。由 <span class="arithmatex">\(X\)</span> 紧，存在有限子覆盖</p>
+<div class="arithmatex">\[
+X=f^{-1}(V_{i_1})\cup\cdots\cup f^{-1}(V_{i_m}).
+\]</div>
+<p>于是</p>
+<div class="arithmatex">\[
+f(X)\subseteq V_{i_1}\cup\cdots\cup V_{i_m}.
+\]</div>
+<p>所以 <span class="arithmatex">\(f(X)\)</span> 紧。证毕。</p>
+<hr />
+<h2 id="proof-evt">13. 紧集上的极值定理<a class="headerlink" href="#proof-evt" title="Permanent link">&para;</a></h2>
+<p>设 <span class="arithmatex">\(X\)</span> 非空紧，<span class="arithmatex">\(f:X\to\mathbb R\)</span> 连续。由 §12，<span class="arithmatex">\(f(X)\)</span> 是 <span class="arithmatex">\(\mathbb R\)</span> 中的紧集，因此有界且闭。</p>
+<p>令 <span class="arithmatex">\(M=\sup f(X)\)</span>。由上确界定义，存在 <span class="arithmatex">\(x_n\in X\)</span> 使 <span class="arithmatex">\(f(x_n)\to M\)</span>。因为 <span class="arithmatex">\(f(X)\)</span> 闭，<span class="arithmatex">\(M\in f(X)\)</span>，所以存在 <span class="arithmatex">\(x\in X\)</span> 使 <span class="arithmatex">\(f(x)=M\)</span>。最小值同理。证毕。</p>
+<hr />
+<h2 id="14">14. 暂缓证明的定理：需要补什么<a class="headerlink" href="#14" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>定理</th>
+<th>暂缓原因</th>
+<th>补证明所需</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一阶逻辑完备性</td>
+<td>需要证明系统、模型论</td>
+<td>逻辑后续/数理逻辑</td>
+</tr>
+<tr>
+<td>AC ⇔ Zorn ⇔ 良序</td>
+<td>需要序数、超限递归</td>
+<td>公理化集合论</td>
+</tr>
+<tr>
+<td>实数完备性其余等价</td>
+<td>需要单调有界/区间套/BW</td>
+<td>空间与分支分析</td>
+</tr>
+<tr>
+<td>代数基本定理</td>
+<td>需要复分析或拓扑</td>
+<td>深入复分析</td>
+</tr>
+<tr>
+<td>谱定理</td>
+<td>需要内积空间与归纳</td>
+<td>代数后续/线性代数</td>
+</tr>
+<tr>
+<td>Heine–Borel/BW</td>
+<td>需要实分析</td>
+<td>空间与分支</td>
+</tr>
+<tr>
+<td>MCT/Fatou/DCT</td>
+<td>需要测度论</td>
+<td>深入</td>
+</tr>
+<tr>
+<td>Cauchy 积分/留数</td>
+<td>需要复分析</td>
+<td>深入</td>
+</tr>
+<tr>
+<td>Hahn–Banach 等</td>
+<td>需要泛函分析</td>
+<td>深入</td>
+</tr>
+<tr>
+<td>Gauss–Bonnet/Brouwer</td>
+<td>需要几何/代数拓扑</td>
+<td>深入</td>
+</tr>
+</tbody>
+</table>
+<h2 id="proof-banach">15. Banach 压缩映射原理<a class="headerlink" href="#proof-banach" title="Permanent link">&para;</a></h2>
+<p><strong>定理</strong>：设 <span class="arithmatex">\((X,d)\)</span> 完备，<span class="arithmatex">\(T:X\to X\)</span> 满足</p>
+<div class="arithmatex">\[
+d(Tx,Ty)\le q\,d(x,y),\qquad 0\le q&lt;1.
+\]</div>
+<p>则 <span class="arithmatex">\(T\)</span> 有唯一不动点。</p>
+<p><strong>存在性</strong>：任取 <span class="arithmatex">\(x_0\in X\)</span>，令 <span class="arithmatex">\(x_{n+1}=T(x_n)\)</span>。归纳得</p>
+<div class="arithmatex">\[
+d(x_{n+1},x_{n+2})\le q\,d(x_n,x_{n+1})\le q^{n+1}d(x_0,x_1).
+\]</div>
+<p>对 <span class="arithmatex">\(m&gt;n\)</span>，由三角不等式与几何级数：</p>
+<div class="arithmatex">\[
+d(x_n,x_m)\le\sum_{k=n}^{m-1}d(x_k,x_{k+1})
+\le d(x_0,x_1)\sum_{k=n}^{m-1}q^k
+\le \frac{q^n}{1-q}d(x_0,x_1)\to0.
+\]</div>
+<p>所以 <span class="arithmatex">\(\{x_n\}\)</span> 是 Cauchy 列。<span class="arithmatex">\(X\)</span> 完备，故 <span class="arithmatex">\(x_n\to x\)</span>。由 <span class="arithmatex">\(T\)</span> 的连续性（Lipschitz 蕴含连续），</p>
+<div class="arithmatex">\[
+T(x)=\lim T(x_n)=\lim x_{n+1}=x.
+\]</div>
+<p><strong>唯一性</strong>：若 <span class="arithmatex">\(x,y\)</span> 都是不动点，则</p>
+<div class="arithmatex">\[
+d(x,y)=d(Tx,Ty)\le q\,d(x,y),
+\]</div>
+<p>因为 <span class="arithmatex">\(0\le q&lt;1\)</span>，只能 <span class="arithmatex">\(d(x,y)=0\)</span>，即 <span class="arithmatex">\(x=y\)</span>。证毕。</p>
+<h2 id="rudin">Rudin 章节证明状态<a class="headerlink" href="#rudin" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>章</th>
+<th>已给证明/提纲</th>
+<th>暂缓</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 实数系</td>
+<td>有序域、上确界、Archimedean、稠密、n 次根、Schwarz</td>
+<td>完备性其余等价形式</td>
+</tr>
+<tr>
+<td>2 基础拓扑</td>
+<td>开球、闭集、紧集闭/有界、闭子集紧、连通区间、连续像连通</td>
+<td>Heine–Borel 完整证明</td>
+</tr>
+<tr>
+<td>3 数列级数</td>
+<td>极限唯一、有界、单调收敛、绝对收敛、M 判别</td>
+<td>Cauchy 准则、BW、根/比判别细节</td>
+</tr>
+<tr>
+<td>4 连续性</td>
+<td>序列刻画、复合、紧像、介值、一致连续提纲</td>
+<td>单调函数间断点计数</td>
+</tr>
+<tr>
+<td>5 微分</td>
+<td>可导⇒连续、求导法则、Rolle/MVT/Cauchy MVT、Darboux 提纲</td>
+<td>Taylor 余项、L'Hôpital</td>
+</tr>
+<tr>
+<td>6 RS 积分</td>
+<td>加细、可积准则、连续×单调、性质、分部积分提纲</td>
+<td>有界变差、换元</td>
+</tr>
+<tr>
+<td>7 函数列</td>
+<td>一致收敛保持连续/积分、M 判别、导数交换提纲</td>
+<td>Arzelà–Ascoli、Stone–Weierstrass</td>
+</tr>
+<tr>
+<td>8 特殊函数</td>
+<td>指数律、对数性质、三角恒等式、Gamma 递推</td>
+<td>Fourier 收敛、Parseval</td>
+</tr>
+<tr>
+<td>9 多元</td>
+<td>线性变换连续、可微⇒连续、压缩映射（链接）</td>
+<td>反函数/隐函数/秩定理</td>
+</tr>
+<tr>
+<td>10 微分形式</td>
+<td>d²=0、∂²=0、Stokes 思路</td>
+<td>Poincaré 引理</td>
+</tr>
+<tr>
+<td>11 Lebesgue</td>
+<td>MCT/Fatou/DCT 陈述与关系</td>
+<td>完整测度论证明、Riesz–Fischer</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>这张表是“章节级”索引；具体定理页内的状态标记更细。暂缓不等于错误，只表示本站尚未展开完整证明。</p>
+</blockquote>
+<h2 id="_4">参考<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Propositional_calculus">Propositional calculus</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Equivalence_relation">Equivalence relation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cantor%27s_theorem">Cantor's theorem</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Schr%C3%B6der%E2%80%93Bernstein_theorem">Schröder–Bernstein theorem</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Dedekind_cut">Dedekind cut</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Isomorphism_theorem">Isomorphism theorem</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Rank%E2%80%93nullity_theorem">Rank–nullity theorem</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Compact_space">Compact space</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Extreme_value_theorem">Extreme value theorem</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../../principles/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 学习规则">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                学习规则
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../glossary/" class="md-footer__link md-footer__link--next" aria-label="下一页: 术语表">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                术语表
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      个人学习整理 · 非官方教材 · 定义与证明以所列前置为准
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/table-wrap.js"></script>
+      
+        <script src="../../javascripts/lang-switch.js"></script>
+      
+        <script src="../../javascripts/glossary.js"></script>
+      
+        <script src="../../javascripts/rudin-toc.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

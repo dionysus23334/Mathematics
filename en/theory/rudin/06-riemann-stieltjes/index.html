@@ -1,0 +1,2259 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Mathematics hub — Classical Academic System (Regular + Rudin) and the Educational Stage System.">
+      
+      
+        <meta name="author" content="dionysus23334">
+      
+      
+        <link rel="canonical" href="https://dionysus23334.github.io/Mathematics/en/en/theory/rudin/06-riemann-stieltjes/">
+      
+      
+        <link rel="prev" href="../05-differentiation/">
+      
+      
+        <link rel="next" href="../07-function-sequences/">
+      
+      
+        
+          <link rel="alternate" href="../../../../theory/rudin/06-riemann-stieltjes/" hreflang="zh">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Chapter 6 · Riemann–Stieltjes Integration - Mathematics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/base.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-6-the-riemannstieltjes-integral" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../" title="Mathematics" class="md-header__button md-logo" aria-label="Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mathematics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 6 · Riemann–Stieltjes Integration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../../theory/rudin/06-riemann-stieltjes/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dionysus23334/Mathematics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dionysus23334/Mathematics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../" title="Mathematics" class="md-nav__button md-logo" aria-label="Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Mathematics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dionysus23334/Mathematics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dionysus23334/Mathematics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://dionysus23334.github.io/study-blogs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ← Study archive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classical Academic System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Classical Academic System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regular System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Regular System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logic, Language, and Proof
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sets, Relations, and Mappings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-numbers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Natural Numbers and Number Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-algebra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebraic Structures and Linear Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-spaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spaces, Limits, and Continuity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-branches/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Branches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rudin System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Rudin System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-real-complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1 · Real and Complex Number Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-basic-topology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 · Basic Topology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-sequences-series/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 · Sequences and Series
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-continuity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 · Continuity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-differentiation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 5 · Differentiation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6 · Riemann–Stieltjes Integration
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6 · Riemann–Stieltjes Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r6-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Partitions and Upper and Lower Sums
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1 Partitions and Upper and Lower Sums">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-61-refinement-of-a-partition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 6.1 (Refinement of a Partition)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-62-necessary-and-sufficient-condition-for-integrability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 6.2 (Necessary and Sufficient Condition for Integrability)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r6-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Existence
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2 Existence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-63-continuous-monotone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 6.3 (Continuous × Monotone)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-64-bounded-variation-continuous" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 6.4 (Bounded Variation × Continuous)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r6-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Properties of the Integral
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 Properties of the Integral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-65-integration-by-parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 6.5 (Integration by Parts)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-66-change-of-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 6.6 (Change of Variable)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r6-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Rectifiable Curves
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4 Rectifiable Curves">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-67-rectifiable-bounded-variation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 6.7 (Rectifiable ↔ Bounded Variation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r6-ex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenge
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interface-with-the-regular-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface with the Regular System
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r6-ref" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-function-sequences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7 · Sequences and Series of Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-special-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8 · Some Special Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-multivariable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 9 · Functions of Several Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-differential-forms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 10 · Integration of Differential Forms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-lebesgue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 11 · Lebesgue Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Educational Stage System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Educational Stage System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stages/elementary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elementary Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stages/secondary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secondary Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stages/competition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mathematical Competitions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stages/university/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    University Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Study Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../proofs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proof Status and Core Proofs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../abbreviations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Abbreviations and English Terms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sources and Attribution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r6-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Partitions and Upper and Lower Sums
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1 Partitions and Upper and Lower Sums">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-61-refinement-of-a-partition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 6.1 (Refinement of a Partition)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-62-necessary-and-sufficient-condition-for-integrability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 6.2 (Necessary and Sufficient Condition for Integrability)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r6-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Existence
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2 Existence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-63-continuous-monotone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 6.3 (Continuous × Monotone)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-64-bounded-variation-continuous" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 6.4 (Bounded Variation × Continuous)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r6-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Properties of the Integral
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 Properties of the Integral">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-65-integration-by-parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 6.5 (Integration by Parts)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-66-change-of-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 6.6 (Change of Variable)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r6-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Rectifiable Curves
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4 Rectifiable Curves">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-67-rectifiable-bounded-variation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 6.7 (Rectifiable ↔ Bounded Variation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r6-ex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenge
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interface-with-the-regular-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface with the Regular System
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r6-ref" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-6-the-riemannstieltjes-integral">Chapter 6 · The Riemann–Stieltjes Integral<a class="headerlink" href="#chapter-6-the-riemannstieltjes-integral" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Status</strong>: Expanded. Key steps are supplied for existence proofs; major theorems are explicitly marked.<br />
+<strong>Part of</strong>: Rudin System · Chapter 6 · The Riemann–Stieltjes Integral<br />
+<strong>Source</strong>: Walter Rudin, <em>Principles of Mathematical Analysis</em>, Chapter 6.</p>
+</blockquote>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Sequences, continuity, differentiation;</li>
+<li>Chapter 2: compactness and uniform continuity;</li>
+<li>Spaces, Limits, and Continuity: metric spaces.</li>
+</ul>
+<h2 id="r6-1">6.1 Partitions and Upper and Lower Sums<a class="headerlink" href="#r6-1" title="Permanent link">&para;</a></h2>
+<p>Let <span class="arithmatex">\([a,b]\)</span> be an interval and let <span class="arithmatex">\(f,\alpha:[a,b]\to\mathbb R\)</span> be bounded. A partition is</p>
+<div class="arithmatex">\[
+P=\{a=x_0&lt;x_1&lt;\cdots&lt;x_n=b\}.
+\]</div>
+<p>Let</p>
+<div class="arithmatex">\[
+M_i=\sup_{[x_{i-1},x_i]}f,\qquad m_i=\inf_{[x_{i-1},x_i]}f,
+\]</div>
+<p>and define the upper and lower sums:</p>
+<div class="arithmatex">\[
+U(P,f,\alpha)=\sum_{i=1}^n M_i\Delta\alpha_i,
+\qquad
+L(P,f,\alpha)=\sum_{i=1}^n m_i\Delta\alpha_i,
+\]</div>
+<p>where <span class="arithmatex">\(\Delta\alpha_i=\alpha(x_i)-\alpha(x_{i-1})\)</span> (we first assume that <span class="arithmatex">\(\alpha\)</span> is monotonically increasing, so that these are nonnegative).</p>
+<p>Define</p>
+<div class="arithmatex">\[
+\overline{\int_a^b}f\,d\alpha=\inf_P U(P,f,\alpha),
+\qquad
+\underline{\int_a^b}f\,d\alpha=\sup_P L(P,f,\alpha).
+\]</div>
+<p>If the upper and lower integrals coincide, we say that the Riemann–Stieltjes integral exists and write it as <span class="arithmatex">\(\int_a^b f\,d\alpha\)</span>.</p>
+<h3 id="theorem-61-refinement-of-a-partition">Theorem 6.1 (Refinement of a Partition)<a class="headerlink" href="#theorem-61-refinement-of-a-partition" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(P^*\)</span> is a refinement of <span class="arithmatex">\(P\)</span>, then</p>
+<div class="arithmatex">\[
+L(P,f,\alpha)\le L(P^*,f,\alpha)\le U(P^*,f,\alpha)\le U(P,f,\alpha).
+\]</div>
+<p><strong>Proof idea</strong>: It suffices to consider the insertion of a single division point into one subinterval; the supremum over a smaller interval does not exceed the original supremum, and the infimum behaves in the opposite way. Adding the resulting inequalities term by term yields the claim.</p>
+<h3 id="theorem-62-necessary-and-sufficient-condition-for-integrability">Theorem 6.2 (Necessary and Sufficient Condition for Integrability)<a class="headerlink" href="#theorem-62-necessary-and-sufficient-condition-for-integrability" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(f\)</span> is integrable with respect to <span class="arithmatex">\(\alpha\)</span> <span class="arithmatex">\(\iff\)</span> for every <span class="arithmatex">\(\varepsilon&gt;0\)</span> there exists a partition <span class="arithmatex">\(P\)</span> such that</p>
+<div class="arithmatex">\[
+U(P,f,\alpha)-L(P,f,\alpha)&lt;\varepsilon.
+\]</div>
+<p><strong>Proof outline</strong>:</p>
+<ul>
+<li>If <span class="arithmatex">\(f\)</span> is integrable, choose <span class="arithmatex">\(P_1,P_2\)</span> so that the upper and lower sums are close to the upper and lower integrals, and squeeze by means of a common refinement;</li>
+<li>Conversely, the upper and lower integrals are trapped between two numbers whose difference is less than <span class="arithmatex">\(\varepsilon\)</span>; letting <span class="arithmatex">\(\varepsilon\to0\)</span> shows that they are equal.</li>
+</ul>
+<h2 id="r6-2">6.2 Existence<a class="headerlink" href="#r6-2" title="Permanent link">&para;</a></h2>
+<h3 id="theorem-63-continuous-monotone">Theorem 6.3 (Continuous × Monotone)<a class="headerlink" href="#theorem-63-continuous-monotone" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(f\)</span> is continuous on <span class="arithmatex">\([a,b]\)</span> and <span class="arithmatex">\(\alpha\)</span> is monotonically increasing on <span class="arithmatex">\([a,b]\)</span>, then <span class="arithmatex">\(\int_a^b f\,d\alpha\)</span> exists.</p>
+<p><strong>Proof</strong>: <span class="arithmatex">\(f\)</span> is uniformly continuous on the compact interval. Given <span class="arithmatex">\(\varepsilon&gt;0\)</span>, choose <span class="arithmatex">\(\delta&gt;0\)</span> such that <span class="arithmatex">\(|x-y|&lt;\delta\Rightarrow|f(x)-f(y)|&lt;\varepsilon\)</span>. Take a partition <span class="arithmatex">\(P\)</span> all of whose subintervals have length <span class="arithmatex">\(&lt;\delta\)</span>. Then</p>
+<div class="arithmatex">\[
+M_i-m_i&lt;\varepsilon,
+\]</div>
+<p>so that</p>
+<div class="arithmatex">\[
+U(P,f,\alpha)-L(P,f,\alpha)
+\le \varepsilon\sum_{i=1}^n\Delta\alpha_i
+=\varepsilon(\alpha(b)-\alpha(a)).
+\]</div>
+<p>Integrability follows from Theorem 6.2. This completes the proof.</p>
+<h3 id="theorem-64-bounded-variation-continuous">Theorem 6.4 (Bounded Variation × Continuous)<a class="headerlink" href="#theorem-64-bounded-variation-continuous" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(\alpha\)</span> is of bounded variation on <span class="arithmatex">\([a,b]\)</span> and <span class="arithmatex">\(f\)</span> is continuous, then <span class="arithmatex">\(\int f\,d\alpha\)</span> exists.</p>
+<p><strong>Proof status</strong>: The full proof is deferred. Idea: write <span class="arithmatex">\(\alpha\)</span> as the difference of two monotonically increasing functions, <span class="arithmatex">\(\alpha=\alpha_1-\alpha_2\)</span> (Jordan decomposition), apply Theorem 6.3 to <span class="arithmatex">\(\alpha_1\)</span> and <span class="arithmatex">\(\alpha_2\)</span> separately, and then subtract.</p>
+<h2 id="r6-3">6.3 Properties of the Integral<a class="headerlink" href="#r6-3" title="Permanent link">&para;</a></h2>
+<p>If <span class="arithmatex">\(f,g\)</span> are integrable with respect to <span class="arithmatex">\(\alpha\)</span>, then:</p>
+<p>[
+\int(\lambda f+\mu g)\,d\alpha=\lambda\int f\,d\alpha+\mu\int g\,d\alpha,
+]
+[
+\int f\,d(\lambda\alpha+\mu\beta)=\lambda\int f\,d\alpha+\mu\int f\,d\beta,
+]
+[
+\left|\int f\,d\alpha\right|\le\int|f|\,d\alpha\quad(\alpha\text{ monotonically increasing}).
+]</p>
+<p><strong>Proof</strong>: By the linearity of upper and lower sums together with a squeezing argument; the absolute-value estimate uses <span class="arithmatex">\(-|f|\le f\le|f|\)</span>. This completes the proof.</p>
+<h3 id="theorem-65-integration-by-parts">Theorem 6.5 (Integration by Parts)<a class="headerlink" href="#theorem-65-integration-by-parts" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(f\)</span> is integrable with respect to <span class="arithmatex">\(\alpha\)</span>, then <span class="arithmatex">\(\alpha\)</span> is integrable with respect to <span class="arithmatex">\(f\)</span>, and</p>
+<div class="arithmatex">\[
+\int_a^b f\,d\alpha+\int_a^b \alpha\,df
+=f(b)\alpha(b)-f(a)\alpha(a).
+\]</div>
+<p><strong>Proof outline</strong>: For a partition <span class="arithmatex">\(P\)</span>, consider</p>
+<div class="arithmatex">\[
+\sum f(x_i)(\alpha(x_i)-\alpha(x_{i-1}))
++\sum \alpha(x_{i-1})(f(x_i)-f(x_{i-1}))
+=f(b)\alpha(b)-f(a)\alpha(a),
+\]</div>
+<p>and pass to the limit.</p>
+<h3 id="theorem-66-change-of-variable">Theorem 6.6 (Change of Variable)<a class="headerlink" href="#theorem-66-change-of-variable" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(\varphi:[\alpha,\beta]\to[a,b]\)</span> is continuously differentiable and strictly monotone, and <span class="arithmatex">\(f\)</span> is continuous, then</p>
+<div class="arithmatex">\[
+\int_{\varphi(\alpha)}^{\varphi(\beta)}f(x)\,dx
+=\int_\alpha^\beta f(\varphi(t))\varphi'(t)\,dt.
+\]</div>
+<p><strong>Proof status</strong>: The full proof is deferred; it uses the Lagrange mean value theorem applied to Riemann sums together with uniform continuity.</p>
+<h2 id="r6-4">6.4 Rectifiable Curves<a class="headerlink" href="#r6-4" title="Permanent link">&para;</a></h2>
+<p>The arc length of a curve <span class="arithmatex">\(\gamma:[a,b]\to\mathbb R^n\)</span> is</p>
+<div class="arithmatex">\[
+L(\gamma)=\sup_{P}\sum_{i=1}^n\|\gamma(x_i)-\gamma(x_{i-1})\|.
+\]</div>
+<p>If <span class="arithmatex">\(L(\gamma)&lt;\infty\)</span>, we say that <span class="arithmatex">\(\gamma\)</span> is rectifiable.</p>
+<h3 id="theorem-67-rectifiable-bounded-variation">Theorem 6.7 (Rectifiable ↔ Bounded Variation)<a class="headerlink" href="#theorem-67-rectifiable-bounded-variation" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(\gamma\)</span> is rectifiable <span class="arithmatex">\(\iff\)</span> each coordinate function <span class="arithmatex">\(\gamma_j\)</span> is of bounded variation on <span class="arithmatex">\([a,b]\)</span>.</p>
+<p><strong>Proof outline</strong>: Use the equivalence of norms and the definition of bounded variation, estimating coordinate by coordinate; all norms on a finite-dimensional space are equivalent.</p>
+<h2 id="r6-ex">Exercises<a class="headerlink" href="#r6-ex" title="Permanent link">&para;</a></h2>
+<h3 id="basic">Basic<a class="headerlink" href="#basic" title="Permanent link">&para;</a></h3>
+<ol>
+<li>For <span class="arithmatex">\(f(x)=x\)</span> and <span class="arithmatex">\([a,b]=[0,1]\)</span>, compute <span class="arithmatex">\(\int_0^1 x\,dx\)</span> directly from the definition.</li>
+<li>Prove: if <span class="arithmatex">\(f\)</span> is bounded on <span class="arithmatex">\([a,b]\)</span> and <span class="arithmatex">\(\alpha\)</span> is monotonically increasing, then <span class="arithmatex">\(L(P,f,\alpha)\le U(P,f,\alpha)\)</span>.</li>
+<li>Compute <span class="arithmatex">\(\int_0^1 x\,d(x^2)\)</span> (hint: integration by parts).</li>
+</ol>
+<h3 id="advanced">Advanced<a class="headerlink" href="#advanced" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Prove that a continuous function is integrable with respect to a monotonically increasing function (completing Theorem 6.3).</li>
+<li>Prove the additivity of the integral over intervals: if <span class="arithmatex">\(a&lt;c&lt;b\)</span>, then <span class="arithmatex">\(\int_a^b f\,d\alpha=\int_a^c f\,d\alpha+\int_c^b f\,d\alpha\)</span>.</li>
+<li>Prove: if <span class="arithmatex">\(f\)</span> is continuous and <span class="arithmatex">\(\alpha\)</span> is of bounded variation, then <span class="arithmatex">\(|\int f\,d\alpha|\le\|f\|_\infty V(\alpha)\)</span>.</li>
+</ol>
+<h3 id="challenge">Challenge<a class="headerlink" href="#challenge" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Prove the integration by parts formula (completing the limiting step of Theorem 6.5).</li>
+<li>Prove that the arc length of a <span class="arithmatex">\(C^1\)</span> curve equals <span class="arithmatex">\(\int_a^b\|\gamma'(t)\|\,dt\)</span>.</li>
+</ol>
+<blockquote>
+<p>Hint: For Exercise 8, first apply the MVT to a partition to obtain a lower bound, and then use uniform continuity to obtain an upper bound.</p>
+</blockquote>
+<h2 id="interface-with-the-regular-system">Interface with the Regular System<a class="headerlink" href="#interface-with-the-regular-system" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Chapter 5: <a href="../05-differentiation/">Differentiation</a></li>
+<li>Chapter 7: <a href="../07-function-sequences/">Sequences and Series of Functions</a></li>
+<li>Spaces, Limits, and Continuity: <a href="../../05-spaces/">Spaces, Limits, and Continuity</a></li>
+<li>Proof status: <a href="../../proofs/">Proof Status and Core Proofs</a></li>
+</ul>
+<h2 id="r6-ref">References<a class="headerlink" href="#r6-ref" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Walter Rudin, <em>Principles of Mathematical Analysis</em> (Chinese edition), Chapter 6.</li>
+<li><a href="https://en.wikipedia.org/wiki/Riemann%E2%80%93Stieltjes_integral">Riemann–Stieltjes integral</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bounded_variation">Bounded variation</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../05-differentiation/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Chapter 5 · Differentiation">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Chapter 5 · Differentiation
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../07-function-sequences/" class="md-footer__link md-footer__link--next" aria-label="Next: Chapter 7 · Sequences and Series of Functions">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Chapter 7 · Sequences and Series of Functions
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Personal study notes · Unofficial · Definitions and proofs follow the stated prerequisites.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tracking", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../../javascripts/table-wrap.js"></script>
+      
+        <script src="../../../../javascripts/lang-switch.js"></script>
+      
+        <script src="../../../../javascripts/glossary.js"></script>
+      
+        <script src="../../../../javascripts/rudin-toc.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

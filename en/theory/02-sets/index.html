@@ -1,0 +1,2134 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Mathematics hub — Classical Academic System (Regular + Rudin) and the Educational Stage System.">
+      
+      
+        <meta name="author" content="dionysus23334">
+      
+      
+        <link rel="canonical" href="https://dionysus23334.github.io/Mathematics/en/en/theory/02-sets/">
+      
+      
+        <link rel="prev" href="../01-logic/">
+      
+      
+        <link rel="next" href="../03-numbers/">
+      
+      
+        
+          <link rel="alternate" href="../../../theory/02-sets/" hreflang="zh">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Sets, Relations, and Mappings - Mathematics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/base.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sets-relations-and-mappings" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="Mathematics" class="md-header__button md-logo" aria-label="Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mathematics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sets, Relations, and Mappings
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../theory/02-sets/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dionysus23334/Mathematics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dionysus23334/Mathematics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Mathematics" class="md-nav__button md-logo" aria-label="Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Mathematics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dionysus23334/Mathematics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dionysus23334/Mathematics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://dionysus23334.github.io/study-blogs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ← Study archive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classical Academic System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Classical Academic System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regular System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Regular System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logic, Language, and Proof
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sets, Relations, and Mappings
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sets, Relations, and Mappings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sets-basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Sets and Membership
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-basic-set-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Basic Set Operations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-introduction-to-axiomatic-set-theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Introduction to Axiomatic Set Theory
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-ordered-pairs-and-cartesian-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Ordered Pairs and Cartesian Products
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sets-relations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Binary Relations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sets-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Mappings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-operations-on-mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Operations on Mappings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sets-quotient" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 Families of Sets and Quotient Sets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependency Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-the-axiom-of-choice-and-zorns-lemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.9 The Axiom of Choice and Zorn's Lemma
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#210-the-cantorschroderbernstein-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.10 The Cantor–Schröder–Bernstein Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#211-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.11 References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checkpoints
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-numbers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Natural Numbers and Number Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-algebra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebraic Structures and Linear Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-spaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spaces, Limits, and Continuity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-branches/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Branches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rudin System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Rudin System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/01-real-complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1 · Real and Complex Number Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/02-basic-topology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 · Basic Topology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/03-sequences-series/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 · Sequences and Series
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/04-continuity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 · Continuity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/05-differentiation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 5 · Differentiation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/06-riemann-stieltjes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6 · Riemann–Stieltjes Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/07-function-sequences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7 · Sequences and Series of Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/08-special-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8 · Some Special Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/09-multivariable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 9 · Functions of Several Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/10-differential-forms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 10 · Integration of Differential Forms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/11-lebesgue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 11 · Lebesgue Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Educational Stage System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Educational Stage System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/elementary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elementary Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/secondary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secondary Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/competition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mathematical Competitions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/university/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    University Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Study Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proofs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proof Status and Core Proofs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../abbreviations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Abbreviations and English Terms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sources and Attribution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sets-basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Sets and Membership
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-basic-set-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Basic Set Operations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-introduction-to-axiomatic-set-theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Introduction to Axiomatic Set Theory
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-ordered-pairs-and-cartesian-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Ordered Pairs and Cartesian Products
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sets-relations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Binary Relations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sets-maps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Mappings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-operations-on-mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Operations on Mappings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sets-quotient" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 Families of Sets and Quotient Sets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependency Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-the-axiom-of-choice-and-zorns-lemma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.9 The Axiom of Choice and Zorn's Lemma
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#210-the-cantorschroderbernstein-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.10 The Cantor–Schröder–Bernstein Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#211-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.11 References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checkpoints
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="sets-relations-and-mappings">Sets, Relations, and Mappings<a class="headerlink" href="#sets-relations-and-mappings" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Sources</strong>: standard ZF/ZFC formulation; Wikipedia: Zermelo–Fraenkel set theory, Axiom of choice.</p>
+<p><strong>Prerequisite</strong>: logic (propositions, quantifiers, proofs).<br />
+<strong>Goal of this chapter</strong>: to establish the object language shared by all subsequent branches of mathematics.</p>
+</blockquote>
+<h2 id="sets-basic">2.1 Sets and Membership<a class="headerlink" href="#sets-basic" title="Permanent link">&para;</a></h2>
+<p>A set is a totality of objects; <span class="arithmatex">\(x \in A\)</span> means that <span class="arithmatex">\(x\)</span> is an element of <span class="arithmatex">\(A\)</span>, while <span class="arithmatex">\(x \notin A\)</span> means that it is not.</p>
+<ul>
+<li><strong>Axiom of extensionality</strong>: two sets are equal if and only if they have the same elements.</li>
+<li><strong>Subset</strong>: <span class="arithmatex">\(A \subseteq B\)</span> means <span class="arithmatex">\(\forall x,\ x\in A \to x\in B\)</span>.</li>
+<li><strong>Proper subset</strong>: <span class="arithmatex">\(A \subsetneq B\)</span> means <span class="arithmatex">\(A\subseteq B\)</span> and <span class="arithmatex">\(A\ne B\)</span>.</li>
+</ul>
+<p>The <strong>empty set</strong> <span class="arithmatex">\(\varnothing\)</span> is the unique set with no elements. Note that both <span class="arithmatex">\(\varnothing \in \{\varnothing\}\)</span> and <span class="arithmatex">\(\varnothing \subseteq \{\varnothing\}\)</span> hold, but they mean different things.</p>
+<h2 id="22-basic-set-operations">2.2 Basic Set Operations<a class="headerlink" href="#22-basic-set-operations" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Definition</th>
+<th>Remark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intersection</td>
+<td><span class="arithmatex">\(A\cap B=\{x:x\in A\land x\in B\}\)</span></td>
+<td>the intersection may be empty</td>
+</tr>
+<tr>
+<td>Union</td>
+<td><span class="arithmatex">\(A\cup B=\{x:x\in A\lor x\in B\}\)</span></td>
+<td>"or" includes both</td>
+</tr>
+<tr>
+<td>Difference</td>
+<td><span class="arithmatex">\(A\setminus B=\{x:x\in A\land x\notin B\}\)</span></td>
+<td><span class="arithmatex">\(B\subseteq A\)</span> is not required</td>
+</tr>
+<tr>
+<td>Complement</td>
+<td><span class="arithmatex">\(A^c=\{x\in U:x\notin A\}\)</span></td>
+<td>the universal set <span class="arithmatex">\(U\)</span> must be specified first</td>
+</tr>
+<tr>
+<td>Power set</td>
+<td><span class="arithmatex">\(\mathcal P(A)=\{B:B\subseteq A\}\)</span></td>
+<td>if <span class="arithmatex">\(\lvert A\rvert=n\)</span>, then <span class="arithmatex">\(\lvert\mathcal P(A)\rvert=2^n\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>De Morgan</strong>:</p>
+<div class="arithmatex">\[
+(A\cup B)^c=A^c\cap B^c,\qquad (A\cap B)^c=A^c\cup B^c.
+\]</div>
+<h2 id="23-introduction-to-axiomatic-set-theory">2.3 Introduction to Axiomatic Set Theory<a class="headerlink" href="#23-introduction-to-axiomatic-set-theory" title="Permanent link">&para;</a></h2>
+<p>Using "the set of all sets" without restriction leads to a paradox (Russell's paradox). Axiomatic set theory restricts the construction of sets by means of the <strong>axiom schema of separation</strong>:</p>
+<div class="arithmatex">\[
+\{x\in A:\ P(x)\}
+\]</div>
+<p>One must first have a set <span class="arithmatex">\(A\)</span> and then select from it; one cannot write <span class="arithmatex">\(\{x:\ P(x)\}\)</span> without specifying where <span class="arithmatex">\(x\)</span> comes from.</p>
+<p>The axioms commonly used include: empty set, pairing, union, power set, infinity, replacement, and choice. Here it suffices to know that "sets cannot collect objects arbitrarily"; the full axiomatization is deferred to a later treatment of set theory.</p>
+<h2 id="24-ordered-pairs-and-cartesian-products">2.4 Ordered Pairs and Cartesian Products<a class="headerlink" href="#24-ordered-pairs-and-cartesian-products" title="Permanent link">&para;</a></h2>
+<p>The essential feature of an <strong>ordered pair</strong> <span class="arithmatex">\((a,b)\)</span> is order: <span class="arithmatex">\((a,b)=(c,d)\)</span> if and only if <span class="arithmatex">\(a=c\)</span> and <span class="arithmatex">\(b=d\)</span>.</p>
+<p><strong>Cartesian product</strong>:</p>
+<div class="arithmatex">\[
+A\times B=\{(a,b):a\in A,\ b\in B\}.
+\]</div>
+<p>In general, <span class="arithmatex">\(A_1\times\cdots\times A_n\)</span> denotes the set of <span class="arithmatex">\(n\)</span>-tuples.</p>
+<h2 id="sets-relations">2.5 Binary Relations<a class="headerlink" href="#sets-relations" title="Permanent link">&para;</a></h2>
+<p>A binary relation from <span class="arithmatex">\(A\)</span> to <span class="arithmatex">\(B\)</span> is a subset of <span class="arithmatex">\(A\times B\)</span>. If <span class="arithmatex">\(R\subseteq A\times A\)</span>, we call <span class="arithmatex">\(R\)</span> a relation on <span class="arithmatex">\(A\)</span>.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reflexive</td>
+<td><span class="arithmatex">\(\forall x\in A,\ (x,x)\in R\)</span></td>
+</tr>
+<tr>
+<td>Symmetric</td>
+<td><span class="arithmatex">\((x,y)\in R \to (y,x)\in R\)</span></td>
+</tr>
+<tr>
+<td>Transitive</td>
+<td><span class="arithmatex">\((x,y),(y,z)\in R \to (x,z)\in R\)</span></td>
+</tr>
+<tr>
+<td>Antisymmetric</td>
+<td><span class="arithmatex">\((x,y),(y,x)\in R \to x=y\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>An <strong>equivalence relation</strong> = reflexive + symmetric + transitive. It partitions the set into pairwise disjoint <strong>equivalence classes</strong>:</p>
+<div class="arithmatex">\[
+[x]=\{y\in A:(x,y)\in R\}.
+\]</div>
+<p>A <strong>partition</strong> is a family of pairwise disjoint subsets of <span class="arithmatex">\(A\)</span> whose union is <span class="arithmatex">\(A\)</span>. Equivalence relations and partitions are in one-to-one correspondence.</p>
+<p>An <strong>order relation</strong> usually means a partial order (reflexive, antisymmetric, transitive); a total order additionally requires that any two elements be comparable.</p>
+<h2 id="sets-maps">2.6 Mappings<a class="headerlink" href="#sets-maps" title="Permanent link">&para;</a></h2>
+<p>A mapping <span class="arithmatex">\(f:A\to B\)</span> assigns to each <span class="arithmatex">\(x\in A\)</span> a unique <span class="arithmatex">\(f(x)\in B\)</span>.</p>
+<ul>
+<li><strong>Domain</strong> <span class="arithmatex">\(A\)</span>, <strong>codomain</strong> <span class="arithmatex">\(B\)</span>;</li>
+<li><strong>Image</strong> <span class="arithmatex">\(f(A)=\{f(x):x\in A\}\)</span>;</li>
+<li><strong>Preimage</strong> <span class="arithmatex">\(f^{-1}(S)=\{x\in A:f(x)\in S\}\)</span>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Definition</th>
+<th>Negation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Injective</td>
+<td><span class="arithmatex">\(f(x_1)=f(x_2)\to x_1=x_2\)</span></td>
+<td>there exist <span class="arithmatex">\(x_1\ne x_2\)</span> with <span class="arithmatex">\(f(x_1)=f(x_2)\)</span></td>
+</tr>
+<tr>
+<td>Surjective</td>
+<td><span class="arithmatex">\(\forall y\in B,\ \exists x\in A,\ f(x)=y\)</span></td>
+<td>there exists <span class="arithmatex">\(y\in B\)</span> not in the image</td>
+</tr>
+<tr>
+<td>Bijective</td>
+<td>both injective and surjective</td>
+<td>there is a collision or a missed value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: surjectivity is relative to the <strong>codomain</strong>; changing the codomain changes surjectivity.</p>
+<h2 id="27-operations-on-mappings">2.7 Operations on Mappings<a class="headerlink" href="#27-operations-on-mappings" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Composition</strong>: <span class="arithmatex">\((g\circ f)(x)=g(f(x))\)</span>, which requires the codomain of <span class="arithmatex">\(f\)</span> to be compatible with the domain of <span class="arithmatex">\(g\)</span>.</li>
+<li><strong>Inverse mapping</strong>: if <span class="arithmatex">\(f:A\to B\)</span> is bijective, then there exists <span class="arithmatex">\(f^{-1}:B\to A\)</span> satisfying <span class="arithmatex">\(f^{-1}(f(x))=x\)</span> and <span class="arithmatex">\(f(f^{-1}(y))=y\)</span>.</li>
+<li><strong>Restriction</strong>: restricting the domain of <span class="arithmatex">\(f\)</span> to a subset <span class="arithmatex">\(S\subseteq A\)</span>, written <span class="arithmatex">\(f|_S\)</span>.</li>
+</ul>
+<p>Composition is in general not commutative: <span class="arithmatex">\(f\circ g\ne g\circ f\)</span>, and indeed both sides need not even be defined.</p>
+<h2 id="sets-quotient">2.8 Families of Sets and Quotient Sets<a class="headerlink" href="#sets-quotient" title="Permanent link">&para;</a></h2>
+<p>A <strong>family of sets</strong> <span class="arithmatex">\(\{A_i\}_{i\in I}\)</span> is a family of sets indexed by an index set <span class="arithmatex">\(I\)</span>; one may form the union <span class="arithmatex">\(\bigcup_{i\in I}A_i\)</span> and the intersection <span class="arithmatex">\(\bigcap_{i\in I}A_i\)</span>.</p>
+<p>The <strong>quotient set</strong> <span class="arithmatex">\(A/{\sim}\)</span> is the set whose elements are the equivalence classes:</p>
+<div class="arithmatex">\[
+A/{\sim}=\{[x]:x\in A\}.
+\]</div>
+<p>The quotient set is the formal language for "identifying objects according to an equivalence relation". The integers, the rational numbers, quotient groups, and quotient rings are all constructed by means of it.</p>
+<h2 id="dependency-rules">Dependency Rules<a class="headerlink" href="#dependency-rules" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Equivalence relations must precede quotient sets;</li>
+<li>Mappings must precede isomorphisms;</li>
+<li>Order relations must precede supremum/infimum;</li>
+<li>Power sets and Cartesian products must precede relations and function spaces.</li>
+</ul>
+<h2 id="29-the-axiom-of-choice-and-zorns-lemma">2.9 The Axiom of Choice and Zorn's Lemma<a class="headerlink" href="#29-the-axiom-of-choice-and-zorns-lemma" title="Permanent link">&para;</a></h2>
+<p><strong>Axiom of Choice (AC)</strong>: for any family of sets <span class="arithmatex">\(\{A_i\}_{i\in I}\)</span> consisting of non-empty sets, there exists a choice function <span class="arithmatex">\(f\)</span> such that <span class="arithmatex">\(f(i)\in A_i\)</span> holds for every <span class="arithmatex">\(i\)</span>.</p>
+<p>Equivalent forms:</p>
+<ul>
+<li><strong>Zorn's lemma</strong>: if every chain in a non-empty partially ordered set <span class="arithmatex">\(P\)</span> has an upper bound, then <span class="arithmatex">\(P\)</span> has a maximal element;</li>
+<li><strong>Well-ordering theorem</strong>: every set can be well-ordered;</li>
+<li><strong>Tychonoff's theorem</strong> (topology): the product of arbitrary compact spaces is compact.</li>
+</ul>
+<p>Zorn's lemma is commonly used in existence proofs for "maximal ideals", "Hamel bases", "algebraic closures", and the like. It does not construct the object; it only guarantees that a maximal object exists. The chain of equivalences among AC, Zorn's lemma, and the well-ordering theorem is <strong>deferred for proof</strong> (it requires axiomatic set theory).</p>
+<p><strong>Boundary</strong>: AC differs from "finite choice"; the selection of finitely many non-empty sets does not require AC. The difference between ZF and ZFC lies precisely in whether AC is adjoined.</p>
+<h2 id="210-the-cantorschroderbernstein-theorem">2.10 The Cantor–Schröder–Bernstein Theorem<a class="headerlink" href="#210-the-cantorschroderbernstein-theorem" title="Permanent link">&para;</a></h2>
+<p>If there exist an injection <span class="arithmatex">\(f:A\to B\)</span> and an injection <span class="arithmatex">\(g:B\to A\)</span>, then there exists a bijection <span class="arithmatex">\(h:A\to B\)</span>.</p>
+<p>Consequently, "<span class="arithmatex">\(|A|\le|B|\)</span> and <span class="arithmatex">\(|B|\le|A|\)</span>" implies "<span class="arithmatex">\(|A|=|B|\)</span>". This theorem does not depend on AC; it shows that the comparison of cardinalities can be defined by means of injections.</p>
+<p><strong>Complete proof</strong>: define the bijection piecewise using <span class="arithmatex">\(C_0=A\setminus g(B)\)</span>, <span class="arithmatex">\(C_{n+1}=g(f(C_n))\)</span>, and <span class="arithmatex">\(C=\bigcup C_n\)</span>; see <a href="../proofs/#proof-sb">proofs page §4</a>.</p>
+<p><strong>Cantor's theorem</strong>: there is no surjection from <span class="arithmatex">\(A\)</span> onto <span class="arithmatex">\(\mathcal P(A)\)</span>, hence <span class="arithmatex">\(|A|&lt;|\mathcal P(A)|\)</span>; for the complete proof see <a href="../proofs/#proof-cantor">proofs page §3</a>.</p>
+<h2 id="211-references">2.11 References<a class="headerlink" href="#211-references" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Zermelo%E2%80%93Fraenkel_set_theory">Zermelo–Fraenkel set theory</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Axiom_of_choice">Axiom of choice</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Zorn%27s_lemma">Zorn's lemma</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Schr%C3%B6der%E2%80%93Bernstein_theorem">Schröder–Bernstein theorem</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Equivalence_relation">Equivalence relation</a></li>
+</ul>
+<h2 id="checkpoints">Checkpoints<a class="headerlink" href="#checkpoints" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Be able to prove "equivalence relation ↔ partition".</li>
+<li>Be able to determine whether a mapping is injective/surjective, and to write down the negation.</li>
+<li>Be able to explain why <span class="arithmatex">\(\{x:P(x)\}\)</span> cannot be used unconditionally.</li>
+<li>Be able to explain the difference between a quotient set and "choosing a representative".</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../01-logic/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Logic, Language, and Proof">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Logic, Language, and Proof
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../03-numbers/" class="md-footer__link md-footer__link--next" aria-label="Next: Natural Numbers and Number Systems">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Natural Numbers and Number Systems
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Personal study notes · Unofficial · Definitions and proofs follow the stated prerequisites.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tracking", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../javascripts/table-wrap.js"></script>
+      
+        <script src="../../../javascripts/lang-switch.js"></script>
+      
+        <script src="../../../javascripts/glossary.js"></script>
+      
+        <script src="../../../javascripts/rudin-toc.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

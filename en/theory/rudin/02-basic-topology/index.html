@@ -1,0 +1,2279 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Mathematics hub — Classical Academic System (Regular + Rudin) and the Educational Stage System.">
+      
+      
+        <meta name="author" content="dionysus23334">
+      
+      
+        <link rel="canonical" href="https://dionysus23334.github.io/Mathematics/en/en/theory/rudin/02-basic-topology/">
+      
+      
+        <link rel="prev" href="../01-real-complex/">
+      
+      
+        <link rel="next" href="../03-sequences-series/">
+      
+      
+        
+          <link rel="alternate" href="../../../../theory/rudin/02-basic-topology/" hreflang="zh">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Chapter 2 · Basic Topology - Mathematics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/base.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-2-basic-topology" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../" title="Mathematics" class="md-header__button md-logo" aria-label="Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mathematics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 2 · Basic Topology
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../../theory/rudin/02-basic-topology/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dionysus23334/Mathematics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dionysus23334/Mathematics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../" title="Mathematics" class="md-nav__button md-logo" aria-label="Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Mathematics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dionysus23334/Mathematics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dionysus23334/Mathematics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://dionysus23334.github.io/study-blogs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ← Study archive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classical Academic System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Classical Academic System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regular System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Regular System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logic, Language, and Proof
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sets, Relations, and Mappings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-numbers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Natural Numbers and Number Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-algebra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebraic Structures and Linear Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-spaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spaces, Limits, and Continuity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-branches/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Branches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rudin System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Rudin System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-real-complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1 · Real and Complex Number Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 · Basic Topology
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 · Basic Topology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r2-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Metric Spaces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Metric Spaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-21-every-open-ball-is-open" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 2.1 (Every Open Ball Is Open)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-22-closed-sets-open-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 2.2 (Closed Sets ↔ Open Sets)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-23-characterisation-of-the-closure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 2.3 (Characterisation of the Closure)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Compactness
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Compactness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-24-compact-sets-are-closed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 2.4 (Compact Sets Are Closed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-25-compact-sets-are-bounded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 2.5 (Compact Sets Are Bounded)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-26-closed-subsets-of-compact-sets-are-compact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 2.6 (Closed Subsets of Compact Sets Are Compact)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-27-heineborel-rn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 2.7 (Heine–Borel, R^n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r2-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Connectedness
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Connectedness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-28-connected-subsets-of-r-are-intervals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 2.8 (Connected Subsets of R Are Intervals)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-29-continuous-images-of-connected-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 2.9 (Continuous Images of Connected Sets)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r2-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 The Cantor Set
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r2-ex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenge
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interface-with-the-regular-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface with the Regular System
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r2-ref" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-sequences-series/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 · Sequences and Series
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-continuity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 · Continuity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-differentiation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 5 · Differentiation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-riemann-stieltjes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6 · Riemann–Stieltjes Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-function-sequences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7 · Sequences and Series of Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-special-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8 · Some Special Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-multivariable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 9 · Functions of Several Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-differential-forms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 10 · Integration of Differential Forms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-lebesgue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 11 · Lebesgue Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Educational Stage System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Educational Stage System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stages/elementary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elementary Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stages/secondary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secondary Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stages/competition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mathematical Competitions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stages/university/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    University Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Study Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../proofs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proof Status and Core Proofs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../abbreviations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Abbreviations and English Terms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sources and Attribution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r2-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Metric Spaces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Metric Spaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-21-every-open-ball-is-open" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 2.1 (Every Open Ball Is Open)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-22-closed-sets-open-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 2.2 (Closed Sets ↔ Open Sets)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-23-characterisation-of-the-closure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 2.3 (Characterisation of the Closure)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r2-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Compactness
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Compactness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-24-compact-sets-are-closed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 2.4 (Compact Sets Are Closed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-25-compact-sets-are-bounded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 2.5 (Compact Sets Are Bounded)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-26-closed-subsets-of-compact-sets-are-compact" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 2.6 (Closed Subsets of Compact Sets Are Compact)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-27-heineborel-rn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 2.7 (Heine–Borel, R^n)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r2-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Connectedness
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Connectedness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-28-connected-subsets-of-r-are-intervals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 2.8 (Connected Subsets of R Are Intervals)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-29-continuous-images-of-connected-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 2.9 (Continuous Images of Connected Sets)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r2-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 The Cantor Set
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r2-ex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenge
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interface-with-the-regular-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interface with the Regular System
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r2-ref" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-2-basic-topology">Chapter 2 · Basic Topology<a class="headerlink" href="#chapter-2-basic-topology" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Status</strong>: Expanded. Theorems carrying a "deferred proof" are explicitly labelled; an outline is not treated as a complete proof.<br />
+<strong>Belongs to</strong>: Rudin System · Chapter 2 · Basic Topology<br />
+<strong>Source</strong>: Walter Rudin, <em>Principles of Mathematical Analysis</em>, Chapter 2; Munkres, <em>Topology</em> (the topology part).</p>
+</blockquote>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Regular System: logic, sets, number systems, algebra;</li>
+<li>Spaces, Limits, and Continuity: metric spaces, convergence, and the basic language of continuity.</li>
+</ul>
+<h2 id="r2-1">2.1 Metric Spaces<a class="headerlink" href="#r2-1" title="Permanent link">&para;</a></h2>
+<p>A <strong>metric space</strong> is a set <span class="arithmatex">\(X\)</span> equipped with a function <span class="arithmatex">\(d:X\times X\to[0,\infty)\)</span> satisfying</p>
+<div class="arithmatex">\[
+d(x,y)=0\iff x=y,\qquad d(x,y)=d(y,x),\qquad d(x,z)\le d(x,y)+d(y,z).
+\]</div>
+<p><strong>Open ball</strong>:</p>
+<div class="arithmatex">\[
+B(x,r)=\{y\in X:d(x,y)&lt;r\}.
+\]</div>
+<p><strong>Open set</strong>: <span class="arithmatex">\(U\subseteq X\)</span> is open if for every <span class="arithmatex">\(x\in U\)</span> there exists <span class="arithmatex">\(r&gt;0\)</span> such that <span class="arithmatex">\(B(x,r)\subseteq U\)</span>.<br />
+<strong>Closed set</strong>: the complement is open.</p>
+<h3 id="theorem-21-every-open-ball-is-open">Theorem 2.1 (Every Open Ball Is Open)<a class="headerlink" href="#theorem-21-every-open-ball-is-open" title="Permanent link">&para;</a></h3>
+<p>Every open ball <span class="arithmatex">\(B(x,r)\)</span> is an open set.</p>
+<p><strong>Proof</strong>: Let <span class="arithmatex">\(y\in B(x,r)\)</span> and set <span class="arithmatex">\(s=r-d(x,y)&gt;0\)</span>. For any <span class="arithmatex">\(z\in B(y,s)\)</span>,</p>
+<div class="arithmatex">\[
+d(x,z)\le d(x,y)+d(y,z)&lt;d(x,y)+s=r,
+\]</div>
+<p>hence <span class="arithmatex">\(B(y,s)\subseteq B(x,r)\)</span>. This completes the proof.</p>
+<h3 id="theorem-22-closed-sets-open-sets">Theorem 2.2 (Closed Sets ↔ Open Sets)<a class="headerlink" href="#theorem-22-closed-sets-open-sets" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(F\subseteq X\)</span> is closed <span class="arithmatex">\(\iff F^c\)</span> is open.</p>
+<p><strong>Proof</strong>: By definition, <span class="arithmatex">\(F\)</span> is closed precisely when <span class="arithmatex">\(F^c\)</span> is open; the converse holds likewise. This completes the proof.</p>
+<h3 id="theorem-23-characterisation-of-the-closure">Theorem 2.3 (Characterisation of the Closure)<a class="headerlink" href="#theorem-23-characterisation-of-the-closure" title="Permanent link">&para;</a></h3>
+<p>Let <span class="arithmatex">\(E\subseteq X\)</span>. Then</p>
+<div class="arithmatex">\[
+\overline E=E\cup E',
+\]</div>
+<p>where <span class="arithmatex">\(E'\)</span> is the set of limit points of <span class="arithmatex">\(E\)</span>. Moreover, <span class="arithmatex">\(x\in\overline E\)</span> if and only if every <span class="arithmatex">\(B(x,r)\)</span> meets <span class="arithmatex">\(E\)</span>.</p>
+<p><strong>Proof outline</strong>: If <span class="arithmatex">\(x\in\overline E\)</span> and some <span class="arithmatex">\(B(x,r)\cap E=\varnothing\)</span>, then <span class="arithmatex">\(E\subseteq B(x,r)^c\)</span>, and <span class="arithmatex">\(B(x,r)^c\)</span> is closed, so <span class="arithmatex">\(\overline E\subseteq B(x,r)^c\)</span>, a contradiction. Conversely, if every ball meets <span class="arithmatex">\(E\)</span>, then <span class="arithmatex">\(x\)</span> belongs to every closed set containing <span class="arithmatex">\(E\)</span>, hence <span class="arithmatex">\(x\in\overline E\)</span>. The details are supplied from the definition of a closed set.</p>
+<h2 id="r2-2">2.2 Compactness<a class="headerlink" href="#r2-2" title="Permanent link">&para;</a></h2>
+<p><strong>Open cover</strong>: <span class="arithmatex">\(\{U_i\}\)</span> is an open cover of <span class="arithmatex">\(K\)</span> if <span class="arithmatex">\(K\subseteq\bigcup_i U_i\)</span>.<br />
+<strong>Compact</strong>: every open cover has a finite subcover.</p>
+<h3 id="theorem-24-compact-sets-are-closed">Theorem 2.4 (Compact Sets Are Closed)<a class="headerlink" href="#theorem-24-compact-sets-are-closed" title="Permanent link">&para;</a></h3>
+<p>A compact set <span class="arithmatex">\(K\)</span> in a metric space is closed.</p>
+<p><strong>Proof</strong>: Take <span class="arithmatex">\(p\notin K\)</span>. For each <span class="arithmatex">\(q\in K\)</span>, set <span class="arithmatex">\(r_q=d(p,q)/2&gt;0\)</span>. The balls <span class="arithmatex">\(B(q,r_q)\)</span> cover <span class="arithmatex">\(K\)</span>; by compactness there exist finitely many <span class="arithmatex">\(q_1,\dots,q_m\)</span> such that</p>
+<div class="arithmatex">\[
+K\subseteq\bigcup_{j=1}^m B(q_j,r_{q_j}).
+\]</div>
+<p>Let</p>
+<div class="arithmatex">\[
+\rho=\min_{1\le j\le m} d(p,q_j)&gt;0.
+\]</div>
+<p>Then <span class="arithmatex">\(B(p,\rho/2)\)</span> is disjoint from every <span class="arithmatex">\(B(q_j,r_{q_j})\)</span>, hence disjoint from <span class="arithmatex">\(K\)</span>. Therefore <span class="arithmatex">\(p\)</span> is not in the closure, and <span class="arithmatex">\(K\)</span> is closed. This completes the proof.</p>
+<h3 id="theorem-25-compact-sets-are-bounded">Theorem 2.5 (Compact Sets Are Bounded)<a class="headerlink" href="#theorem-25-compact-sets-are-bounded" title="Permanent link">&para;</a></h3>
+<p>A compact set <span class="arithmatex">\(K\)</span> is bounded: there exist <span class="arithmatex">\(p\in X\)</span> and <span class="arithmatex">\(R&gt;0\)</span> such that <span class="arithmatex">\(K\subseteq B(p,R)\)</span>.</p>
+<p><strong>Proof</strong>: Choose any <span class="arithmatex">\(p\in X\)</span>. The family of balls <span class="arithmatex">\(\{B(p,n):n\in\mathbb N\}\)</span> covers <span class="arithmatex">\(K\)</span>; compactness yields a finite subcover, and we take <span class="arithmatex">\(R\)</span> to be the largest radius. This completes the proof.</p>
+<h3 id="theorem-26-closed-subsets-of-compact-sets-are-compact">Theorem 2.6 (Closed Subsets of Compact Sets Are Compact)<a class="headerlink" href="#theorem-26-closed-subsets-of-compact-sets-are-compact" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(K\)</span> is compact and <span class="arithmatex">\(F\subseteq K\)</span> is closed (in <span class="arithmatex">\(X\)</span>), then <span class="arithmatex">\(F\)</span> is compact.</p>
+<p><strong>Proof</strong>: Take an open cover <span class="arithmatex">\(\{U_i\}\)</span> of <span class="arithmatex">\(F\)</span>. Adjoining <span class="arithmatex">\(F^c\)</span> yields an open cover of <span class="arithmatex">\(K\)</span>; since <span class="arithmatex">\(K\)</span> is compact, we extract a finite subcover. Removing <span class="arithmatex">\(F^c\)</span>, the remaining sets <span class="arithmatex">\(U_i\)</span> cover <span class="arithmatex">\(F\)</span>. This completes the proof.</p>
+<h3 id="theorem-27-heineborel-rn">Theorem 2.7 (Heine–Borel, R^n)<a class="headerlink" href="#theorem-27-heineborel-rn" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(K\subseteq\mathbb R^n\)</span> is compact <span class="arithmatex">\(\iff K\)</span> is bounded and closed.</p>
+<p><strong>Proof status</strong>: the full proof is deferred; it requires the completeness of <span class="arithmatex">\(\mathbb R^n\)</span>, the Bolzano–Weierstrass theorem, and a finite-subcover argument. The idea of the proof is "bounded closed set <span class="arithmatex">\(\Rightarrow\)</span> sequentially compact <span class="arithmatex">\(\Rightarrow\)</span> compact", where sequential compactness is obtained by coordinate bisection.</p>
+<h2 id="r2-3">2.3 Connectedness<a class="headerlink" href="#r2-3" title="Permanent link">&para;</a></h2>
+<p><strong>Separation</strong>: <span class="arithmatex">\(X=A\cup B\)</span>, with <span class="arithmatex">\(A,B\)</span> non-empty, disjoint, and both open (equivalently, both closed).<br />
+<strong>Connected</strong>: no such separation exists.</p>
+<h3 id="theorem-28-connected-subsets-of-r-are-intervals">Theorem 2.8 (Connected Subsets of R Are Intervals)<a class="headerlink" href="#theorem-28-connected-subsets-of-r-are-intervals" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(E\subseteq\mathbb R\)</span> is connected <span class="arithmatex">\(\iff E\)</span> is an interval.</p>
+<p><strong>Proof</strong>: If <span class="arithmatex">\(E\)</span> is not an interval, there exist <span class="arithmatex">\(a&lt;b&lt;c\)</span> with <span class="arithmatex">\(a,c\in E\)</span> and <span class="arithmatex">\(b\notin E\)</span>. Then</p>
+<div class="arithmatex">\[
+E=(E\cap(-\infty,b))\cup(E\cap(b,\infty))
+\]</div>
+<p>is a union of non-empty disjoint open sets (in the relative topology), hence disconnected.</p>
+<p>Conversely, suppose <span class="arithmatex">\(E\)</span> is an interval and <span class="arithmatex">\(E=A\cup B\)</span> is a separation. Take <span class="arithmatex">\(a\in A,b\in B\)</span>, and assume without loss of generality that <span class="arithmatex">\(a&lt;b\)</span>. Let</p>
+<div class="arithmatex">\[
+c=\sup(A\cap[a,b]).
+\]</div>
+<p>Since <span class="arithmatex">\(A\)</span> is relatively closed, <span class="arithmatex">\(c\in A\)</span>; since <span class="arithmatex">\(B\)</span> is relatively open, for <span class="arithmatex">\(c&lt;b\)</span> we have <span class="arithmatex">\(c+\varepsilon\in B\)</span> for all sufficiently small <span class="arithmatex">\(\varepsilon\)</span>, which makes <span class="arithmatex">\(A\cap[a,b]\)</span> admit a larger upper bound, a contradiction; if <span class="arithmatex">\(c=b\)</span>, then <span class="arithmatex">\(b\in A\cap B\)</span>, again a contradiction. Therefore <span class="arithmatex">\(E\)</span> is connected. This completes the proof.</p>
+<h3 id="theorem-29-continuous-images-of-connected-sets">Theorem 2.9 (Continuous Images of Connected Sets)<a class="headerlink" href="#theorem-29-continuous-images-of-connected-sets" title="Permanent link">&para;</a></h3>
+<p>A continuous mapping sends connected sets to connected sets.</p>
+<p><strong>Proof</strong>: If <span class="arithmatex">\(f(E)=A\cup B\)</span> is a separation, then <span class="arithmatex">\(E=f^{-1}(A)\cup f^{-1}(B)\)</span> is a separation (the preimage of an open set under a continuous mapping is open), a contradiction. This completes the proof.</p>
+<h2 id="r2-4">2.4 The Cantor Set<a class="headerlink" href="#r2-4" title="Permanent link">&para;</a></h2>
+<p>Begin with <span class="arithmatex">\([0,1]\)</span> and delete the middle third at each step:</p>
+<div class="arithmatex">\[
+C_0=[0,1],\quad C_1=[0,\tfrac13]\cup[\tfrac23,1],\quad C_{n+1}\subset C_n,
+\]</div>
+<p>and let</p>
+<div class="arithmatex">\[
+C=\bigcap_{n=0}^\infty C_n.
+\]</div>
+<p><strong>Properties</strong>:</p>
+<ol>
+<li><span class="arithmatex">\(C\)</span> is compact and non-empty;</li>
+<li><span class="arithmatex">\(C\)</span> is perfect (it has no isolated points);</li>
+<li><span class="arithmatex">\(C\)</span> is nowhere dense;</li>
+<li><span class="arithmatex">\(C\)</span> is uncountable.</li>
+</ol>
+<p><strong>Idea of the uncountability proof</strong>: the points whose ternary expansion uses only the digits <span class="arithmatex">\(0,1,2\)</span> but never <span class="arithmatex">\(1\)</span> belong to <span class="arithmatex">\(C\)</span>; encoding a <span class="arithmatex">\(0/2\)</span> sequence as a binary sequence yields <span class="arithmatex">\(2^{\aleph_0}\)</span> points. Distinct binary sequences give distinct points (apart from countably many points of ternary ambiguity), so <span class="arithmatex">\(C\)</span> is uncountable.</p>
+<h2 id="r2-ex">Exercises<a class="headerlink" href="#r2-ex" title="Permanent link">&para;</a></h2>
+<h3 id="basic">Basic<a class="headerlink" href="#basic" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Prove that the union of finitely many compact sets is compact, and that the intersection of arbitrarily many closed sets is closed.</li>
+<li>In a discrete metric space, which sets are compact? Which sets are connected?</li>
+<li>Prove that <span class="arithmatex">\(\mathbb Q\cap[0,1]\)</span> is not compact (construct an open cover with no finite subcover).</li>
+</ol>
+<h3 id="advanced">Advanced<a class="headerlink" href="#advanced" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Prove that every infinite subset of a compact metric space has a limit point.</li>
+<li>Prove that the continuous image of a connected set is connected; give an example of a connected set whose image under a continuous mapping is not closed.</li>
+<li>Prove that the Cantor set has no isolated points and is nowhere dense.</li>
+</ol>
+<h3 id="challenge">Challenge<a class="headerlink" href="#challenge" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Prove that the Cantor set is uncountable, and explain its cardinality relation to <span class="arithmatex">\(2^{\mathbb N}\)</span>.</li>
+<li>Prove that in a metric space, "compact <span class="arithmatex">\(\iff\)</span> sequentially compact <span class="arithmatex">\(\iff\)</span> complete and totally bounded". (This may be completed after the BW theorem in Chapter 3.)</li>
+</ol>
+<blockquote>
+<p>Hint: for Exercise 8, first prove "compact <span class="arithmatex">\(\Rightarrow\)</span> sequentially compact" by contradiction using open covers; then prove "sequentially compact <span class="arithmatex">\(\Rightarrow\)</span> complete and totally bounded"; finally, use total boundedness together with completeness to construct a finite subcover.</p>
+</blockquote>
+<h2 id="interface-with-the-regular-system">Interface with the Regular System<a class="headerlink" href="#interface-with-the-regular-system" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Spaces, Limits, and Continuity: <a href="../../05-spaces/">Spaces, Limits, and Continuity</a></li>
+<li>Chapter 3: <a href="../03-sequences-series/">Sequences and Series</a></li>
+<li>Proof status: <a href="../../proofs/">Proof Status and Core Proofs</a></li>
+</ul>
+<h2 id="r2-ref">References<a class="headerlink" href="#r2-ref" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Walter Rudin, <em>Principles of Mathematical Analysis</em> (Chinese edition), Chapter 2.</li>
+<li><a href="https://en.wikipedia.org/wiki/Metric_space">Metric space</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Compact_space">Compact space</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cantor_set">Cantor set</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../01-real-complex/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Chapter 1 · Real and Complex Number Systems">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Chapter 1 · Real and Complex Number Systems
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../03-sequences-series/" class="md-footer__link md-footer__link--next" aria-label="Next: Chapter 3 · Sequences and Series">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Chapter 3 · Sequences and Series
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Personal study notes · Unofficial · Definitions and proofs follow the stated prerequisites.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tracking", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../../javascripts/table-wrap.js"></script>
+      
+        <script src="../../../../javascripts/lang-switch.js"></script>
+      
+        <script src="../../../../javascripts/glossary.js"></script>
+      
+        <script src="../../../../javascripts/rudin-toc.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

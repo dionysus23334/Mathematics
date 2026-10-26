@@ -1,0 +1,2346 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Mathematics hub — Classical Academic System (Regular + Rudin) and the Educational Stage System.">
+      
+      
+        <meta name="author" content="dionysus23334">
+      
+      
+        <link rel="canonical" href="https://dionysus23334.github.io/Mathematics/en/en/theory/rudin/03-sequences-series/">
+      
+      
+        <link rel="prev" href="../02-basic-topology/">
+      
+      
+        <link rel="next" href="../04-continuity/">
+      
+      
+        
+          <link rel="alternate" href="../../../../theory/rudin/03-sequences-series/" hreflang="zh">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Chapter 3 · Sequences and Series - Mathematics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/base.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-3-sequences-and-series" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../" title="Mathematics" class="md-header__button md-logo" aria-label="Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mathematics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 3 · Sequences and Series
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../../theory/rudin/03-sequences-series/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dionysus23334/Mathematics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dionysus23334/Mathematics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../" title="Mathematics" class="md-nav__button md-logo" aria-label="Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Mathematics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dionysus23334/Mathematics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dionysus23334/Mathematics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://dionysus23334.github.io/study-blogs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ← Study archive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classical Academic System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Classical Academic System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regular System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Regular System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logic, Language, and Proof
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sets, Relations, and Mappings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-numbers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Natural Numbers and Number Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-algebra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebraic Structures and Linear Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-spaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spaces, Limits, and Continuity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06-branches/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Branches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rudin System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Rudin System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-real-complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1 · Real and Complex Number Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-basic-topology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 · Basic Topology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 · Sequences and Series
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 · Sequences and Series
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r3-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Convergence and Basic Properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Convergence and Basic Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-31-uniqueness-of-the-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 3.1 (Uniqueness of the Limit)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-32-convergent-bounded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 3.2 (Convergent ⇒ Bounded)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-33-monotone-and-bounded-convergent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 3.3 (Monotone and Bounded ⇒ Convergent)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r3-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Subsequences, Cauchy Sequences, and Completeness
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Subsequences, Cauchy Sequences, and Completeness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-34-convergent-subsequences-converge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 3.4 (Convergent ⇒ Subsequences Converge)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-35-cauchy-criterion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 3.5 (Cauchy Criterion)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-36-bolzanoweierstrass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 3.6 (Bolzano–Weierstrass)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r3-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Limit Superior and Limit Inferior
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Limit Superior and Limit Inferior">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-37-convergence-equality-of-limit-superior-and-limit-inferior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 3.7 (Convergence ↔ Equality of Limit Superior and Limit Inferior)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r3-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Series
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 Series">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-38-necessary-condition-for-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 3.8 (Necessary Condition for Convergence)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-39-absolute-convergence-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 3.9 (Absolute Convergence ⇒ Convergence)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-310-ratio-and-root-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 3.10 (Ratio and Root Tests)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-311-power-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 3.11 (Power Series)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r3-ex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intermediate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intermediate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenge
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interfaces-with-the-regular-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interfaces with the Regular System
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r3-ref" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-continuity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 · Continuity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-differentiation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 5 · Differentiation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-riemann-stieltjes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6 · Riemann–Stieltjes Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-function-sequences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7 · Sequences and Series of Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-special-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8 · Some Special Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-multivariable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 9 · Functions of Several Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-differential-forms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 10 · Integration of Differential Forms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-lebesgue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 11 · Lebesgue Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Educational Stage System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Educational Stage System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stages/elementary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elementary Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stages/secondary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secondary Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stages/competition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mathematical Competitions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../stages/university/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    University Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Study Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../proofs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proof Status and Core Proofs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../abbreviations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Abbreviations and English Terms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sources and Attribution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r3-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Convergence and Basic Properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Convergence and Basic Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-31-uniqueness-of-the-limit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 3.1 (Uniqueness of the Limit)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-32-convergent-bounded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 3.2 (Convergent ⇒ Bounded)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-33-monotone-and-bounded-convergent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 3.3 (Monotone and Bounded ⇒ Convergent)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r3-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Subsequences, Cauchy Sequences, and Completeness
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Subsequences, Cauchy Sequences, and Completeness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-34-convergent-subsequences-converge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 3.4 (Convergent ⇒ Subsequences Converge)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-35-cauchy-criterion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 3.5 (Cauchy Criterion)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-36-bolzanoweierstrass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 3.6 (Bolzano–Weierstrass)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r3-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Limit Superior and Limit Inferior
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Limit Superior and Limit Inferior">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-37-convergence-equality-of-limit-superior-and-limit-inferior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 3.7 (Convergence ↔ Equality of Limit Superior and Limit Inferior)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r3-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Series
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 Series">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#theorem-38-necessary-condition-for-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 3.8 (Necessary Condition for Convergence)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-39-absolute-convergence-convergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 3.9 (Absolute Convergence ⇒ Convergence)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-310-ratio-and-root-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 3.10 (Ratio and Root Tests)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#theorem-311-power-series" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theorem 3.11 (Power Series)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r3-ex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#intermediate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intermediate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenge
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interfaces-with-the-regular-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interfaces with the Regular System
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r3-ref" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-3-sequences-and-series">Chapter 3 · Sequences and Series<a class="headerlink" href="#chapter-3-sequences-and-series" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Status</strong>: Expanded. Core theorems are either proved or explicitly marked "deferred"; an outline is not treated as a complete proof.<br />
+<strong>Part of</strong>: Rudin System · Chapter 3 · Sequences and Series<br />
+<strong>Source</strong>: Walter Rudin, <em>Principles of Mathematical Analysis</em>, Chapter 3.</p>
+</blockquote>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Logic, sets, number systems;</li>
+<li>Chapter 2: metric spaces, compactness;</li>
+<li>Spaces, Limits, and Continuity: the preliminary language of convergence of sequences.</li>
+</ul>
+<h2 id="r3-1">3.1 Convergence and Basic Properties<a class="headerlink" href="#r3-1" title="Permanent link">&para;</a></h2>
+<p>A sequence <span class="arithmatex">\(\{a_n\}\subseteq\mathbb R\)</span> converges to <span class="arithmatex">\(a\)</span> if</p>
+<div class="arithmatex">\[
+\forall\varepsilon&gt;0,\ \exists N,\ \forall n&gt;N:\ |a_n-a|&lt;\varepsilon.
+\]</div>
+<h3 id="theorem-31-uniqueness-of-the-limit">Theorem 3.1 (Uniqueness of the Limit)<a class="headerlink" href="#theorem-31-uniqueness-of-the-limit" title="Permanent link">&para;</a></h3>
+<p>A convergent sequence has a unique limit.</p>
+<p><strong>Proof</strong>: Suppose <span class="arithmatex">\(a_n\to a\)</span> and <span class="arithmatex">\(a_n\to b\)</span>, and take <span class="arithmatex">\(\varepsilon=|a-b|/2\)</span> (if <span class="arithmatex">\(a\ne b\)</span>). There exists <span class="arithmatex">\(N\)</span> such that for <span class="arithmatex">\(n&gt;N\)</span> we have <span class="arithmatex">\(|a_n-a|&lt;\varepsilon\)</span> and <span class="arithmatex">\(|a_n-b|&lt;\varepsilon\)</span>. Then</p>
+<div class="arithmatex">\[
+|a-b|\le|a-a_n|+|a_n-b|&lt;2\varepsilon=|a-b|,
+\]</div>
+<p>a contradiction. Hence <span class="arithmatex">\(a=b\)</span>. Q.E.D.</p>
+<h3 id="theorem-32-convergent-bounded">Theorem 3.2 (Convergent ⇒ Bounded)<a class="headerlink" href="#theorem-32-convergent-bounded" title="Permanent link">&para;</a></h3>
+<p>A convergent sequence is bounded.</p>
+<p><strong>Proof</strong>: Take <span class="arithmatex">\(\varepsilon=1\)</span>; there exists <span class="arithmatex">\(N\)</span> such that <span class="arithmatex">\(|a_n-a|&lt;1\)</span> for <span class="arithmatex">\(n&gt;N\)</span>. Put</p>
+<div class="arithmatex">\[
+M=\max\{|a_1|,\dots,|a_N|,|a|+1\},
+\]</div>
+<p>then <span class="arithmatex">\(|a_n|\le M\)</span> for every term. Q.E.D.</p>
+<h3 id="theorem-33-monotone-and-bounded-convergent">Theorem 3.3 (Monotone and Bounded ⇒ Convergent)<a class="headerlink" href="#theorem-33-monotone-and-bounded-convergent" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(\{a_n\}\)</span> is monotonically increasing and bounded above, then <span class="arithmatex">\(a_n\to\sup\{a_n\}\)</span>.</p>
+<p><strong>Proof</strong>: Let <span class="arithmatex">\(L=\sup\{a_n\}\)</span>. For any <span class="arithmatex">\(\varepsilon&gt;0\)</span>, <span class="arithmatex">\(L-\varepsilon\)</span> is not an upper bound, so there exists <span class="arithmatex">\(N\)</span> with <span class="arithmatex">\(a_N&gt;L-\varepsilon\)</span>. By monotonicity, for <span class="arithmatex">\(n&gt;N\)</span>,</p>
+<div class="arithmatex">\[
+L-\varepsilon&lt;a_N\le a_n\le L,
+\]</div>
+<p>hence <span class="arithmatex">\(|a_n-L|&lt;\varepsilon\)</span>. Q.E.D.</p>
+<h2 id="r3-2">3.2 Subsequences, Cauchy Sequences, and Completeness<a class="headerlink" href="#r3-2" title="Permanent link">&para;</a></h2>
+<p><strong>Subsequence</strong>: <span class="arithmatex">\(\{a_{n_k}\}\)</span>, where <span class="arithmatex">\(n_1&lt;n_2&lt;\cdots\)</span>.</p>
+<h3 id="theorem-34-convergent-subsequences-converge">Theorem 3.4 (Convergent ⇒ Subsequences Converge)<a class="headerlink" href="#theorem-34-convergent-subsequences-converge" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(a_n\to a\)</span>, then every subsequence also converges to <span class="arithmatex">\(a\)</span>.</p>
+<p><strong>Proof</strong>: Given <span class="arithmatex">\(\varepsilon&gt;0\)</span>, take the <span class="arithmatex">\(N\)</span> of the original sequence; since <span class="arithmatex">\(n_k\ge k\)</span>, for <span class="arithmatex">\(k&gt;N\)</span> we have <span class="arithmatex">\(n_k&gt;N\)</span>, hence <span class="arithmatex">\(|a_{n_k}-a|&lt;\varepsilon\)</span>. Q.E.D.</p>
+<p><strong>Cauchy sequence</strong>:</p>
+<div class="arithmatex">\[
+\forall\varepsilon&gt;0,\ \exists N,\ \forall m,n&gt;N:\ |a_m-a_n|&lt;\varepsilon.
+\]</div>
+<h3 id="theorem-35-cauchy-criterion">Theorem 3.5 (Cauchy Criterion)<a class="headerlink" href="#theorem-35-cauchy-criterion" title="Permanent link">&para;</a></h3>
+<p>A sequence in <span class="arithmatex">\(\mathbb R\)</span> converges <span class="arithmatex">\(\iff\)</span> it is a Cauchy sequence.</p>
+<p><strong>Proof outline</strong>:</p>
+<ul>
+<li>Convergent ⇒ Cauchy: use the triangle inequality;</li>
+<li>Cauchy ⇒ bounded: take <span class="arithmatex">\(\varepsilon=1\)</span>; only finitely many terms lie outside the interval;</li>
+<li>By Bolzano–Weierstrass, extract a convergent subsequence <span class="arithmatex">\(a_{n_k}\to a\)</span>;</li>
+<li>Use the Cauchy property together with the convergence of the subsequence to prove <span class="arithmatex">\(a_n\to a\)</span>.</li>
+</ul>
+<p>The complete proof depends on BW; this site marks BW as deferred (see below).</p>
+<h3 id="theorem-36-bolzanoweierstrass">Theorem 3.6 (Bolzano–Weierstrass)<a class="headerlink" href="#theorem-36-bolzanoweierstrass" title="Permanent link">&para;</a></h3>
+<p>Every bounded sequence in <span class="arithmatex">\(\mathbb R^n\)</span> has a convergent subsequence.</p>
+<p><strong>Proof status</strong>: Complete proof deferred. The usual method: repeatedly bisect the interval, choosing the half containing infinitely many terms, to obtain nested intervals; take the intersection point by the nested interval theorem, then extract a subsequence.</p>
+<h2 id="r3-3">3.3 Limit Superior and Limit Inferior<a class="headerlink" href="#r3-3" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+\limsup_{n\to\infty}a_n=\lim_{n\to\infty}\sup_{k\ge n}a_k,
+\qquad
+\liminf_{n\to\infty}a_n=\lim_{n\to\infty}\inf_{k\ge n}a_k.
+\]</div>
+<p>The values <span class="arithmatex">\(\pm\infty\)</span> are allowed. If <span class="arithmatex">\((a_n)\)</span> is bounded, then <span class="arithmatex">\(\limsup a_n\)</span> is the largest subsequential limit and <span class="arithmatex">\(\liminf a_n\)</span> is the smallest subsequential limit.</p>
+<h3 id="theorem-37-convergence-equality-of-limit-superior-and-limit-inferior">Theorem 3.7 (Convergence ↔ Equality of Limit Superior and Limit Inferior)<a class="headerlink" href="#theorem-37-convergence-equality-of-limit-superior-and-limit-inferior" title="Permanent link">&para;</a></h3>
+<p>A bounded sequence <span class="arithmatex">\(\{a_n\}\)</span> converges <span class="arithmatex">\(\iff\)</span></p>
+<div class="arithmatex">\[
+\liminf a_n=\limsup a_n.
+\]</div>
+<p>In that case the limit equals the common value.</p>
+<p><strong>Proof outline</strong>: If the sequence converges to <span class="arithmatex">\(a\)</span>, then both the suprema and the infima of the tails tend to <span class="arithmatex">\(a\)</span>; conversely, if the limit superior and the limit inferior both equal <span class="arithmatex">\(a\)</span>, the definition yields a squeeze.</p>
+<h2 id="r3-4">3.4 Series<a class="headerlink" href="#r3-4" title="Permanent link">&para;</a></h2>
+<p>The series <span class="arithmatex">\(\sum a_n\)</span> converges if the partial sums</p>
+<div class="arithmatex">\[
+s_n=a_1+\cdots+a_n
+\]</div>
+<p>converge.</p>
+<h3 id="theorem-38-necessary-condition-for-convergence">Theorem 3.8 (Necessary Condition for Convergence)<a class="headerlink" href="#theorem-38-necessary-condition-for-convergence" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(\sum a_n\)</span> converges, then <span class="arithmatex">\(a_n\to0\)</span>.</p>
+<p><strong>Proof</strong>: <span class="arithmatex">\(a_n=s_n-s_{n-1}\to s-s=0\)</span>. Q.E.D.</p>
+<p>The converse fails: the harmonic series <span class="arithmatex">\(\sum 1/n\)</span> diverges.</p>
+<h3 id="theorem-39-absolute-convergence-convergence">Theorem 3.9 (Absolute Convergence ⇒ Convergence)<a class="headerlink" href="#theorem-39-absolute-convergence-convergence" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(\sum|a_n|\)</span> converges, then <span class="arithmatex">\(\sum a_n\)</span> converges.</p>
+<p><strong>Proof</strong>: Let <span class="arithmatex">\(p_n=\max(a_n,0)\)</span> and <span class="arithmatex">\(q_n=\max(-a_n,0)\)</span>. Then <span class="arithmatex">\(0\le p_n,q_n\le|a_n|\)</span>, so by the comparison test <span class="arithmatex">\(\sum p_n,\sum q_n\)</span> converge; since <span class="arithmatex">\(a_n=p_n-q_n\)</span>, it follows that <span class="arithmatex">\(\sum a_n\)</span> converges. Q.E.D.</p>
+<h3 id="theorem-310-ratio-and-root-tests">Theorem 3.10 (Ratio and Root Tests)<a class="headerlink" href="#theorem-310-ratio-and-root-tests" title="Permanent link">&para;</a></h3>
+<p>Suppose <span class="arithmatex">\(a_n\ne0\)</span>.</p>
+<ul>
+<li>If <span class="arithmatex">\(\limsup |a_{n+1}/a_n|&lt;1\)</span>, then <span class="arithmatex">\(\sum a_n\)</span> converges absolutely;</li>
+<li>If <span class="arithmatex">\(\liminf |a_{n+1}/a_n|&gt;1\)</span>, then <span class="arithmatex">\(\sum a_n\)</span> diverges;</li>
+<li>If <span class="arithmatex">\(\limsup |a_n|^{1/n}&lt;1\)</span>, then the series converges absolutely;</li>
+<li>If <span class="arithmatex">\(\limsup |a_n|^{1/n}&gt;1\)</span>, then the series diverges.</li>
+</ul>
+<p><strong>Proof outline</strong>: Compare with a geometric series; for the root test, <span class="arithmatex">\(|a_n|^{1/n}\le q&lt;1\)</span> yields <span class="arithmatex">\(|a_n|\le q^n\)</span>.</p>
+<h3 id="theorem-311-power-series">Theorem 3.11 (Power Series)<a class="headerlink" href="#theorem-311-power-series" title="Permanent link">&para;</a></h3>
+<p>For a power series <span class="arithmatex">\(\sum c_n x^n\)</span>, there exists a radius of convergence <span class="arithmatex">\(R\in[0,\infty]\)</span> such that</p>
+<div class="arithmatex">\[
+|x|&lt;R\Rightarrow\text{absolute convergence},\qquad |x|&gt;R\Rightarrow\text{divergence}.
+\]</div>
+<p>Moreover,</p>
+<div class="arithmatex">\[
+\frac1R=\limsup_{n\to\infty}|c_n|^{1/n}.
+\]</div>
+<p>The series converges uniformly on compact subsets of <span class="arithmatex">\(|x|&lt;R\)</span>.</p>
+<p><strong>Proof outline</strong>: Apply the root test to <span class="arithmatex">\(\sum c_nx^n\)</span>; uniform convergence on compact subsets follows from the Weierstrass test (Chapter 7).</p>
+<h2 id="r3-ex">Exercises<a class="headerlink" href="#r3-ex" title="Permanent link">&para;</a></h2>
+<h3 id="basic">Basic<a class="headerlink" href="#basic" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Find the limit: <span class="arithmatex">\(\displaystyle \lim_{n\to\infty}\frac{3n^2+2}{n^2-n}\)</span>.</li>
+<li>Prove: if <span class="arithmatex">\(a_n\to a\)</span>, then <span class="arithmatex">\(|a_n|\to|a|\)</span>; is the converse true?</li>
+<li>Determine the convergence of the series <span class="arithmatex">\(\sum \frac{1}{n^2}\)</span>, <span class="arithmatex">\(\sum \frac{1}{n}\)</span>, <span class="arithmatex">\(\sum \frac{(-1)^n}{n}\)</span>.</li>
+</ol>
+<h3 id="intermediate">Intermediate<a class="headerlink" href="#intermediate" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Prove that <span class="arithmatex">\(\lim_{n\to\infty}n^{1/n}=1\)</span>.</li>
+<li>Find the radius of convergence and the interval of convergence of <span class="arithmatex">\(\sum_{n=1}^\infty \frac{x^n}{n}\)</span>.</li>
+<li>Give an example of a bounded sequence that does not converge, yet for which <span class="arithmatex">\(\limsup\)</span> and <span class="arithmatex">\(\liminf\)</span> both exist and are unequal.</li>
+</ol>
+<h3 id="challenge">Challenge<a class="headerlink" href="#challenge" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Prove: if <span class="arithmatex">\(\sum a_n\)</span> converges absolutely, then every rearrangement converges to the same value.</li>
+<li>Prove: if <span class="arithmatex">\(a_n&gt;0\)</span> and <span class="arithmatex">\(\sum a_n\)</span> converges, then <span class="arithmatex">\(\sum \sqrt{a_n}/n\)</span> converges (hint: Cauchy–Schwarz).</li>
+</ol>
+<blockquote>
+<p>Hint: In Exercise 8, pair <span class="arithmatex">\(\sqrt{a_n}\)</span> with <span class="arithmatex">\(1/n\)</span>, estimate by finite sums, and then pass to the limit.</p>
+</blockquote>
+<h2 id="interfaces-with-the-regular-system">Interfaces with the Regular System<a class="headerlink" href="#interfaces-with-the-regular-system" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Spaces, Limits, and Continuity: <a href="../../05-spaces/">Spaces, Limits, and Continuity</a></li>
+<li>Chapter 2: <a href="../02-basic-topology/">Basic Topology</a></li>
+<li>Chapter 7: <a href="../07-function-sequences/">Sequences and Series of Functions</a></li>
+<li>Proof status: <a href="../../proofs/">Proof Status and Core Proofs</a></li>
+</ul>
+<h2 id="r3-ref">References<a class="headerlink" href="#r3-ref" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Walter Rudin, <em>Principles of Mathematical Analysis</em> (Chinese edition), Chapter 3.</li>
+<li><a href="https://en.wikipedia.org/wiki/Limit_of_a_sequence">Limit of a sequence</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cauchy_sequence">Cauchy sequence</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Series_(mathematics)">Series (mathematics)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../02-basic-topology/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Chapter 2 · Basic Topology">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Chapter 2 · Basic Topology
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04-continuity/" class="md-footer__link md-footer__link--next" aria-label="Next: Chapter 4 · Continuity">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Chapter 4 · Continuity
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Personal study notes · Unofficial · Definitions and proofs follow the stated prerequisites.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tracking", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../../javascripts/table-wrap.js"></script>
+      
+        <script src="../../../../javascripts/lang-switch.js"></script>
+      
+        <script src="../../../../javascripts/glossary.js"></script>
+      
+        <script src="../../../../javascripts/rudin-toc.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

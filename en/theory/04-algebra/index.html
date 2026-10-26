@@ -1,0 +1,2080 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Mathematics hub — Classical Academic System (Regular + Rudin) and the Educational Stage System.">
+      
+      
+        <meta name="author" content="dionysus23334">
+      
+      
+        <link rel="canonical" href="https://dionysus23334.github.io/Mathematics/en/en/theory/04-algebra/">
+      
+      
+        <link rel="prev" href="../03-numbers/">
+      
+      
+        <link rel="next" href="../05-spaces/">
+      
+      
+        
+          <link rel="alternate" href="../../../theory/04-algebra/" hreflang="zh">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Algebraic Structures and Linear Spaces - Mathematics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/base.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#algebraic-structures-and-linear-spaces" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="Mathematics" class="md-header__button md-logo" aria-label="Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mathematics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Algebraic Structures and Linear Spaces
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../theory/04-algebra/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dionysus23334/Mathematics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dionysus23334/Mathematics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Mathematics" class="md-nav__button md-logo" aria-label="Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Mathematics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dionysus23334/Mathematics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dionysus23334/Mathematics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://dionysus23334.github.io/study-blogs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ← Study archive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classical Academic System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Classical Academic System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regular System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Regular System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logic, Language, and Proof
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sets, Relations, and Mappings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-numbers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Natural Numbers and Number Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebraic Structures and Linear Spaces
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebraic Structures and Linear Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-operations-and-algebraic-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Operations and Algebraic Structures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algebra-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Groups
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algebra-rings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Rings and Fields
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-homomorphisms-and-isomorphisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Homomorphisms and Isomorphisms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algebra-vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Vector Spaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algebra-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 Bases, Dimension, and Linear Maps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47-matrices-and-systems-of-linear-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7 Matrices and Systems of Linear Equations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algebra-spectral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8 Determinants, Eigenvalues, and Inner Products
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies-and-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependencies and Boundaries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49-fundamental-theorem-of-group-homomorphisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9 Fundamental Theorem of Group Homomorphisms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#410-ranknullity-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10 Rank–Nullity Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#411-spectral-theorem-for-real-symmetric-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.11 Spectral Theorem for Real Symmetric Matrices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#412-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.12 References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checkpoints
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-spaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spaces, Limits, and Continuity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-branches/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Branches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rudin System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Rudin System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/01-real-complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1 · Real and Complex Number Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/02-basic-topology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 · Basic Topology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/03-sequences-series/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 · Sequences and Series
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/04-continuity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 · Continuity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/05-differentiation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 5 · Differentiation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/06-riemann-stieltjes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6 · Riemann–Stieltjes Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/07-function-sequences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7 · Sequences and Series of Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/08-special-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8 · Some Special Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/09-multivariable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 9 · Functions of Several Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/10-differential-forms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 10 · Integration of Differential Forms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/11-lebesgue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 11 · Lebesgue Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Educational Stage System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Educational Stage System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/elementary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elementary Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/secondary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secondary Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/competition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mathematical Competitions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/university/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    University Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Study Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proofs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proof Status and Core Proofs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../abbreviations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Abbreviations and English Terms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sources and Attribution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-operations-and-algebraic-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Operations and Algebraic Structures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algebra-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Groups
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algebra-rings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Rings and Fields
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-homomorphisms-and-isomorphisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Homomorphisms and Isomorphisms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algebra-vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Vector Spaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algebra-basis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 Bases, Dimension, and Linear Maps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47-matrices-and-systems-of-linear-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7 Matrices and Systems of Linear Equations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algebra-spectral" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8 Determinants, Eigenvalues, and Inner Products
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies-and-boundaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependencies and Boundaries
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49-fundamental-theorem-of-group-homomorphisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9 Fundamental Theorem of Group Homomorphisms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#410-ranknullity-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10 Rank–Nullity Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#411-spectral-theorem-for-real-symmetric-matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.11 Spectral Theorem for Real Symmetric Matrices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#412-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.12 References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checkpoints
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="algebraic-structures-and-linear-spaces">Algebraic Structures and Linear Spaces<a class="headerlink" href="#algebraic-structures-and-linear-spaces" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Source</strong>: Standard abstract algebra textbooks; Wikipedia: Group, Ring, Field, Vector space.</p>
+<p><strong>Prerequisites</strong>: Sets and number systems (sets, mappings, equivalence relations, number systems).<br />
+<strong>Goal of this chapter</strong>: To abstract the common structures from concrete number systems and to establish the language of linear algebra.</p>
+</blockquote>
+<h2 id="41-operations-and-algebraic-structures">4.1 Operations and Algebraic Structures<a class="headerlink" href="#41-operations-and-algebraic-structures" title="Permanent link">&para;</a></h2>
+<p>A <strong>binary operation</strong> on a set <span class="arithmatex">\(A\)</span> is a mapping <span class="arithmatex">\(A\times A\to A\)</span>. It must assign a unique result to every ordered pair, and the result must again lie in <span class="arithmatex">\(A\)</span> (closure).</p>
+<p>An algebraic structure = a set + several operations + the axioms satisfied by these operations.</p>
+<h2 id="algebra-groups">4.2 Groups<a class="headerlink" href="#algebra-groups" title="Permanent link">&para;</a></h2>
+<p>A group <span class="arithmatex">\((G,\cdot)\)</span> satisfies:</p>
+<ol>
+<li><strong>Associativity</strong>: <span class="arithmatex">\((ab)c=a(bc)\)</span>;</li>
+<li><strong>Identity element</strong>: there exists <span class="arithmatex">\(e\in G\)</span> such that <span class="arithmatex">\(ea=ae=a\)</span>;</li>
+<li><strong>Inverse element</strong>: for every <span class="arithmatex">\(a\in G\)</span> there exists <span class="arithmatex">\(a^{-1}\)</span> such that <span class="arithmatex">\(aa^{-1}=a^{-1}a=e\)</span>.</li>
+</ol>
+<p>If in addition the commutative law <span class="arithmatex">\(ab=ba\)</span> holds, the group is called an <strong>abelian group</strong>.</p>
+<p>Examples: <span class="arithmatex">\((\mathbb Z,+)\)</span>, <span class="arithmatex">\((\mathbb Q\setminus\{0\},\cdot)\)</span>, <span class="arithmatex">\(GL_n(\mathbb R)\)</span> (invertible matrices under multiplication), and the permutation group <span class="arithmatex">\(S_n\)</span>.</p>
+<p><strong>Subgroup</strong>: a non-empty subset <span class="arithmatex">\(H\subseteq G\)</span> that is closed under multiplication and inverses. Lagrange's theorem: in a finite group, the order of a subgroup divides the order of the group.</p>
+<h2 id="algebra-rings">4.3 Rings and Fields<a class="headerlink" href="#algebra-rings" title="Permanent link">&para;</a></h2>
+<p>A ring <span class="arithmatex">\((R,+,\cdot)\)</span> satisfies: <span class="arithmatex">\((R,+)\)</span> is an abelian group; multiplication is associative; multiplication distributes over addition.</p>
+<ul>
+<li><strong>Commutative ring</strong>: multiplication is commutative;</li>
+<li><strong>Ring with unity</strong>: there exists a multiplicative identity <span class="arithmatex">\(1\)</span>;</li>
+<li><strong>Integral domain</strong>: commutative, with unity, and without zero divisors (<span class="arithmatex">\(ab=0\to a=0\)</span> or <span class="arithmatex">\(b=0\)</span>).</li>
+</ul>
+<p>A <strong>field</strong> is a commutative ring with unity in which every non-zero element has a multiplicative inverse. Examples: <span class="arithmatex">\(\mathbb Q,\mathbb R,\mathbb C,\mathbb F_p\)</span> (with <span class="arithmatex">\(p\)</span> prime).</p>
+<h2 id="44-homomorphisms-and-isomorphisms">4.4 Homomorphisms and Isomorphisms<a class="headerlink" href="#44-homomorphisms-and-isomorphisms" title="Permanent link">&para;</a></h2>
+<p>A mapping that preserves the operations is called a <strong>homomorphism</strong>:</p>
+<ul>
+<li>Group homomorphism: <span class="arithmatex">\(\varphi(ab)=\varphi(a)\varphi(b)\)</span>;</li>
+<li>Ring homomorphism: <span class="arithmatex">\(\varphi(a+b)=\varphi(a)+\varphi(b)\)</span>, <span class="arithmatex">\(\varphi(ab)=\varphi(a)\varphi(b)\)</span>.</li>
+</ul>
+<p>A bijective homomorphism is called an <strong>isomorphism</strong>. Two structures related by an isomorphism are "the same" algebraically; only the names of the elements differ.</p>
+<p><strong>Kernel</strong>: <span class="arithmatex">\(\ker\varphi=\{g:\varphi(g)=e\}\)</span>. Fundamental theorem of group homomorphisms: <span class="arithmatex">\(G/\ker\varphi\cong \operatorname{im}\varphi\)</span>.</p>
+<h2 id="algebra-vector">4.5 Vector Spaces<a class="headerlink" href="#algebra-vector" title="Permanent link">&para;</a></h2>
+<p>Let <span class="arithmatex">\(F\)</span> be a field. A vector space <span class="arithmatex">\(V\)</span> is an abelian group equipped with a scalar multiplication <span class="arithmatex">\(F\times V\to V\)</span> satisfying:</p>
+<div class="arithmatex">\[
+1v=v,\qquad a(bv)=(ab)v,
+\]</div>
+<div class="arithmatex">\[
+a(u+v)=au+av,\qquad (a+b)v=av+bv.
+\]</div>
+<p>The elements are called vectors, and <span class="arithmatex">\(F\)</span> is called the base field. <span class="arithmatex">\(\mathbb R^n\)</span> is the most typical example.</p>
+<h2 id="algebra-basis">4.6 Bases, Dimension, and Linear Maps<a class="headerlink" href="#algebra-basis" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Linear combination</strong>: <span class="arithmatex">\(\sum_{i=1}^n a_i v_i\)</span>;</li>
+<li><strong>Span</strong>: every vector in <span class="arithmatex">\(V\)</span> can be written as a finite linear combination;</li>
+<li><strong>Linear independence</strong>: if <span class="arithmatex">\(\sum a_i v_i=0\)</span>, then all <span class="arithmatex">\(a_i=0\)</span>;</li>
+<li><strong>Basis</strong>: linearly independent and spanning <span class="arithmatex">\(V\)</span>.</li>
+</ul>
+<p>If <span class="arithmatex">\(V\)</span> has a basis consisting of <span class="arithmatex">\(n\)</span> vectors, then every basis consists of <span class="arithmatex">\(n\)</span> vectors, and <span class="arithmatex">\(n\)</span> is called the <strong>dimension</strong>.</p>
+<p>A <strong>linear map</strong> <span class="arithmatex">\(T:V\to W\)</span> satisfies <span class="arithmatex">\(T(au+bv)=aT(u)+bT(v)\)</span>. A linear map is uniquely determined by its values on a basis.</p>
+<h2 id="47-matrices-and-systems-of-linear-equations">4.7 Matrices and Systems of Linear Equations<a class="headerlink" href="#47-matrices-and-systems-of-linear-equations" title="Permanent link">&para;</a></h2>
+<p>Once a basis is chosen, a linear map is represented by a matrix; composition corresponds to matrix multiplication. The solution set of the system <span class="arithmatex">\(Ax=b\)</span>:</p>
+<ul>
+<li>The solution space of the homogeneous system <span class="arithmatex">\(Ax=0\)</span> is the kernel;</li>
+<li>If the inhomogeneous system is consistent, its solution set is an affine subspace (a particular solution plus the homogeneous solutions).</li>
+</ul>
+<p><strong>Rank–nullity theorem</strong>:</p>
+<div class="arithmatex">\[
+\dim V=\dim\ker T+\dim\operatorname{im}T.
+\]</div>
+<h2 id="algebra-spectral">4.8 Determinants, Eigenvalues, and Inner Products<a class="headerlink" href="#algebra-spectral" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Determinant</strong>: an alternating multilinear function satisfying <span class="arithmatex">\(\det(AB)=\det A\det B\)</span>; <span class="arithmatex">\(\det A\ne0\)</span> if and only if <span class="arithmatex">\(A\)</span> is invertible.</li>
+<li><strong>Eigenvalue/eigenvector</strong>: <span class="arithmatex">\(Av=\lambda v\)</span>, <span class="arithmatex">\(v\ne0\)</span>. Characteristic polynomial <span class="arithmatex">\(\det(A-\lambda I)=0\)</span>.</li>
+<li><strong>Inner product</strong>: positive definite, symmetric/conjugate symmetric, linear in the first argument; it induces the norm <span class="arithmatex">\(\|v\|=\sqrt{\langle v,v\rangle}\)</span>.</li>
+<li><strong>Orthogonality</strong>: <span class="arithmatex">\(\langle u,v\rangle=0\)</span>; an orthogonal basis simplifies coordinate computations.</li>
+</ul>
+<h2 id="dependencies-and-boundaries">Dependencies and Boundaries<a class="headerlink" href="#dependencies-and-boundaries" title="Permanent link">&para;</a></h2>
+<p>This chapter treats only the <strong>basic definitions and typical examples</strong>. Complete group theory (Sylow theorems, solvable groups), commutative algebra (ideals, localization), and field extensions (Galois theory) belong to the algebra branch of the Core Branches.</p>
+<p>Before entering analysis, what is required is: the real and complex fields, vector spaces, inner products, norms, linear maps, and matrices; it is not necessary to have studied a complete course in advanced algebra first.</p>
+<h2 id="49-fundamental-theorem-of-group-homomorphisms">4.9 Fundamental Theorem of Group Homomorphisms<a class="headerlink" href="#49-fundamental-theorem-of-group-homomorphisms" title="Permanent link">&para;</a></h2>
+<p>Let <span class="arithmatex">\(\varphi:G\to H\)</span> be a group homomorphism. Then <span class="arithmatex">\(\ker\varphi\)</span> is a normal subgroup of <span class="arithmatex">\(G\)</span>, and</p>
+<div class="arithmatex">\[
+G/\ker\varphi\cong\operatorname{im}\varphi.
+\]</div>
+<p>The isomorphism is given by <span class="arithmatex">\(g\ker\varphi\mapsto\varphi(g)\)</span>. This theorem converts "the image of a homomorphism" into "a quotient group" and is one of the earliest structure theorems in group theory; the complete proof is given in <a href="../proofs/#proof-group-iso">proofs page §8</a>.</p>
+<p><strong>Corollary</strong>: <span class="arithmatex">\(\varphi\)</span> is injective <span class="arithmatex">\(\iff \ker\varphi=\{e\}\)</span>.</p>
+<h2 id="410-ranknullity-theorem">4.10 Rank–Nullity Theorem<a class="headerlink" href="#410-ranknullity-theorem" title="Permanent link">&para;</a></h2>
+<p>Let <span class="arithmatex">\(V,W\)</span> be finite-dimensional vector spaces over a field <span class="arithmatex">\(F\)</span>, and let <span class="arithmatex">\(T:V\to W\)</span> be linear. Then</p>
+<div class="arithmatex">\[
+\dim V=\dim\ker T+\dim\operatorname{im}T.
+\]</div>
+<p>Equivalently, <span class="arithmatex">\(\operatorname{rank}T+\operatorname{nullity}T=\dim V\)</span>. It states that the sum of the "dimensions lost" and the "dimensions retained" by a linear map equals the dimension of the domain; the complete proof is given in <a href="../proofs/#proof-rank-nullity">proofs page §9</a>.</p>
+<p><strong>Corollary</strong>: if <span class="arithmatex">\(\dim V=\dim W\)</span>, then <span class="arithmatex">\(T\)</span> is injective <span class="arithmatex">\(\iff\)</span> surjective <span class="arithmatex">\(\iff\)</span> invertible.</p>
+<h2 id="411-spectral-theorem-for-real-symmetric-matrices">4.11 Spectral Theorem for Real Symmetric Matrices<a class="headerlink" href="#411-spectral-theorem-for-real-symmetric-matrices" title="Permanent link">&para;</a></h2>
+<p>If <span class="arithmatex">\(A\)</span> is a real symmetric matrix (<span class="arithmatex">\(A=A^{\mathsf T}\)</span>), then:</p>
+<ol>
+<li>All eigenvalues of <span class="arithmatex">\(A\)</span> are real;</li>
+<li>Eigenvectors belonging to distinct eigenvalues are orthogonal;</li>
+<li>There exists an orthogonal matrix <span class="arithmatex">\(Q\)</span> such that <span class="arithmatex">\(A=Q\Lambda Q^{\mathsf T}\)</span>, where <span class="arithmatex">\(\Lambda\)</span> is a diagonal matrix whose diagonal entries are the eigenvalues.</li>
+</ol>
+<p>That is to say, a real symmetric matrix has a set of orthonormal eigenvectors forming a basis of <span class="arithmatex">\(\mathbb R^n\)</span>. Complex Hermitian matrices admit an analogous unitary diagonalization. This site <strong>defers the proof for now</strong> (it requires inner product spaces and induction).</p>
+<h2 id="412-references">4.12 References<a class="headerlink" href="#412-references" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Group_(mathematics)">Group (mathematics)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ring_(mathematics)">Ring (mathematics)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Field_(mathematics)">Field (mathematics)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Vector_space">Vector space</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Rank%E2%80%93nullity_theorem">Rank–nullity theorem</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Spectral_theorem">Spectral theorem</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Isomorphism_theorem">Isomorphism theorem</a></li>
+</ul>
+<h2 id="checkpoints">Checkpoints<a class="headerlink" href="#checkpoints" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Be able to verify whether a set together with a given operation forms a group/ring/field.</li>
+<li>Be able to distinguish homomorphisms, isomorphisms, and automorphisms.</li>
+<li>Be able to prove that the number of vectors in a basis does not depend on the choice of basis (finite-dimensional case).</li>
+<li>Be able to state the rank–nullity theorem and use it to determine the structure of the solution set of a linear system.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../03-numbers/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Natural Numbers and Number Systems">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Natural Numbers and Number Systems
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../05-spaces/" class="md-footer__link md-footer__link--next" aria-label="Next: Spaces, Limits, and Continuity">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Spaces, Limits, and Continuity
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Personal study notes · Unofficial · Definitions and proofs follow the stated prerequisites.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tracking", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../javascripts/table-wrap.js"></script>
+      
+        <script src="../../../javascripts/lang-switch.js"></script>
+      
+        <script src="../../../javascripts/glossary.js"></script>
+      
+        <script src="../../../javascripts/rudin-toc.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

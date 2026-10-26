@@ -1,0 +1,2082 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Mathematics hub — Classical Academic System (Regular + Rudin) and the Educational Stage System.">
+      
+      
+        <meta name="author" content="dionysus23334">
+      
+      
+        <link rel="canonical" href="https://dionysus23334.github.io/Mathematics/en/en/theory/03-numbers/">
+      
+      
+        <link rel="prev" href="../02-sets/">
+      
+      
+        <link rel="next" href="../04-algebra/">
+      
+      
+        
+          <link rel="alternate" href="../../../theory/03-numbers/" hreflang="zh">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Natural Numbers and Number Systems - Mathematics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/base.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#natural-numbers-and-the-construction-of-number-systems" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="Mathematics" class="md-header__button md-logo" aria-label="Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mathematics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Natural Numbers and Number Systems
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../theory/03-numbers/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dionysus23334/Mathematics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dionysus23334/Mathematics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Mathematics" class="md-nav__button md-logo" aria-label="Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Mathematics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dionysus23334/Mathematics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dionysus23334/Mathematics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://dionysus23334.github.io/study-blogs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ← Study archive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classical Academic System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Classical Academic System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regular System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Regular System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logic, Language, and Proof
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sets, Relations, and Mappings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Natural Numbers and Number Systems
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Natural Numbers and Number Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#numbers-peano" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Natural Numbers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-operations-on-natural-numbers-and-divisibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Operations on Natural Numbers and Divisibility
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-the-integers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 The Integers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-the-rational-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 The Rational Numbers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numbers-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 The Real Numbers and Dedekind Cuts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-the-complex-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 The Complex Numbers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numbers-cardinality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7 Finite, Countable, and Uncountable Sets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependency Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38-equivalent-forms-of-completeness-of-the-real-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8 Equivalent Forms of Completeness of the Real Numbers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39-the-fundamental-theorem-of-algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.9 The Fundamental Theorem of Algebra
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#310-cardinality-and-the-continuum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.10 Cardinality and the Continuum
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#311-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.11 References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checkpoints
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-algebra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebraic Structures and Linear Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-spaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spaces, Limits, and Continuity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-branches/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Branches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rudin System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Rudin System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/01-real-complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1 · Real and Complex Number Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/02-basic-topology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 · Basic Topology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/03-sequences-series/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 · Sequences and Series
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/04-continuity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 · Continuity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/05-differentiation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 5 · Differentiation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/06-riemann-stieltjes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6 · Riemann–Stieltjes Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/07-function-sequences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7 · Sequences and Series of Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/08-special-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8 · Some Special Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/09-multivariable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 9 · Functions of Several Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/10-differential-forms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 10 · Integration of Differential Forms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/11-lebesgue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 11 · Lebesgue Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Educational Stage System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Educational Stage System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/elementary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elementary Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/secondary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secondary Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/competition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mathematical Competitions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/university/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    University Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Study Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proofs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proof Status and Core Proofs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../abbreviations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Abbreviations and English Terms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sources and Attribution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#numbers-peano" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Natural Numbers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-operations-on-natural-numbers-and-divisibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Operations on Natural Numbers and Divisibility
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-the-integers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 The Integers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-the-rational-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 The Rational Numbers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numbers-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 The Real Numbers and Dedekind Cuts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-the-complex-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 The Complex Numbers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numbers-cardinality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7 Finite, Countable, and Uncountable Sets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependency Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#38-equivalent-forms-of-completeness-of-the-real-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.8 Equivalent Forms of Completeness of the Real Numbers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#39-the-fundamental-theorem-of-algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.9 The Fundamental Theorem of Algebra
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#310-cardinality-and-the-continuum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.10 Cardinality and the Continuum
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#311-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.11 References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checkpoints
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="natural-numbers-and-the-construction-of-number-systems">Natural Numbers and the Construction of Number Systems<a class="headerlink" href="#natural-numbers-and-the-construction-of-number-systems" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Sources</strong>: Rudin, Chapter 1; Peano axioms, Dedekind cut.</p>
+<p><strong>Prerequisite</strong>: logic and sets (proofs, sets, equivalence relations, mappings).<br />
+<strong>Goal of this chapter</strong>: not merely to "recognize the various kinds of numbers", but to explain how they are obtained and why their operations are valid.</p>
+</blockquote>
+<h2 id="numbers-peano">3.1 Natural Numbers<a class="headerlink" href="#numbers-peano" title="Permanent link">&para;</a></h2>
+<p>The natural numbers can be characterized by the <strong>Peano axioms</strong> (starting from an initial object and a successor operation):</p>
+<ol>
+<li><span class="arithmatex">\(0\in\mathbb N\)</span>;</li>
+<li>there exists a successor mapping <span class="arithmatex">\(S:\mathbb N\to\mathbb N\)</span>;</li>
+<li><span class="arithmatex">\(S(n)\ne 0\)</span> for all <span class="arithmatex">\(n\)</span>;</li>
+<li><span class="arithmatex">\(S\)</span> is injective;</li>
+<li>if <span class="arithmatex">\(A\subseteq\mathbb N\)</span> contains <span class="arithmatex">\(0\)</span>, and <span class="arithmatex">\(n\in A\to S(n)\in A\)</span>, then <span class="arithmatex">\(A=\mathbb N\)</span>.</li>
+</ol>
+<p>Axiom 5 is precisely the <strong>principle of induction</strong>. It allows a proof that a statement holds "for all natural numbers" to be divided into two steps: the base case and the inductive step.</p>
+<p><strong>Recursive definition</strong>: if the new value at each step depends only on the preceding step (or on finitely many preceding steps), then a function may be defined recursively on <span class="arithmatex">\(\mathbb N\)</span>. For example, the factorial:</p>
+<div class="arithmatex">\[
+0!=1,\qquad (n+1)!=(n+1)\cdot n!.
+\]</div>
+<h2 id="32-operations-on-natural-numbers-and-divisibility">3.2 Operations on Natural Numbers and Divisibility<a class="headerlink" href="#32-operations-on-natural-numbers-and-divisibility" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Addition: <span class="arithmatex">\(m+0=m\)</span>, <span class="arithmatex">\(m+S(n)=S(m+n)\)</span>;</li>
+<li>Multiplication: <span class="arithmatex">\(m\cdot 0=0\)</span>, <span class="arithmatex">\(m\cdot S(n)=m\cdot n+m\)</span>;</li>
+<li>Order: <span class="arithmatex">\(a\le b\)</span> if and only if there exists <span class="arithmatex">\(k\)</span> such that <span class="arithmatex">\(a+k=b\)</span>.</li>
+</ul>
+<p><strong>Division algorithm</strong>: for <span class="arithmatex">\(a\in\mathbb Z\)</span> and <span class="arithmatex">\(b&gt;0\)</span>, there exist unique <span class="arithmatex">\(q,r\)</span> such that</p>
+<div class="arithmatex">\[
+a=bq+r,\qquad 0\le r&lt;b.
+\]</div>
+<p><strong>Prime</strong>: a natural number greater than 1 whose only positive divisors are 1 and itself. <strong>Fundamental theorem of arithmetic</strong>: every natural number greater than 1 admits a unique factorization into a product of primes (order disregarded).</p>
+<h2 id="33-the-integers">3.3 The Integers<a class="headerlink" href="#33-the-integers" title="Permanent link">&para;</a></h2>
+<p>The integers may be regarded as equivalence classes of pairs of natural numbers:</p>
+<div class="arithmatex">\[
+(a,b)\sim(c,d)\iff a+d=b+c.
+\]</div>
+<p>Intuitively, <span class="arithmatex">\((a,b)\)</span> represents <span class="arithmatex">\(a-b\)</span>. Addition and multiplication are defined by</p>
+<div class="arithmatex">\[
+[(a,b)]+[(c,d)]=[(a+c,b+d)],
+\]</div>
+<div class="arithmatex">\[
+[(a,b)]\cdot[(c,d)]=[(ac+bd,\ ad+bc)].
+\]</div>
+<p>One must verify that these definitions are independent of the choice of representatives (well-defined). The integers make subtraction closed.</p>
+<h2 id="34-the-rational-numbers">3.4 The Rational Numbers<a class="headerlink" href="#34-the-rational-numbers" title="Permanent link">&para;</a></h2>
+<p>The rational numbers may be regarded as equivalence classes of pairs of integers:</p>
+<div class="arithmatex">\[
+(a,b)\sim(c,d)\iff ad=bc,\qquad b,d\ne 0.
+\]</div>
+<p><span class="arithmatex">\((a,b)\)</span> represents <span class="arithmatex">\(a/b\)</span>. Addition, multiplication, and order are induced by the operations on the integers; one must exclude the zero denominator and verify well-definedness. The rational numbers make division (by non-zero numbers) closed, and they are <strong>dense</strong>: between any two rational numbers there lies another rational number.</p>
+<h2 id="numbers-real">3.5 The Real Numbers and Dedekind Cuts<a class="headerlink" href="#numbers-real" title="Permanent link">&para;</a></h2>
+<p>Although the rational numbers are dense, they are not complete: for example, <span class="arithmatex">\(\sqrt2\)</span> is not rational. One way to construct the real numbers is the <strong>Dedekind cut</strong>.</p>
+<p>A set <span class="arithmatex">\(A\subseteq\mathbb Q\)</span> is called a cut if:</p>
+<ol>
+<li><span class="arithmatex">\(A\ne\varnothing\)</span> and <span class="arithmatex">\(A\ne\mathbb Q\)</span>;</li>
+<li>if <span class="arithmatex">\(a\in A\)</span> and <span class="arithmatex">\(b&lt;a\)</span>, then <span class="arithmatex">\(b\in A\)</span> (closed downward);</li>
+<li><span class="arithmatex">\(A\)</span> has no greatest element.</li>
+</ol>
+<p>Each cut represents a real number; the rational number <span class="arithmatex">\(q\)</span> corresponds to the cut <span class="arithmatex">\(\{x\in\mathbb Q:x&lt;q\}\)</span>. The operations and the order on the real numbers are defined by inclusion, union, translation, and the like on cuts.</p>
+<p><strong>Completeness (least-upper-bound property)</strong>: every non-empty subset of the real numbers that is bounded above has a supremum. This is the foundation of the results of analysis concerning limits, continuity, compactness, and the like.</p>
+<blockquote>
+<p>One may also construct the real numbers by means of Cauchy sequences; this requires the language of limits and metrics first, and is therefore placed later as "another construction". The advantage of the Dedekind cut is that it does not depend on the theory of limits.</p>
+</blockquote>
+<h2 id="36-the-complex-numbers">3.6 The Complex Numbers<a class="headerlink" href="#36-the-complex-numbers" title="Permanent link">&para;</a></h2>
+<p>The complex numbers may be regarded as pairs of real numbers <span class="arithmatex">\((a,b)\)</span>, with the definitions</p>
+<div class="arithmatex">\[
+(a,b)+(c,d)=(a+c,b+d),
+\]</div>
+<div class="arithmatex">\[
+(a,b)\cdot(c,d)=(ac-bd,\ ad+bc).
+\]</div>
+<p>Writing <span class="arithmatex">\(i=(0,1)\)</span>, we have <span class="arithmatex">\((a,b)=a+bi\)</span> and <span class="arithmatex">\(i^2=-1\)</span>. The field of complex numbers is algebraically closed: every non-constant polynomial with complex coefficients has a root (the fundamental theorem of algebra).</p>
+<h2 id="numbers-cardinality">3.7 Finite, Countable, and Uncountable Sets<a class="headerlink" href="#numbers-cardinality" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Sets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are <strong>equinumerous</strong> if there exists a bijection <span class="arithmatex">\(A\to B\)</span>;</li>
+<li><strong>Finite</strong>: equinumerous with some <span class="arithmatex">\(\{1,\dots,n\}\)</span>;</li>
+<li><strong>Countably infinite</strong>: equinumerous with <span class="arithmatex">\(\mathbb N\)</span>;</li>
+<li><strong>Uncountable</strong>: neither finite nor countably infinite.</li>
+</ul>
+<p>Cantor's theorem: <span class="arithmatex">\(|A|&lt;|\mathcal P(A)|\)</span>, hence <span class="arithmatex">\(\mathbb R\)</span> is uncountable. Finite unions and countable unions of countable sets remain countable; <span class="arithmatex">\(\mathbb Q\)</span> is countable and <span class="arithmatex">\(\mathbb R\)</span> is uncountable.</p>
+<h2 id="dependency-rules">Dependency Rules<a class="headerlink" href="#dependency-rules" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The natural numbers must precede induction;</li>
+<li>The integers/rational numbers must follow equivalence classes and quotient sets;</li>
+<li>Completeness of the reals must precede the theory of limits;</li>
+<li>The complex numbers must follow the arithmetic of the reals;</li>
+<li>Comparison of cardinalities must follow bijections.</li>
+</ul>
+<h2 id="38-equivalent-forms-of-completeness-of-the-real-numbers">3.8 Equivalent Forms of Completeness of the Real Numbers<a class="headerlink" href="#38-equivalent-forms-of-completeness-of-the-real-numbers" title="Permanent link">&para;</a></h2>
+<p>In the ordered field <span class="arithmatex">\(\mathbb R\)</span>, the following properties are equivalent (under the assumption that the Archimedean property holds):</p>
+<ol>
+<li><strong>Supremum property</strong>: every non-empty subset that is bounded above has a supremum;</li>
+<li><strong>Monotone convergence</strong>: every bounded monotone sequence converges;</li>
+<li><strong>Nested intervals</strong>: the intersection of a nested sequence of closed intervals is non-empty (when the lengths tend to 0, the intersection is a single point);</li>
+<li><strong>Bolzano–Weierstrass</strong>: every bounded sequence has a convergent subsequence;</li>
+<li><strong>Cauchy completeness</strong>: every Cauchy sequence converges.</li>
+</ol>
+<p>Different textbooks start from different properties and then derive the others as theorems. This site constructs <span class="arithmatex">\(\mathbb R\)</span> from Dedekind cuts, and therefore takes the supremum property as the first completeness theorem following the definition; for the complete proof of the supremum property see <a href="../proofs/#proof-dedekind">proofs page §6</a>. The remaining equivalent forms are <strong>deferred for proof</strong>.</p>
+<p><strong>Archimedean property</strong>: for every <span class="arithmatex">\(x\in\mathbb R\)</span> there exists <span class="arithmatex">\(n\in\mathbb N\)</span> such that <span class="arithmatex">\(n&gt;x\)</span>. It guarantees that <span class="arithmatex">\(\mathbb N\)</span> is unbounded in <span class="arithmatex">\(\mathbb R\)</span>, and it is also the foundation of "<span class="arithmatex">\(\frac1n\to0\)</span>".</p>
+<h2 id="39-the-fundamental-theorem-of-algebra">3.9 The Fundamental Theorem of Algebra<a class="headerlink" href="#39-the-fundamental-theorem-of-algebra" title="Permanent link">&para;</a></h2>
+<p>Every polynomial of degree <span class="arithmatex">\(n\ge1\)</span> with complex coefficients</p>
+<div class="arithmatex">\[
+p(z)=a_nz^n+\cdots+a_1z+a_0,\qquad a_n\ne0
+\]</div>
+<p>has at least one root in <span class="arithmatex">\(\mathbb C\)</span>; hence it factors as</p>
+<div class="arithmatex">\[
+p(z)=a_n\prod_{k=1}^n(z-z_k)
+\]</div>
+<p>(multiplicities counted). This shows that <span class="arithmatex">\(\mathbb C\)</span> is algebraically closed; but <span class="arithmatex">\(\mathbb R\)</span> is not (<span class="arithmatex">\(x^2+1\)</span> has no real root).</p>
+<p>The proof may be given by complex analysis (Liouville's theorem) or by algebraic topology (winding number); this site treats it as a conclusion concerning "properties of the field of complex numbers" and <strong>defers the proof</strong>, which is placed in the complex analysis branch.</p>
+<h2 id="310-cardinality-and-the-continuum">3.10 Cardinality and the Continuum<a class="headerlink" href="#310-cardinality-and-the-continuum" title="Permanent link">&para;</a></h2>
+<ul>
+<li><span class="arithmatex">\(\mathbb Q\)</span> is countable: one may enumerate by the height of the numerator and denominator;</li>
+<li><span class="arithmatex">\(\mathbb R\)</span> is uncountable: Cantor's diagonal argument;</li>
+<li><span class="arithmatex">\(|\mathbb R|=|\mathcal P(\mathbb N)|=2^{\aleph_0}\)</span>;</li>
+<li><strong>Continuum hypothesis (CH)</strong>: <span class="arithmatex">\(2^{\aleph_0}=\aleph_1\)</span>. CH is independent of ZFC: it can be neither proved nor refuted (Gödel 1938, Cohen 1963).</li>
+</ul>
+<blockquote>
+<p>Note: uncountable does not mean "one more than <span class="arithmatex">\(\mathbb N\)</span>"; the comparison of cardinalities is defined by means of bijections/injections.</p>
+</blockquote>
+<h2 id="311-references">3.11 References<a class="headerlink" href="#311-references" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Peano_axioms">Peano axioms</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Dedekind_cut">Dedekind cut</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Construction_of_the_real_numbers">Construction of the real numbers</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Completeness_of_the_real_numbers">Completeness of the real numbers</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Fundamental_theorem_of_algebra">Fundamental theorem of algebra</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Continuum_hypothesis">Continuum hypothesis</a></li>
+</ul>
+<h2 id="checkpoints">Checkpoints<a class="headerlink" href="#checkpoints" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Be able to write down the Peano axioms and explain why induction is valid.</li>
+<li>Be able to construct the integers or the rational numbers by means of equivalence classes, and verify that the operations are well-defined.</li>
+<li>Be able to explain how a Dedekind cut expresses <span class="arithmatex">\(\sqrt2\)</span>.</li>
+<li>Be able to prove that <span class="arithmatex">\(\mathbb Q\)</span> is countable and <span class="arithmatex">\(\mathbb R\)</span> is uncountable (at least state the idea of the diagonal argument).</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../02-sets/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Sets, Relations, and Mappings">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Sets, Relations, and Mappings
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04-algebra/" class="md-footer__link md-footer__link--next" aria-label="Next: Algebraic Structures and Linear Spaces">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Algebraic Structures and Linear Spaces
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Personal study notes · Unofficial · Definitions and proofs follow the stated prerequisites.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tracking", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../javascripts/table-wrap.js"></script>
+      
+        <script src="../../../javascripts/lang-switch.js"></script>
+      
+        <script src="../../../javascripts/glossary.js"></script>
+      
+        <script src="../../../javascripts/rudin-toc.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2772 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Mathematics hub — Classical Academic System (Regular + Rudin) and the Educational Stage System.">
+      
+      
+        <meta name="author" content="dionysus23334">
+      
+      
+        <link rel="canonical" href="https://dionysus23334.github.io/Mathematics/en/en/theory/proofs/">
+      
+      
+        <link rel="prev" href="../../principles/">
+      
+      
+        <link rel="next" href="../../glossary/">
+      
+      
+        
+          <link rel="alternate" href="../../../theory/proofs/" hreflang="zh">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Proof Status and Core Proofs - Mathematics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/base.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#proof-status-and-core-proofs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="Mathematics" class="md-header__button md-logo" aria-label="Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mathematics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Proof Status and Core Proofs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../theory/proofs/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dionysus23334/Mathematics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dionysus23334/Mathematics
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Mathematics" class="md-nav__button md-logo" aria-label="Mathematics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Mathematics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dionysus23334/Mathematics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dionysus23334/Mathematics
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://dionysus23334.github.io/study-blogs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ← Study archive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Classical Academic System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Classical Academic System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Regular System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Regular System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-logic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logic, Language, and Proof
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-sets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sets, Relations, and Mappings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-numbers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Natural Numbers and Number Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-algebra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebraic Structures and Linear Spaces
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-spaces/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spaces, Limits, and Continuity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-branches/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Branches
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rudin System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Rudin System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/01-real-complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 1 · Real and Complex Number Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/02-basic-topology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 2 · Basic Topology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/03-sequences-series/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 3 · Sequences and Series
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/04-continuity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 4 · Continuity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/05-differentiation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 5 · Differentiation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/06-riemann-stieltjes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 6 · Riemann–Stieltjes Integration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/07-function-sequences/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 7 · Sequences and Series of Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/08-special-functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 8 · Some Special Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/09-multivariable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 9 · Functions of Several Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/10-differential-forms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 10 · Integration of Differential Forms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rudin/11-lebesgue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chapter 11 · Lebesgue Theory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Educational Stage System
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Educational Stage System
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/elementary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elementary Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/secondary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secondary Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/competition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mathematical Competitions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../stages/university/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    University Mathematics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../principles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Study Rules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proof Status and Core Proofs
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proof Status and Core Proofs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#status-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status Conventions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Propositional Equivalences and Quantifier Negation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Propositional Equivalences and Quantifier Negation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-de-morgan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 De Morgan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-contrapositive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Contrapositive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-quantifier-negation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Quantifier Negation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-equivalence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Equivalence Relation ↔ Partition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-cantor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Cantor's Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-sb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Cantor–Schröder–Bernstein
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-axiom-of-choice-zorns-lemma-and-the-well-ordering-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Axiom of Choice, Zorn's Lemma, and the Well-Ordering Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-dedekind" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Supremum Property of Dedekind Cuts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-remaining-equivalent-forms-of-completeness-of-the-reals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Remaining Equivalent Forms of Completeness of the Reals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-group-iso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Fundamental Theorem of Group Homomorphisms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-rank-nullity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Rank–Nullity Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-open-ball" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Open Balls Are Open Sets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-continuity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Two Characterizations of Continuity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Two Characterizations of Continuity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-preimage-of-an-open-set-is-open" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ε-δ ⇒ Preimage of an Open Set Is Open
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preimage-of-an-open-set-is-open-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preimage of an Open Set Is Open ⇒ ε-δ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-compact-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Continuous Image of a Compact Set Is Compact
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-evt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Extreme Value Theorem on Compact Sets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-theorems-with-deferred-proofs-what-must-be-supplied" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Theorems with Deferred Proofs: What Must Be Supplied
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-banach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Banach Contraction Mapping Principle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rudin-chapter-proof-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rudin Chapter Proof Status
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../abbreviations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Abbreviations and English Terms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sources and Attribution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#status-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status Conventions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Propositional Equivalences and Quantifier Negation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Propositional Equivalences and Quantifier Negation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-de-morgan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 De Morgan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-contrapositive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Contrapositive
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-quantifier-negation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Quantifier Negation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-equivalence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Equivalence Relation ↔ Partition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-cantor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Cantor's Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-sb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Cantor–Schröder–Bernstein
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-axiom-of-choice-zorns-lemma-and-the-well-ordering-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Axiom of Choice, Zorn's Lemma, and the Well-Ordering Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-dedekind" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Supremum Property of Dedekind Cuts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-remaining-equivalent-forms-of-completeness-of-the-reals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Remaining Equivalent Forms of Completeness of the Reals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-group-iso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Fundamental Theorem of Group Homomorphisms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-rank-nullity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Rank–Nullity Theorem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-open-ball" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Open Balls Are Open Sets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-continuity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Two Characterizations of Continuity
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Two Characterizations of Continuity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-preimage-of-an-open-set-is-open" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ε-δ ⇒ Preimage of an Open Set Is Open
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preimage-of-an-open-set-is-open-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preimage of an Open Set Is Open ⇒ ε-δ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-compact-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Continuous Image of a Compact Set Is Compact
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-evt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Extreme Value Theorem on Compact Sets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-theorems-with-deferred-proofs-what-must-be-supplied" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Theorems with Deferred Proofs: What Must Be Supplied
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proof-banach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Banach Contraction Mapping Principle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rudin-chapter-proof-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rudin Chapter Proof Status
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="proof-status-and-core-proofs">Proof Status and Core Proofs<a class="headerlink" href="#proof-status-and-core-proofs" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>This page answers two questions: <strong>which theorems have complete proofs? Which are only stated/outlined?</strong></p>
+<p>Principle: an "idea of the proof" must not be written as a "proof". A complete proof must be checkable step by step; a deferred proof must be explicitly labeled and must list its prerequisites.</p>
+</blockquote>
+<h2 id="status-conventions">Status Conventions<a class="headerlink" href="#status-conventions" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Complete proof</strong></td>
+<td>Starting from definitions/axioms, every step is given and checkable</td>
+</tr>
+<tr>
+<td><strong>Proof outline</strong></td>
+<td>The key constructions and steps are given, technical details are omitted; completeness is not claimed</td>
+</tr>
+<tr>
+<td><strong>Deferred proof</strong></td>
+<td>The page uses the conclusion only, leaving the proof to a later branch/textbook; prerequisites must be listed</td>
+</tr>
+<tr>
+<td><strong>Definition/axiom</strong></td>
+<td>Not used as a theorem proof, but as a starting point</td>
+</tr>
+</tbody>
+</table>
+<h2 id="status-summary">Status Summary<a class="headerlink" href="#status-summary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Theorem/Conclusion</th>
+<th>Status</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>De Morgan equivalences, contrapositive, quantifier negation</td>
+<td>Complete proof</td>
+<td>This page, §1</td>
+</tr>
+<tr>
+<td>Soundness and completeness of propositional/first-order logic</td>
+<td>Deferred proof</td>
+<td>This page, §4; requires a proof system and model theory</td>
+</tr>
+<tr>
+<td>Equivalence relation ↔ partition</td>
+<td>Complete proof</td>
+<td>This page, §2</td>
+</tr>
+<tr>
+<td>Cantor's theorem (power set strictly larger than the set)</td>
+<td>Complete proof</td>
+<td>This page, §3</td>
+</tr>
+<tr>
+<td>Cantor–Schröder–Bernstein</td>
+<td>Complete proof</td>
+<td>This page, §4</td>
+</tr>
+<tr>
+<td>ZF/ZFC, AC, Zorn's lemma, well-ordering theorem</td>
+<td>Deferred proof</td>
+<td>This page, §5; requires axiomatic set theory</td>
+</tr>
+<tr>
+<td>Peano induction principle</td>
+<td>Axiom/definition</td>
+<td>Number systems</td>
+</tr>
+<tr>
+<td>Supremum property of Dedekind cuts</td>
+<td>Complete proof</td>
+<td>This page, §6</td>
+</tr>
+<tr>
+<td>Equivalence of five forms of completeness of the reals</td>
+<td>Partial: supremum proved; the rest deferred</td>
+<td>This page, §6, §7</td>
+</tr>
+<tr>
+<td>Fundamental theorem of algebra</td>
+<td>Deferred proof</td>
+<td>Number systems; requires complex analysis</td>
+</tr>
+<tr>
+<td>Fundamental theorem of group homomorphisms</td>
+<td>Complete proof</td>
+<td>This page, §8</td>
+</tr>
+<tr>
+<td>Rank–nullity theorem</td>
+<td>Complete proof</td>
+<td>This page, §9</td>
+</tr>
+<tr>
+<td>Spectral theorem for real symmetric matrices</td>
+<td>Deferred proof</td>
+<td>Algebra; requires inner product spaces and induction</td>
+</tr>
+<tr>
+<td>Open balls are open sets</td>
+<td>Complete proof</td>
+<td>This page, §10</td>
+</tr>
+<tr>
+<td>Equivalence of the <span class="arithmatex">\(\varepsilon\)</span>-<span class="arithmatex">\(\delta\)</span> and open-preimage characterizations of continuity</td>
+<td>Complete proof</td>
+<td>This page, §11</td>
+</tr>
+<tr>
+<td>Continuous image of a compact set is compact</td>
+<td>Complete proof</td>
+<td>This page, §12</td>
+</tr>
+<tr>
+<td>Continuous functions on compact sets attain extrema (EVT)</td>
+<td>Complete proof</td>
+<td>This page, §13</td>
+</tr>
+<tr>
+<td>Banach contraction mapping principle</td>
+<td>Complete proof</td>
+<td>This page, §15</td>
+</tr>
+<tr>
+<td>Heine–Borel, Bolzano–Weierstrass</td>
+<td>Deferred proof</td>
+<td>Spaces; requires real analysis</td>
+</tr>
+<tr>
+<td>MCT, Fatou, DCT</td>
+<td>Deferred proof</td>
+<td>Advanced; requires measure theory</td>
+</tr>
+<tr>
+<td>Cauchy integral theorem/formula, residue theorem</td>
+<td>Deferred proof</td>
+<td>Advanced; requires complex analysis</td>
+</tr>
+<tr>
+<td>Hahn–Banach, open mapping, closed graph, uniform boundedness</td>
+<td>Deferred proof</td>
+<td>Advanced; requires functional analysis</td>
+</tr>
+<tr>
+<td>Gauss–Bonnet, Brouwer, Mayer–Vietoris</td>
+<td>Deferred proof</td>
+<td>Advanced; requires geometry/algebraic topology</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The status table is an "honesty checklist": when you see "deferred proof", you should not treat that conclusion as already proved on this site.</p>
+</blockquote>
+<hr />
+<h2 id="proof-logic">1. Propositional Equivalences and Quantifier Negation<a class="headerlink" href="#proof-logic" title="Permanent link">&para;</a></h2>
+<h3 id="11-de-morgan">1.1 De Morgan<a class="headerlink" href="#11-de-morgan" title="Permanent link">&para;</a></h3>
+<p>We prove <span class="arithmatex">\(\neg(P\land Q)\equiv\neg P\lor\neg Q\)</span>. Write out the truth table:</p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(P\)</span></th>
+<th><span class="arithmatex">\(Q\)</span></th>
+<th><span class="arithmatex">\(P\land Q\)</span></th>
+<th><span class="arithmatex">\(\neg(P\land Q)\)</span></th>
+<th><span class="arithmatex">\(\neg P\lor\neg Q\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr>
+<td>T</td>
+<td>F</td>
+<td>F</td>
+<td>T</td>
+<td>T</td>
+</tr>
+<tr>
+<td>F</td>
+<td>T</td>
+<td>F</td>
+<td>T</td>
+<td>T</td>
+</tr>
+<tr>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+<td>T</td>
+<td>T</td>
+</tr>
+</tbody>
+</table>
+<p>The two columns coincide, hence the equivalence. The equivalence <span class="arithmatex">\(\neg(P\lor Q)\equiv\neg P\land\neg Q\)</span> follows in the same way.</p>
+<h3 id="12-contrapositive">1.2 Contrapositive<a class="headerlink" href="#12-contrapositive" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+P\to Q\equiv\neg P\lor Q\equiv Q\lor\neg P\equiv\neg(\neg Q)\lor\neg P\equiv\neg Q\to\neg P.
+\]</div>
+<h3 id="13-quantifier-negation">1.3 Quantifier Negation<a class="headerlink" href="#13-quantifier-negation" title="Permanent link">&para;</a></h3>
+<p>By definition, <span class="arithmatex">\(\forall x\in S,\ P(x)\)</span> is false if and only if there exists <span class="arithmatex">\(x\in S\)</span> for which <span class="arithmatex">\(P(x)\)</span> is false:</p>
+<div class="arithmatex">\[
+\neg\forall x\in S,\ P(x)\equiv\exists x\in S,\ \neg P(x).
+\]</div>
+<p>Likewise <span class="arithmatex">\(\neg\exists x\in S,\ P(x)\equiv\forall x\in S,\ \neg P(x)\)</span>.</p>
+<hr />
+<h2 id="proof-equivalence">2. Equivalence Relation ↔ Partition<a class="headerlink" href="#proof-equivalence" title="Permanent link">&para;</a></h2>
+<p>Let <span class="arithmatex">\(\sim\)</span> be an equivalence relation on <span class="arithmatex">\(A\)</span>. For each <span class="arithmatex">\(x\in A\)</span>, set <span class="arithmatex">\([x]=\{y\in A:x\sim y\}\)</span>.</p>
+<p><strong>Each step</strong>:</p>
+<ol>
+<li><strong>Non-empty</strong>: by reflexivity, <span class="arithmatex">\(x\in[x]\)</span>.</li>
+<li><strong>Pairwise disjoint or equal</strong>: if <span class="arithmatex">\([x]\cap[y]\ne\varnothing\)</span>, take <span class="arithmatex">\(z\in[x]\cap[y]\)</span>. Then <span class="arithmatex">\(x\sim z\)</span> and <span class="arithmatex">\(y\sim z\)</span>. By symmetry <span class="arithmatex">\(z\sim y\)</span>, and by transitivity <span class="arithmatex">\(x\sim y\)</span>. For any <span class="arithmatex">\(w\in[x]\)</span>, <span class="arithmatex">\(w\sim x\sim y\)</span>, hence <span class="arithmatex">\(w\in[y]\)</span>; thus <span class="arithmatex">\([x]\subseteq[y]\)</span>. Similarly <span class="arithmatex">\([y]\subseteq[x]\)</span>, so <span class="arithmatex">\([x]=[y]\)</span>.</li>
+<li><strong>Union is <span class="arithmatex">\(A\)</span></strong>: every <span class="arithmatex">\(x\)</span> belongs to <span class="arithmatex">\([x]\)</span>, so <span class="arithmatex">\(\bigcup_{x\in A}[x]=A\)</span>.</li>
+</ol>
+<p>Therefore the equivalence classes form a partition.</p>
+<p>Conversely, if <span class="arithmatex">\(\mathcal P\)</span> is a partition of <span class="arithmatex">\(A\)</span>, define <span class="arithmatex">\(x\sim y\)</span> if and only if <span class="arithmatex">\(x,y\)</span> lie in the same block.</p>
+<ul>
+<li>Reflexive: <span class="arithmatex">\(x\)</span> lies in the same block as itself;</li>
+<li>Symmetric: the relation of lying in the same block is symmetric;</li>
+<li>Transitive: if <span class="arithmatex">\(x,y\)</span> lie in the same block and <span class="arithmatex">\(y,z\)</span> lie in the same block, then <span class="arithmatex">\(x,z\)</span> lie in the same block.</li>
+</ul>
+<p>Hence <span class="arithmatex">\(\sim\)</span> is an equivalence relation, and its equivalence classes are exactly the blocks of the partition. This completes the proof.</p>
+<hr />
+<h2 id="proof-cantor">3. Cantor's Theorem<a class="headerlink" href="#proof-cantor" title="Permanent link">&para;</a></h2>
+<p><strong>Theorem</strong>: there is no surjection <span class="arithmatex">\(f:A\to\mathcal P(A)\)</span>.</p>
+<p><strong>Proof</strong>: suppose for contradiction that <span class="arithmatex">\(f\)</span> is a surjection. Define</p>
+<div class="arithmatex">\[
+D=\{x\in A:x\notin f(x)\}.
+\]</div>
+<p>Then <span class="arithmatex">\(D\subseteq A\)</span>, that is, <span class="arithmatex">\(D\in\mathcal P(A)\)</span>. Since <span class="arithmatex">\(f\)</span> is surjective, there exists <span class="arithmatex">\(d\in A\)</span> with <span class="arithmatex">\(f(d)=D\)</span>.</p>
+<p>Consider whether <span class="arithmatex">\(d\in D\)</span>:</p>
+<ul>
+<li>If <span class="arithmatex">\(d\in D\)</span>, then by the definition of <span class="arithmatex">\(D\)</span> we have <span class="arithmatex">\(d\notin f(d)=D\)</span>, a contradiction;</li>
+<li>If <span class="arithmatex">\(d\notin D\)</span>, then <span class="arithmatex">\(d\notin f(d)\)</span>, so by definition <span class="arithmatex">\(d\in D\)</span>, a contradiction.</li>
+</ul>
+<p>Both cases lead to a contradiction, so no such surjection exists. This completes the proof.</p>
+<hr />
+<h2 id="proof-sb">4. Cantor–Schröder–Bernstein<a class="headerlink" href="#proof-sb" title="Permanent link">&para;</a></h2>
+<p><strong>Theorem</strong>: if there exist an injection <span class="arithmatex">\(f:A\to B\)</span> and an injection <span class="arithmatex">\(g:B\to A\)</span>, then there exists a bijection <span class="arithmatex">\(h:A\to B\)</span>.</p>
+<p><strong>Construction</strong>:</p>
+<div class="arithmatex">\[
+C_0=A\setminus g(B),\qquad C_{n+1}=g(f(C_n)),\qquad C=\bigcup_{n=0}^\infty C_n.
+\]</div>
+<p>Define</p>
+<div class="arithmatex">\[
+h(x)=
+\begin{cases}
+f(x), &amp; x\in C,\\
+g^{-1}(x), &amp; x\notin C.
+\end{cases}
+\]</div>
+<p>If <span class="arithmatex">\(x\notin C\)</span>, then <span class="arithmatex">\(x\notin C_0=A\setminus g(B)\)</span>, so <span class="arithmatex">\(x\in g(B)\)</span>, and <span class="arithmatex">\(g^{-1}(x)\)</span> exists and is unique.</p>
+<p><strong>Well-defined</strong>: the two cases are mutually exclusive; <span class="arithmatex">\(g^{-1}(x)\)</span> is unique.</p>
+<p><strong>Injective</strong>: suppose <span class="arithmatex">\(h(x)=h(y)\)</span>.</p>
+<ul>
+<li>If <span class="arithmatex">\(x,y\in C\)</span>, then <span class="arithmatex">\(f(x)=f(y)\)</span>, and injectivity of <span class="arithmatex">\(f\)</span> gives <span class="arithmatex">\(x=y\)</span>.</li>
+<li>If <span class="arithmatex">\(x,y\notin C\)</span>, then <span class="arithmatex">\(g^{-1}(x)=g^{-1}(y)\)</span>, which gives <span class="arithmatex">\(x=y\)</span>.</li>
+<li>If <span class="arithmatex">\(x\in C,\ y\notin C\)</span>, then <span class="arithmatex">\(f(x)=g^{-1}(y)\)</span>; applying <span class="arithmatex">\(g\)</span> to both sides gives <span class="arithmatex">\(g(f(x))=y\)</span>. But <span class="arithmatex">\(x\in C_n\)</span> for some <span class="arithmatex">\(n\)</span>, so <span class="arithmatex">\(g(f(x))\in C_{n+1}\subseteq C\)</span>, contradicting <span class="arithmatex">\(y\notin C\)</span>.</li>
+</ul>
+<p>Hence <span class="arithmatex">\(h\)</span> is injective.</p>
+<p><strong>Surjective</strong>: take any <span class="arithmatex">\(y\in B\)</span>.</p>
+<ul>
+<li>If <span class="arithmatex">\(g(y)\in C\)</span>, then <span class="arithmatex">\(g(y)\in C_{n+1}=g(f(C_n))\)</span> for some <span class="arithmatex">\(n\)</span> (note that <span class="arithmatex">\(g(y)\notin C_0\)</span>), so <span class="arithmatex">\(g(y)=g(f(c))\)</span> for some <span class="arithmatex">\(c\in C_n\)</span>. By injectivity of <span class="arithmatex">\(g\)</span>, <span class="arithmatex">\(y=f(c)=h(c)\)</span>.</li>
+<li>If <span class="arithmatex">\(g(y)\notin C\)</span>, then <span class="arithmatex">\(h(g(y))=g^{-1}(g(y))=y\)</span>.</li>
+</ul>
+<p>Hence <span class="arithmatex">\(h\)</span> is surjective. This completes the proof.</p>
+<hr />
+<h2 id="5-axiom-of-choice-zorns-lemma-and-the-well-ordering-theorem">5. Axiom of Choice, Zorn's Lemma, and the Well-Ordering Theorem<a class="headerlink" href="#5-axiom-of-choice-zorns-lemma-and-the-well-ordering-theorem" title="Permanent link">&para;</a></h2>
+<p>These three are equivalent (in ZF). This site <strong>does not prove</strong> this chain of equivalences; it requires ordinals, transfinite recursion, and an axiomatic system of set theory.</p>
+<ul>
+<li><strong>AC</strong>: every family of non-empty sets has a choice function;</li>
+<li><strong>Zorn</strong>: in a non-empty partially ordered set, if every chain has an upper bound, then there is a maximal element;</li>
+<li><strong>Well-ordering theorem</strong>: every set can be well ordered.</li>
+</ul>
+<p>When using Zorn, one must verify that "every chain has an upper bound"; verifying only finite chains does not suffice.</p>
+<hr />
+<h2 id="proof-dedekind">6. Supremum Property of Dedekind Cuts<a class="headerlink" href="#proof-dedekind" title="Permanent link">&para;</a></h2>
+<p>Let <span class="arithmatex">\(S\)</span> be a family of non-empty Dedekind cuts bounded above by a cut <span class="arithmatex">\(B\)</span> (that is, every <span class="arithmatex">\(A\in S\)</span> satisfies <span class="arithmatex">\(A\subseteq B\)</span>). Let</p>
+<div class="arithmatex">\[
+U=\bigcup_{A\in S} A.
+\]</div>
+<p><strong>Proof that <span class="arithmatex">\(U\)</span> is a cut</strong>:</p>
+<ol>
+<li><span class="arithmatex">\(U\ne\varnothing\)</span>: <span class="arithmatex">\(S\)</span> is non-empty; take <span class="arithmatex">\(A\in S\)</span>, then <span class="arithmatex">\(A\ne\varnothing\)</span>, so <span class="arithmatex">\(U\)</span> is non-empty.</li>
+<li><span class="arithmatex">\(U\ne\mathbb Q\)</span>: every <span class="arithmatex">\(A\subseteq B\)</span>, so <span class="arithmatex">\(U\subseteq B\ne\mathbb Q\)</span>.</li>
+<li>Downward closed: if <span class="arithmatex">\(q\in U\)</span>, then <span class="arithmatex">\(q\in A\)</span> for some <span class="arithmatex">\(A\in S\)</span>; if <span class="arithmatex">\(p&lt;q\)</span>, downward closure of <span class="arithmatex">\(A\)</span> gives <span class="arithmatex">\(p\in A\subseteq U\)</span>.</li>
+<li>No greatest element: if <span class="arithmatex">\(q\in U\)</span>, then <span class="arithmatex">\(q\in A\)</span> for some <span class="arithmatex">\(A\)</span>; <span class="arithmatex">\(A\)</span> has no greatest element, so there exists <span class="arithmatex">\(r\in A\)</span> with <span class="arithmatex">\(q&lt;r\)</span>, whence <span class="arithmatex">\(r\in U\)</span>.</li>
+</ol>
+<p>Therefore <span class="arithmatex">\(U\)</span> is a cut.</p>
+<p><strong>Upper bound</strong>: every <span class="arithmatex">\(A\in S\)</span> satisfies <span class="arithmatex">\(A\subseteq U\)</span>, so <span class="arithmatex">\(U\)</span> is an upper bound.</p>
+<p><strong>Least upper bound</strong>: if <span class="arithmatex">\(C\)</span> is any upper bound, then every <span class="arithmatex">\(A\subseteq C\)</span>, so <span class="arithmatex">\(U=\bigcup A\subseteq C\)</span>. Hence <span class="arithmatex">\(U\)</span> is the least upper bound. This completes the proof.</p>
+<hr />
+<h2 id="7-remaining-equivalent-forms-of-completeness-of-the-reals">7. Remaining Equivalent Forms of Completeness of the Reals<a class="headerlink" href="#7-remaining-equivalent-forms-of-completeness-of-the-reals" title="Permanent link">&para;</a></h2>
+<p>The number systems page lists five equivalent forms. This site gives a complete proof only of "Dedekind cuts ⇒ supremum property" (§6).</p>
+<p>The remaining implications require the monotone bounded theorem, the nested interval theorem, and the Bolzano–Weierstrass theorem from real analysis; they are proved in the spaces and branch-analysis sections. Here we do not repeatedly cite "equivalence" as a proved conclusion, but use it only as a roadmap.</p>
+<hr />
+<h2 id="proof-group-iso">8. Fundamental Theorem of Group Homomorphisms<a class="headerlink" href="#proof-group-iso" title="Permanent link">&para;</a></h2>
+<p>Let <span class="arithmatex">\(\varphi:G\to H\)</span> be a group homomorphism and <span class="arithmatex">\(K=\ker\varphi\)</span>.</p>
+<p><strong>The kernel is normal</strong>: for <span class="arithmatex">\(k\in K\)</span> and <span class="arithmatex">\(g\in G\)</span>,</p>
+<div class="arithmatex">\[
+\varphi(gkg^{-1})=\varphi(g)\varphi(k)\varphi(g)^{-1}=e,
+\]</div>
+<p>so <span class="arithmatex">\(gkg^{-1}\in K\)</span>.</p>
+<p><strong>Definition</strong>: let <span class="arithmatex">\(\Phi:G/K\to\operatorname{im}\varphi\)</span>, <span class="arithmatex">\(\Phi(gK)=\varphi(g)\)</span>.</p>
+<p><strong>Well-defined</strong>: if <span class="arithmatex">\(gK=hK\)</span>, then <span class="arithmatex">\(h^{-1}g\in K\)</span>, so</p>
+<div class="arithmatex">\[
+\varphi(h)^{-1}\varphi(g)=\varphi(h^{-1}g)=e,
+\]</div>
+<p>hence <span class="arithmatex">\(\varphi(g)=\varphi(h)\)</span>.</p>
+<p><strong>Homomorphism</strong>:</p>
+<div class="arithmatex">\[
+\Phi(gK\cdot hK)=\Phi(ghK)=\varphi(gh)=\varphi(g)\varphi(h)=\Phi(gK)\Phi(hK).
+\]</div>
+<p><strong>Injective</strong>: if <span class="arithmatex">\(\Phi(gK)=e\)</span>, then <span class="arithmatex">\(\varphi(g)=e\)</span>, so <span class="arithmatex">\(g\in K\)</span>, that is, <span class="arithmatex">\(gK=K\)</span>.</p>
+<p><strong>Surjective</strong>: take any <span class="arithmatex">\(y\in\operatorname{im}\varphi\)</span>; there exists <span class="arithmatex">\(g\)</span> with <span class="arithmatex">\(y=\varphi(g)=\Phi(gK)\)</span>.</p>
+<p>Therefore <span class="arithmatex">\(\Phi\)</span> is an isomorphism, and <span class="arithmatex">\(G/K\cong\operatorname{im}\varphi\)</span>. This completes the proof.</p>
+<hr />
+<h2 id="proof-rank-nullity">9. Rank–Nullity Theorem<a class="headerlink" href="#proof-rank-nullity" title="Permanent link">&para;</a></h2>
+<p>Let <span class="arithmatex">\(V\)</span> be finite-dimensional and <span class="arithmatex">\(T:V\to W\)</span> linear. Take a basis of <span class="arithmatex">\(\ker T\)</span>,</p>
+<div class="arithmatex">\[
+v_1,\dots,v_k.
+\]</div>
+<p>Extend it to a basis of <span class="arithmatex">\(V\)</span>,</p>
+<div class="arithmatex">\[
+v_1,\dots,v_k,v_{k+1},\dots,v_n.
+\]</div>
+<p><strong>Proof that <span class="arithmatex">\(T(v_{k+1}),\dots,T(v_n)\)</span> is a basis of <span class="arithmatex">\(\operatorname{im}T\)</span></strong>:</p>
+<p><strong>Spanning</strong>: take any <span class="arithmatex">\(v=\sum_{i=1}^n a_i v_i\)</span>; then</p>
+<div class="arithmatex">\[
+T(v)=\sum_{i=1}^n a_iT(v_i)=\sum_{i=k+1}^n a_iT(v_i),
+\]</div>
+<p>because the first <span class="arithmatex">\(k\)</span> terms lie in the kernel.</p>
+<p><strong>Linear independence</strong>: if <span class="arithmatex">\(\sum_{i=k+1}^n a_iT(v_i)=0\)</span>, then</p>
+<div class="arithmatex">\[
+T\left(\sum_{i=k+1}^n a_iv_i\right)=0,
+\]</div>
+<p>so <span class="arithmatex">\(\sum_{i=k+1}^n a_iv_i\in\ker T\)</span>. But this is also a combination of <span class="arithmatex">\(v_{k+1},\dots,v_n\)</span>; the kernel has basis <span class="arithmatex">\(v_1,\dots,v_k\)</span>. By linear independence of a basis, all <span class="arithmatex">\(a_i=0\)</span>.</p>
+<p>Therefore <span class="arithmatex">\(\dim\operatorname{im}T=n-k\)</span>, that is,</p>
+<div class="arithmatex">\[
+\dim V=\dim\ker T+\dim\operatorname{im}T.
+\]</div>
+<p>This completes the proof.</p>
+<hr />
+<h2 id="proof-open-ball">10. Open Balls Are Open Sets<a class="headerlink" href="#proof-open-ball" title="Permanent link">&para;</a></h2>
+<p>Let <span class="arithmatex">\(y\in B(x,r)\)</span> and set <span class="arithmatex">\(s=r-d(x,y)&gt;0\)</span>. For any <span class="arithmatex">\(z\in B(y,s)\)</span>, the triangle inequality gives</p>
+<div class="arithmatex">\[
+d(x,z)\le d(x,y)+d(y,z)&lt;d(x,y)+s=r,
+\]</div>
+<p>so <span class="arithmatex">\(z\in B(x,r)\)</span>. Hence <span class="arithmatex">\(B(y,s)\subseteq B(x,r)\)</span>, that is, <span class="arithmatex">\(B(x,r)\)</span> is an open set. This completes the proof.</p>
+<hr />
+<h2 id="proof-continuity">11. Two Characterizations of Continuity<a class="headerlink" href="#proof-continuity" title="Permanent link">&para;</a></h2>
+<p>Let <span class="arithmatex">\(f:X\to Y\)</span>, where <span class="arithmatex">\(X,Y\)</span> are metric spaces.</p>
+<h3 id="-preimage-of-an-open-set-is-open">ε-δ ⇒ Preimage of an Open Set Is Open<a class="headerlink" href="#-preimage-of-an-open-set-is-open" title="Permanent link">&para;</a></h3>
+<p>Let <span class="arithmatex">\(V\subseteq Y\)</span> be open and <span class="arithmatex">\(x\in f^{-1}(V)\)</span>. Then <span class="arithmatex">\(f(x)\in V\)</span>, so there exists <span class="arithmatex">\(\varepsilon&gt;0\)</span> with <span class="arithmatex">\(B_Y(f(x),\varepsilon)\subseteq V\)</span>. By continuity, there exists <span class="arithmatex">\(\delta&gt;0\)</span> such that</p>
+<div class="arithmatex">\[
+f(B_X(x,\delta))\subseteq B_Y(f(x),\varepsilon)\subseteq V.
+\]</div>
+<p>Hence <span class="arithmatex">\(B_X(x,\delta)\subseteq f^{-1}(V)\)</span>, that is, <span class="arithmatex">\(f^{-1}(V)\)</span> is open.</p>
+<h3 id="preimage-of-an-open-set-is-open-">Preimage of an Open Set Is Open ⇒ ε-δ<a class="headerlink" href="#preimage-of-an-open-set-is-open-" title="Permanent link">&para;</a></h3>
+<p>Given <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(\varepsilon&gt;0\)</span>, take <span class="arithmatex">\(V=B_Y(f(x),\varepsilon)\)</span>. <span class="arithmatex">\(V\)</span> is open, so <span class="arithmatex">\(f^{-1}(V)\)</span> is open and contains <span class="arithmatex">\(x\)</span>. There exists <span class="arithmatex">\(\delta&gt;0\)</span> with <span class="arithmatex">\(B_X(x,\delta)\subseteq f^{-1}(V)\)</span>, that is, <span class="arithmatex">\(f(B_X(x,\delta))\subseteq V\)</span>. This is precisely the <span class="arithmatex">\(\varepsilon\)</span>-<span class="arithmatex">\(\delta\)</span> definition. This completes the proof.</p>
+<hr />
+<h2 id="proof-compact-image">12. Continuous Image of a Compact Set Is Compact<a class="headerlink" href="#proof-compact-image" title="Permanent link">&para;</a></h2>
+<p>Let <span class="arithmatex">\(f:X\to Y\)</span> be continuous and <span class="arithmatex">\(X\)</span> compact. Take any open cover <span class="arithmatex">\(\{V_i\}_{i\in I}\)</span> of <span class="arithmatex">\(f(X)\)</span>. Then</p>
+<div class="arithmatex">\[
+\{f^{-1}(V_i)\}_{i\in I}
+\]</div>
+<p>is an open cover of <span class="arithmatex">\(X\)</span>. Since <span class="arithmatex">\(X\)</span> is compact, there is a finite subcover</p>
+<div class="arithmatex">\[
+X=f^{-1}(V_{i_1})\cup\cdots\cup f^{-1}(V_{i_m}).
+\]</div>
+<p>Thus</p>
+<div class="arithmatex">\[
+f(X)\subseteq V_{i_1}\cup\cdots\cup V_{i_m}.
+\]</div>
+<p>Therefore <span class="arithmatex">\(f(X)\)</span> is compact. This completes the proof.</p>
+<hr />
+<h2 id="proof-evt">13. Extreme Value Theorem on Compact Sets<a class="headerlink" href="#proof-evt" title="Permanent link">&para;</a></h2>
+<p>Let <span class="arithmatex">\(X\)</span> be non-empty and compact, and let <span class="arithmatex">\(f:X\to\mathbb R\)</span> be continuous. By §12, <span class="arithmatex">\(f(X)\)</span> is a compact subset of <span class="arithmatex">\(\mathbb R\)</span>, hence bounded and closed.</p>
+<p>Let <span class="arithmatex">\(M=\sup f(X)\)</span>. By the definition of supremum, there exist <span class="arithmatex">\(x_n\in X\)</span> with <span class="arithmatex">\(f(x_n)\to M\)</span>. Since <span class="arithmatex">\(f(X)\)</span> is closed, <span class="arithmatex">\(M\in f(X)\)</span>, so there exists <span class="arithmatex">\(x\in X\)</span> with <span class="arithmatex">\(f(x)=M\)</span>. The argument for the minimum is the same. This completes the proof.</p>
+<hr />
+<h2 id="14-theorems-with-deferred-proofs-what-must-be-supplied">14. Theorems with Deferred Proofs: What Must Be Supplied<a class="headerlink" href="#14-theorems-with-deferred-proofs-what-must-be-supplied" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Theorem</th>
+<th>Reason for deferral</th>
+<th>Required to complete the proof</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Completeness of first-order logic</td>
+<td>Requires a proof system and model theory</td>
+<td>Logic sequel/mathematical logic</td>
+</tr>
+<tr>
+<td>AC ⇔ Zorn ⇔ well-ordering</td>
+<td>Requires ordinals and transfinite recursion</td>
+<td>Axiomatic set theory</td>
+</tr>
+<tr>
+<td>Remaining equivalences of completeness of the reals</td>
+<td>Requires monotone bounded/nested intervals/BW</td>
+<td>Spaces and branch analysis</td>
+</tr>
+<tr>
+<td>Fundamental theorem of algebra</td>
+<td>Requires complex analysis or topology</td>
+<td>Advanced complex analysis</td>
+</tr>
+<tr>
+<td>Spectral theorem</td>
+<td>Requires inner product spaces and induction</td>
+<td>Algebra sequel/linear algebra</td>
+</tr>
+<tr>
+<td>Heine–Borel/BW</td>
+<td>Requires real analysis</td>
+<td>Spaces and branches</td>
+</tr>
+<tr>
+<td>MCT/Fatou/DCT</td>
+<td>Requires measure theory</td>
+<td>Advanced</td>
+</tr>
+<tr>
+<td>Cauchy integral/residue</td>
+<td>Requires complex analysis</td>
+<td>Advanced</td>
+</tr>
+<tr>
+<td>Hahn–Banach, etc.</td>
+<td>Requires functional analysis</td>
+<td>Advanced</td>
+</tr>
+<tr>
+<td>Gauss–Bonnet/Brouwer</td>
+<td>Requires geometry/algebraic topology</td>
+<td>Advanced</td>
+</tr>
+</tbody>
+</table>
+<h2 id="proof-banach">15. Banach Contraction Mapping Principle<a class="headerlink" href="#proof-banach" title="Permanent link">&para;</a></h2>
+<p><strong>Theorem</strong>: let <span class="arithmatex">\((X,d)\)</span> be complete and let <span class="arithmatex">\(T:X\to X\)</span> satisfy</p>
+<div class="arithmatex">\[
+d(Tx,Ty)\le q\,d(x,y),\qquad 0\le q&lt;1.
+\]</div>
+<p>Then <span class="arithmatex">\(T\)</span> has a unique fixed point.</p>
+<p><strong>Existence</strong>: take any <span class="arithmatex">\(x_0\in X\)</span> and set <span class="arithmatex">\(x_{n+1}=T(x_n)\)</span>. Induction gives</p>
+<div class="arithmatex">\[
+d(x_{n+1},x_{n+2})\le q\,d(x_n,x_{n+1})\le q^{n+1}d(x_0,x_1).
+\]</div>
+<p>For <span class="arithmatex">\(m&gt;n\)</span>, the triangle inequality and the geometric series give</p>
+<div class="arithmatex">\[
+d(x_n,x_m)\le\sum_{k=n}^{m-1}d(x_k,x_{k+1})
+\le d(x_0,x_1)\sum_{k=n}^{m-1}q^k
+\le \frac{q^n}{1-q}d(x_0,x_1)\to0.
+\]</div>
+<p>So <span class="arithmatex">\(\{x_n\}\)</span> is a Cauchy sequence. Since <span class="arithmatex">\(X\)</span> is complete, <span class="arithmatex">\(x_n\to x\)</span>. By continuity of <span class="arithmatex">\(T\)</span> (Lipschitz implies continuous),</p>
+<div class="arithmatex">\[
+T(x)=\lim T(x_n)=\lim x_{n+1}=x.
+\]</div>
+<p><strong>Uniqueness</strong>: if <span class="arithmatex">\(x,y\)</span> are both fixed points, then</p>
+<div class="arithmatex">\[
+d(x,y)=d(Tx,Ty)\le q\,d(x,y),
+\]</div>
+<p>and since <span class="arithmatex">\(0\le q&lt;1\)</span>, necessarily <span class="arithmatex">\(d(x,y)=0\)</span>, that is, <span class="arithmatex">\(x=y\)</span>. This completes the proof.</p>
+<h2 id="rudin-chapter-proof-status">Rudin Chapter Proof Status<a class="headerlink" href="#rudin-chapter-proof-status" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Chapter</th>
+<th>Proof/outline provided</th>
+<th>Deferred</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 The real number system</td>
+<td>Ordered field, supremum, Archimedean, density, n-th roots, Schwarz</td>
+<td>Remaining equivalent forms of completeness</td>
+</tr>
+<tr>
+<td>2 Basic topology</td>
+<td>Open balls, closed sets, compact sets closed/bounded, closed subsets compact, connected intervals, continuous image connected</td>
+<td>Complete proof of Heine–Borel</td>
+</tr>
+<tr>
+<td>3 Sequences and series</td>
+<td>Uniqueness of limits, boundedness, monotone convergence, absolute convergence, M-test</td>
+<td>Cauchy criterion, BW, details of root/ratio tests</td>
+</tr>
+<tr>
+<td>4 Continuity</td>
+<td>Sequential characterization, composition, compact image, intermediate value, uniform continuity outline</td>
+<td>Counting discontinuities of monotone functions</td>
+</tr>
+<tr>
+<td>5 Differentiation</td>
+<td>Differentiable ⇒ continuous, differentiation rules, Rolle/MVT/Cauchy MVT, Darboux outline</td>
+<td>Taylor remainder, L'Hôpital</td>
+</tr>
+<tr>
+<td>6 RS integral</td>
+<td>Refinement, integrability criterion, continuous × monotone, properties, integration by parts outline</td>
+<td>Bounded variation, change of variables</td>
+</tr>
+<tr>
+<td>7 Sequences of functions</td>
+<td>Uniform convergence preserves continuity/integral, M-test, derivative interchange outline</td>
+<td>Arzelà–Ascoli, Stone–Weierstrass</td>
+</tr>
+<tr>
+<td>8 Special functions</td>
+<td>Exponential law, logarithm properties, trigonometric identities, Gamma recursion</td>
+<td>Fourier convergence, Parseval</td>
+</tr>
+<tr>
+<td>9 Multivariable</td>
+<td>Linear maps continuous, differentiable ⇒ continuous, contraction mapping (link)</td>
+<td>Inverse/implicit function, rank theorem</td>
+</tr>
+<tr>
+<td>10 Differential forms</td>
+<td>d²=0, ∂²=0, Stokes' idea</td>
+<td>Poincaré lemma</td>
+</tr>
+<tr>
+<td>11 Lebesgue</td>
+<td>MCT/Fatou/DCT statements and relations</td>
+<td>Complete measure-theoretic proofs, Riesz–Fischer</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>This table is a "chapter-level" index; the status markers within individual theorem pages are finer-grained. Deferred does not mean incorrect; it only means that this site has not yet developed a complete proof.</p>
+</blockquote>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Propositional_calculus">Propositional calculus</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Equivalence_relation">Equivalence relation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cantor%27s_theorem">Cantor's theorem</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Schr%C3%B6der%E2%80%93Bernstein_theorem">Schröder–Bernstein theorem</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Dedekind_cut">Dedekind cut</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Isomorphism_theorem">Isomorphism theorem</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Rank%E2%80%93nullity_theorem">Rank–nullity theorem</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Compact_space">Compact space</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Extreme_value_theorem">Extreme value theorem</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../principles/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Study Rules">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Study Rules
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../glossary/" class="md-footer__link md-footer__link--next" aria-label="Next: Glossary">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Glossary
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Personal study notes · Unofficial · Definitions and proofs follow the stated prerequisites.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tracking", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../../javascripts/table-wrap.js"></script>
+      
+        <script src="../../../javascripts/lang-switch.js"></script>
+      
+        <script src="../../../javascripts/glossary.js"></script>
+      
+        <script src="../../../javascripts/rudin-toc.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
