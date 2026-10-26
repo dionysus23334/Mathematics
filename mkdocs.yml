@@ -40,38 +40,27 @@ nav:
   - ← 个人主页: https://dionysus23334.github.io/study-blogs/
   - 首页: index.md
   - 经典数学理论体系:
-      - 全书目录: theory/book.md
-      - 总览与依赖: theory/index.md
-      - 第一卷 · 基础:
-          - 1 · 逻辑语言与证明: theory/01-logic.md
-          - 2 · 集合、关系与映射: theory/02-sets.md
-          - 3 · 自然数与数系: theory/03-numbers.md
-          - 4 · 代数结构与线性空间: theory/04-algebra.md
-      - 第二卷 · 空间与分析:
-          - 5 · 空间、极限与连续: theory/05-spaces.md
-          - 分析学（Rudin 路线）:
-              - 分析总览: theory/analysis/index.md
-              - 第 1 章 · 实数系与复数系: theory/analysis/01-real-complex.md
-      - 第三卷 · 核心分支:
-          - 6 · 核心分支: theory/06-branches.md
-      - 第四卷 · 深入:
-          - 7 · 深入理论: theory/07-advanced.md
-      - 附录:
-          - 证明状态与核心证明: theory/proofs.md
-          - 学习规则: principles.md
-          - 术语表: glossary.md
-          - 缩写与英文术语: abbreviations.md
+      - 总览: theory/index.md
+      - 1 · 逻辑语言与证明: theory/01-logic.md
+      - 2 · 集合、关系与映射: theory/02-sets.md
+      - 3 · 自然数与数系: theory/03-numbers.md
+      - 4 · 代数结构与线性空间: theory/04-algebra.md
+      - 5 · 空间、极限与连续: theory/05-spaces.md
+      - 分析学 · Rudin 第 1 章: theory/analysis.md
+      - 6 · 核心分支: theory/06-branches.md
+      - 7 · 深入理论: theory/07-advanced.md
   - 教育阶段体系:
       - 总览: stages/index.md
       - 初等数学: stages/elementary.md
       - 中等数学: stages/secondary.md
-      - 数学竞赛:
-          - 总览: stages/competition/index.md
-          - 几何: stages/competition/geometry.md
-          - 代数: stages/competition/algebra.md
-          - 数论: stages/competition/number-theory.md
-          - 组合: stages/competition/combinatorics.md
+      - 数学竞赛: stages/competition.md
       - 高等数学: stages/university.md
+  - 参考:
+      - 学习规则: principles.md
+      - 证明状态与核心证明: theory/proofs.md
+      - 术语表: glossary.md
+      - 缩写与英文术语: abbreviations.md
+      - 来源与出处: sources.md
 
 plugins:
   - search:

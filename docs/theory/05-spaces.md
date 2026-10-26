@@ -1,5 +1,7 @@
 # 5 · 空间、极限与连续性
 
+> **出处**：Rudin 第 2 章；Munkres, Topology；Wikipedia: Metric space、Compact space。
+
 > **前置**：第 3–4 层（实数、向量空间、内积、线性映射）。  
 > **这一层的目标**：把“距离、靠近、连续”从直观变成可证明的语言。Rudin 的分析体系从这里进入。
 

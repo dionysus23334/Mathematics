@@ -57,5 +57,5 @@
 
 - [初等数学 · 基础启蒙](elementary.md)
 - [中等数学 · 中学阶段](secondary.md)
-- [数学竞赛 · 专题拓展](competition/index.md)
+- [数学竞赛 · 专题拓展](competition.md)
 - [高等数学 · 大学及进阶](university.md)

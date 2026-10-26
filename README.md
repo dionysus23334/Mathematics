@@ -12,25 +12,25 @@ Live: https://dionysus23334.github.io/Mathematics/
 ```text
 docs/
   index.md                     two-route homepage
-  theory/                      7-layer dependency route
+  theory/                      dependency route (one chapter per layer)
     01-logic.md
     02-sets.md
     03-numbers.md
     04-algebra.md
     05-spaces.md
+    analysis.md                Rudin chapter 1, with complete proofs
     06-branches.md
     07-advanced.md
+    proofs.md                  proof status + complete core proofs
   stages/                      learning-stage route
     elementary.md
     secondary.md
+    competition.md             one page: geometry / algebra / number theory / combinatorics
     university.md
-    competition/
-      geometry.md
-      algebra.md
-      number-theory.md
-      combinatorics.md
   principles.md                dependency rules and page template
   glossary.md                  searchable terminology index
+  abbreviations.md             English abbreviations
+  sources.md                   textbooks / Wikipedia / attribution
 ```
 
 ## Principles

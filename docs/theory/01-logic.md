@@ -1,5 +1,7 @@
 # 1 · 逻辑语言与证明
 
+> **出处**：标准逻辑教材；Wikipedia: Propositional calculus、First-order logic。
+
 > **前置**：无。  
 > **这一层的目标**：先学会“数学句子怎样写、怎样否定、怎样证明”，再进入具体对象。
 

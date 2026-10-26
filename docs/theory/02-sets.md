@@ -1,5 +1,7 @@
 # 2 · 集合、关系与映射
 
+> **出处**：ZF/ZFC 标准表述；Wikipedia: Zermelo–Fraenkel set theory、Axiom of choice。
+
 > **前置**：第 1 层（命题、量词、证明）。  
 > **这一层的目标**：建立后面所有数学分支共同使用的对象语言。
 
