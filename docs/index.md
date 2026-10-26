@@ -69,6 +69,7 @@
 
 ## 从这里开始
 
+- 想先看全书结构：[全书目录](theory/book.md)
 - 想先看全貌：[经典数学理论体系总览](theory/index.md)
 - 想按阶段学习：[教育阶段体系总览](stages/index.md)
 - 想了解内容规则：[学习规则](principles.md)
