@@ -10,8 +10,7 @@
 - 第 3 章：级数；
 - 第 2 章：紧致。
 
-## 7.1 逐点收敛与一致收敛
-
+## 7.1 逐点收敛与一致收敛 {#r7-1}
 函数列 \(f_n:X\to Y\) **逐点收敛**到 \(f\)，若对每个 \(x\)，\(f_n(x)\to f(x)\)。  
 **一致收敛**：若
 
@@ -67,8 +66,7 @@ f_n(x)=f_n(x_0)+\int_{x_0}^x f_n'(t)\,dt
 
 取极限，用定理 7.3 得 \(f(x)=f(x_0)+\int g\)，所以 \(f'=g\)。
 
-## 7.2 函数项级数
-
+## 7.2 函数项级数 {#r7-2}
 若 \(\sum f_n\) 的部分和一致收敛，称级数一致收敛。
 
 ### 定理 7.5（Weierstrass M-判别）
@@ -83,8 +81,7 @@ f_n(x)=f_n(x_0)+\int_{x_0}^x f_n'(t)\,dt
 
 与 \(x\) 无关，故一致 Cauchy。证毕。
 
-## 7.3 等度连续与 Arzelà–Ascoli
-
+## 7.3 等度连续与 Arzelà–Ascoli {#r7-3}
 函数族 \(\mathcal F\subseteq C(X,Y)\) **等度连续**：对每个 \(\varepsilon>0\)，存在 \(\delta>0\)，使对所有 \(f\in\mathcal F\)、\(d(x,y)<\delta\)，都有 \(d(f(x),f(y))<\varepsilon\)。
 
 ### 定理 7.6（Arzelà–Ascoli）
@@ -99,8 +96,7 @@ f_n(x)=f_n(x_0)+\int_{x_0}^x f_n'(t)\,dt
 
 **证明状态**：暂缓完整证明。经典证明用 Weierstrass 逼近定理与格论（lattice）方法。
 
-## 习题
-
+## 习题 {#r7-ex}
 ### 基础
 
 1. 判断 \(f_n(x)=x^n\) 在 \([0,1]\) 上是否一致收敛。
@@ -127,8 +123,7 @@ f_n(x)=f_n(x_0)+\int_{x_0}^x f_n'(t)\,dt
 - 第 8 章：[特殊函数](08-special-functions.md)
 - 证明状态：[证明状态与核心证明](../proofs.md)
 
-## 参考
-
+## 参考 {#r7-ref}
 - Walter Rudin, *Principles of Mathematical Analysis*（中文版），第 7 章。
 - [Uniform convergence](https://en.wikipedia.org/wiki/Uniform_convergence)
 - [Arzelà–Ascoli theorem](https://en.wikipedia.org/wiki/Arzel%C3%A0%E2%80%93Ascoli_theorem)

@@ -11,8 +11,7 @@
 - 第 6–7 章：积分、一致收敛；
 - 第 7 卷：深入理论中的测度概要。
 
-## 11.1 测度
-
+## 11.1 测度 {#r11-1}
 设 \(\mathcal M\) 是 \(X\) 上的 \(\sigma\)-代数：包含 \(X\)，对补集与可数并封闭。  
 **测度** \(\mu:\mathcal M\to[0,\infty]\) 满足：
 
@@ -26,8 +25,7 @@
 
 \((X,\mathcal M,\mu)\) 称测度空间。**Lebesgue 测度**是 \(\mathbb R^n\) 上满足平移不变、规范化的唯一 Borel 测度（在完备化意义下）。
 
-## 11.2 可测函数
-
+## 11.2 可测函数 {#r11-2}
 \(f:X\to[-\infty,\infty]\) 可测，若对每个 \(a\in\mathbb R\)，
 
 \[
@@ -48,8 +46,7 @@ f=\lim_{n\to\infty}\phi_n,\qquad 0\le\phi_1\le\phi_2\le\cdots
 
 **证明提纲**：把值域按 \(2^{-n}\) 分层，截断到 \(n\)，构造 \(\phi_n\)。
 
-## 11.3 Lebesgue 积分
-
+## 11.3 Lebesgue 积分 {#r11-3}
 对非负简单函数 \(\phi=\sum a_i\chi_{A_i}\)，定义
 
 \[
@@ -99,8 +96,7 @@ f=\lim_{n\to\infty}\phi_n,\qquad 0\le\phi_1\le\phi_2\le\cdots
 
 **证明**：对 \(g+f_n\ge0\) 与 \(g-f_n\ge0\) 分别用 Fatou，夹出结论。证毕。
 
-## 11.4 与 Riemann 积分的关系
-
+## 11.4 与 Riemann 积分的关系 {#r11-4}
 若 \(f\) 在 \([a,b]\) 上 Riemann 可积，则 \(f\) Lebesgue 可积，且积分值相同。  
 反之不成立：Dirichlet 函数 \(\mathbf 1_{\mathbb Q}\) 不是 Riemann 可积，但 Lebesgue 积分为 0（因为 \(\mathbb Q\) 零测）。
 
@@ -110,8 +106,7 @@ f=\lim_{n\to\infty}\phi_n,\qquad 0\le\phi_1\le\phi_2\le\cdots
 
 **证明状态**：暂缓完整证明；用振幅函数与零测集定义。
 
-## 11.5 L² 空间
-
+## 11.5 L² 空间 {#r11-5}
 \[
 L^2(\mu)=\left\{f:\int|f|^2\,d\mu<\infty\right\},
 \]
@@ -128,8 +123,7 @@ L^2(\mu)=\left\{f:\int|f|^2\,d\mu<\infty\right\},
 
 **证明状态**：暂缓；用 Cauchy 列取子列 a.e. 收敛，再用 Fatou 控制。
 
-## 习题
-
+## 习题 {#r11-ex}
 ### 基础
 
 1. 证明可数集是 Lebesgue 零测集。
@@ -156,8 +150,7 @@ L^2(\mu)=\left\{f:\int|f|^2\,d\mu<\infty\right\},
 - 第 7 卷：[深入理论](../07-advanced.md)
 - 证明状态：[证明状态与核心证明](../proofs.md)
 
-## 参考
-
+## 参考 {#r11-ref}
 - Walter Rudin, *Principles of Mathematical Analysis*（中文版），第 11 章。
 - [Measure (mathematics)](https://en.wikipedia.org/wiki/Measure_(mathematics))
 - [Lebesgue integration](https://en.wikipedia.org/wiki/Lebesgue_integration)

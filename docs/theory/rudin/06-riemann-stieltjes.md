@@ -10,8 +10,7 @@
 - 第 2 章：紧致与一致连续；
 - 第 5 卷：度量空间。
 
-## 6.1 分划与上下和
-
+## 6.1 分划与上下和 {#r6-1}
 设 \([a,b]\) 区间，\(f,\alpha:[a,b]\to\mathbb R\) 有界。分划
 
 \[
@@ -67,8 +66,7 @@ U(P,f,\alpha)-L(P,f,\alpha)<\varepsilon.
 - 若可积，取 \(P_1,P_2\) 使上/下和接近上下积分，用共同加细夹逼；
 - 反之，上下积分被夹在差小于 \(\varepsilon\) 的两个数之间，令 \(\varepsilon\to0\) 得相等。
 
-## 6.2 存在性
-
+## 6.2 存在性 {#r6-2}
 ### 定理 6.3（连续 × 单调）
 
 若 \(f\) 在 \([a,b]\) 连续，\(\alpha\) 在 \([a,b]\) 单调递增，则 \(\int_a^b f\,d\alpha\) 存在。
@@ -95,8 +93,7 @@ U(P,f,\alpha)-L(P,f,\alpha)
 
 **证明状态**：暂缓完整证明。思路：把 \(\alpha\) 写成两个单调递增函数之差 \(\alpha=\alpha_1-\alpha_2\)（Jordan 分解），分别对 \(\alpha_1,\alpha_2\) 用定理 6.3，再相减。
 
-## 6.3 积分性质
-
+## 6.3 积分性质 {#r6-3}
 若 \(f,g\) 关于 \(\alpha\) 可积，则：
 
 \[
@@ -141,8 +138,7 @@ U(P,f,\alpha)-L(P,f,\alpha)
 
 **证明状态**：暂缓完整证明；用 Riemann 和的拉格朗日中值定理与一致连续性。
 
-## 6.4 可求长曲线
-
+## 6.4 可求长曲线 {#r6-4}
 曲线 \(\gamma:[a,b]\to\mathbb R^n\) 的弧长：
 
 \[
@@ -157,8 +153,7 @@ L(\gamma)=\sup_{P}\sum_{i=1}^n\|\gamma(x_i)-\gamma(x_{i-1})\|.
 
 **证明提纲**：用范数等价与有界变差的定义，逐坐标估计；有限维空间所有范数等价。
 
-## 习题
-
+## 习题 {#r6-ex}
 ### 基础
 
 1. 对 \(f(x)=x\)、\([a,b]=[0,1]\)，直接按定义计算 \(\int_0^1 x\,dx\)。
@@ -185,8 +180,7 @@ L(\gamma)=\sup_{P}\sum_{i=1}^n\|\gamma(x_i)-\gamma(x_{i-1})\|.
 - 第 5 卷：[空间、极限与连续](../05-spaces.md)
 - 证明状态：[证明状态与核心证明](../proofs.md)
 
-## 参考
-
+## 参考 {#r6-ref}
 - Walter Rudin, *Principles of Mathematical Analysis*（中文版），第 6 章。
 - [Riemann–Stieltjes integral](https://en.wikipedia.org/wiki/Riemann%E2%80%93Stieltjes_integral)
 - [Bounded variation](https://en.wikipedia.org/wiki/Bounded_variation)

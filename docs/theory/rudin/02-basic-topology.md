@@ -9,8 +9,7 @@
 - 常规体系第 1–4 卷：逻辑、集合、数系、代数；
 - 第 5 卷：度量空间、收敛、连续的基本语言。
 
-## 2.1 度量空间
-
+## 2.1 度量空间 {#r2-1}
 **度量空间**是集合 \(X\) 配一个函数 \(d:X\times X\to[0,\infty)\)，满足：
 
 \[
@@ -56,8 +55,7 @@ d(x,z)\le d(x,y)+d(y,z)<d(x,y)+s=r,
 
 **证明提纲**：若 \(x\in\overline E\) 且某 \(B(x,r)\cap E=\varnothing\)，则 \(E\subseteq B(x,r)^c\)，而 \(B(x,r)^c\) 闭，故 \(\overline E\subseteq B(x,r)^c\)，矛盾。反之，若每个球都与 \(E\) 相交，则 \(x\) 属于每个包含 \(E\) 的闭集，故 \(x\in\overline E\)。细节按闭集定义补全。
 
-## 2.2 紧致性
-
+## 2.2 紧致性 {#r2-2}
 **开覆盖**：\(\{U_i\}\) 是 \(K\) 的开覆盖，若 \(K\subseteq\bigcup_i U_i\)。  
 **紧致**：每个开覆盖都有有限子覆盖。
 
@@ -97,8 +95,7 @@ K\subseteq\bigcup_{j=1}^m B(q_j,r_{q_j}).
 
 **证明状态**：暂缓完整证明；需要 \(\mathbb R^n\) 的完备性、Bolzano–Weierstrass 与有限覆盖论证。证明思路是“有界闭集 \(\Rightarrow\) 序列紧 \(\Rightarrow\) 紧”，其中序列紧用坐标剖分/二分法。
 
-## 2.3 连通性
-
+## 2.3 连通性 {#r2-3}
 **分离**：\(X=A\cup B\)，\(A,B\) 非空不交且都开（等价地都闭）。  
 **连通**：不存在这样的分离。
 
@@ -128,8 +125,7 @@ c=\sup(A\cap[a,b]).
 
 **证明**：若 \(f(E)=A\cup B\) 是分离，则 \(E=f^{-1}(A)\cup f^{-1}(B)\) 是分离（连续映射下开集原像开），矛盾。证毕。
 
-## 2.4 Cantor 集
-
+## 2.4 Cantor 集 {#r2-4}
 从 \([0,1]\) 开始，每次去掉中间三分之一：
 
 \[
@@ -151,8 +147,7 @@ C=\bigcap_{n=0}^\infty C_n.
 
 **不可数证明思路**：三进制展开只含数字 \(0,1,2\) 但不用 \(1\) 的点属于 \(C\)；把 \(0/2\) 序列编码为二进制序列，得到 \(2^{\aleph_0}\) 个点。不同二进制序列给出不同点（除去可数多个三进制歧义点），故 \(C\) 不可数。
 
-## 习题
-
+## 习题 {#r2-ex}
 ### 基础
 
 1. 证明：有限个紧集的并是紧集；任意多个闭集的交是闭集。
@@ -178,8 +173,7 @@ C=\bigcap_{n=0}^\infty C_n.
 - 第 3 章：[数列与级数](03-sequences-series.md)
 - 证明状态：[证明状态与核心证明](../proofs.md)
 
-## 参考
-
+## 参考 {#r2-ref}
 - Walter Rudin, *Principles of Mathematical Analysis*（中文版），第 2 章。
 - [Metric space](https://en.wikipedia.org/wiki/Metric_space)
 - [Compact space](https://en.wikipedia.org/wiki/Compact_space)

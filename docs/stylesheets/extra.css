@@ -754,3 +754,15 @@ body {
   text-decoration: none;
 }
 .book-nav a:hover { text-decoration: underline; }
+
+/* Rudin chapter section points in the primary sidebar */
+.rudin-subtoc {
+  margin: .15rem 0 .4rem .55rem !important;
+  padding-left: .55rem !important;
+  border-left: 1px solid var(--md-default-fg-color--lightest);
+}
+.rudin-subtoc .md-nav__link {
+  font-size: .68rem;
+  opacity: .82;
+}
+.rudin-subtoc .md-nav__link:hover { opacity: 1; }

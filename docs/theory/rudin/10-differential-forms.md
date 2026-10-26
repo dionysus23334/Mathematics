@@ -10,8 +10,7 @@
 - 第 9 章：多元微分、反函数定理；
 - 第 6 章：积分。
 
-## 10.1 微分形式
-
+## 10.1 微分形式 {#r10-1}
 设 \(U\subseteq\mathbb R^n\) 开。一个 \(k\)-形式可写成
 
 \[
@@ -50,8 +49,7 @@ d(d\omega)=0.
 
 **闭形式**：\(d\omega=0\)。**恰当形式**：\(\omega=d\eta\)。定理 10.1 说明恰当 ⇒ 闭；反之一般不对，取决于区域拓扑。
 
-## 10.2 单纯形与链
-
+## 10.2 单纯形与链 {#r10-2}
 标准 \(k\)-单纯形：
 
 \[
@@ -76,8 +74,7 @@ d(d\omega)=0.
 
 **证明**：按面映射的组合逐项计算，符号 \((-1)^{i+j}\) 在两次面映射交换时抵消。证毕。
 
-## 10.3 形式的积分与 Stokes 定理
-
+## 10.3 形式的积分与 Stokes 定理 {#r10-3}
 对 \(k\)-形式 \(\omega\) 与奇异 \(k\)-单纯形 \(\sigma\)，定义
 
 \[
@@ -102,8 +99,7 @@ d(d\omega)=0.
 - \(k=2\)：Green 公式；
 - \(k=3\)：经典 Stokes 与 Gauss 公式。
 
-## 10.4 闭形式与恰当形式
-
+## 10.4 闭形式与恰当形式 {#r10-4}
 ### 定理 10.4（Poincaré 引理）
 
 若 \(U\subseteq\mathbb R^n\) 是星形区域，\(\omega\) 是闭 \(k\)-形式（\(k\ge1\)），则存在 \((k-1)\)-形式 \(\eta\) 使
@@ -116,8 +112,7 @@ d(d\omega)=0.
 
 **推论**：在 \(\mathbb R^n\) 中，闭形式局部恰当；全局是否恰当由 de Rham 上同调衡量。
 
-## 习题
-
+## 习题 {#r10-ex}
 ### 基础
 
 1. 计算 \(d(x\,dy+y\,dz)\)。
@@ -144,8 +139,7 @@ d(d\omega)=0.
 - 第 7 卷：[深入理论](../07-advanced.md)
 - 证明状态：[证明状态与核心证明](../proofs.md)
 
-## 参考
-
+## 参考 {#r10-ref}
 - Walter Rudin, *Principles of Mathematical Analysis*（中文版），第 10 章。
 - [Differential form](https://en.wikipedia.org/wiki/Differential_form)
 - [Stokes' theorem](https://en.wikipedia.org/wiki/Stokes%27_theorem)

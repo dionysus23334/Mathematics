@@ -57,27 +57,27 @@ nav:
           - 本章: theory/07-advanced.md
   - Rudin 体系:
       - 第一卷 · 实数系与复数系:
-          - 第 1 章 · 实数系与复数系: theory/rudin/01-real-complex.md
+          - 正文: theory/rudin/01-real-complex.md
       - 第二卷 · 基础拓扑:
-          - 第 2 章 · 基础拓扑: theory/rudin/02-basic-topology.md
+          - 正文: theory/rudin/02-basic-topology.md
       - 第三卷 · 数列与级数:
-          - 第 3 章 · 数列与级数: theory/rudin/03-sequences-series.md
+          - 正文: theory/rudin/03-sequences-series.md
       - 第四卷 · 连续性:
-          - 第 4 章 · 连续性: theory/rudin/04-continuity.md
+          - 正文: theory/rudin/04-continuity.md
       - 第五卷 · 微分法:
-          - 第 5 章 · 微分法: theory/rudin/05-differentiation.md
+          - 正文: theory/rudin/05-differentiation.md
       - 第六卷 · Riemann–Stieltjes 积分:
-          - 第 6 章 · Riemann–Stieltjes 积分: theory/rudin/06-riemann-stieltjes.md
+          - 正文: theory/rudin/06-riemann-stieltjes.md
       - 第七卷 · 函数序列与函数项级数:
-          - 第 7 章 · 函数序列与函数项级数: theory/rudin/07-function-sequences.md
+          - 正文: theory/rudin/07-function-sequences.md
       - 第八卷 · 特殊函数:
-          - 第 8 章 · 特殊函数: theory/rudin/08-special-functions.md
+          - 正文: theory/rudin/08-special-functions.md
       - 第九卷 · 多元函数:
-          - 第 9 章 · 多元函数: theory/rudin/09-multivariable.md
+          - 正文: theory/rudin/09-multivariable.md
       - 第十卷 · 微分形式的积分:
-          - 第 10 章 · 微分形式的积分: theory/rudin/10-differential-forms.md
+          - 正文: theory/rudin/10-differential-forms.md
       - 第十一卷 · Lebesgue 理论:
-          - 第 11 章 · Lebesgue 理论: theory/rudin/11-lebesgue.md
+          - 正文: theory/rudin/11-lebesgue.md
   - 教育阶段体系:
       - 总览: stages/index.md
       - 初等数学: stages/elementary.md
@@ -132,5 +132,6 @@ extra_css:
 
 extra_javascript:
   - javascripts/table-wrap.js
+  - javascripts/rudin-toc.js
   - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js

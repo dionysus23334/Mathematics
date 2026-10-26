@@ -14,8 +14,7 @@
 
 
 
-## 1.1 有序域
-
+## 1.1 有序域 {#r1-1}
 **域** \((F,+,\cdot)\)：\((F,+)\) 是阿贝尔群，\((F\setminus\{0\},\cdot)\) 是阿贝尔群，乘法对加法分配。
 
 **有序域**：存在全序 \(\le\)，且
@@ -71,8 +70,7 @@ y &= 0+y=(-x+x)+y\\
 
 证毕。
 
-## 1.2 上确界与完备性
-
+## 1.2 上确界与完备性 {#r1-2}
 设 \(S\subseteq F\) 非空。
 
 - \(u\) 是 \(S\) 的**上界**：\(\forall s\in S,\ s\le u\)；
@@ -87,8 +85,7 @@ y &= 0+y=(-x+x)+y\\
 
 **Archimedean 性质**：对任意 \(x,y>0\)，存在 \(n\in\mathbb N\) 使 \(nx>y\)。
 
-## 1.3 Archimedean 性质与有理数稠密
-
+## 1.3 Archimedean 性质与有理数稠密 {#r1-3}
 ### 定理 1.3（Archimedean）
 
 若 \(x,y\in\mathbb R\) 且 \(x>0\)，则存在正整数 \(n\) 使 \(nx>y\)。
@@ -117,8 +114,7 @@ m-1\le nx<m.
 
 由 \(m>nx\) 得 \(x<m/n\)。又 \(m\le nx+1<ny\)，所以 \(m/n<y\)。因此 \(m/n\in(x,y)\cap\mathbb Q\)。证毕。
 
-## 1.4 n 次根
-
+## 1.4 n 次根 {#r1-4}
 ### 定理 1.6（正实数的 n 次根）
 
 若 \(x>0\)，\(n\in\mathbb N\) 且 \(n\ge1\)，则存在唯一 \(y>0\) 使 \(y^n=x\)。记 \(y=x^{1/n}\)。
@@ -165,8 +161,7 @@ ny^{n-1}h<y^n-x.
 
 **唯一性**：若 \(y_1^n=y_2^n=x\) 且 \(y_1,y_2>0\)，则 \(y_1=y_2\)（函数 \(t\mapsto t^n\) 在 \(t>0\) 严格递增）。证毕。
 
-## 1.5 绝对值与三角不等式
-
+## 1.5 绝对值与三角不等式 {#r1-5}
 定义
 
 \[
@@ -199,8 +194,7 @@ x,&x\ge0,\\
 
 **推论**：\(||x|-|y||\le|x-y|\)。
 
-## 1.6 复数域
-
+## 1.6 复数域 {#r1-6}
 把复数定义为有序对 \((a,b)\in\mathbb R^2\)，运算
 
 \[
@@ -248,8 +242,7 @@ x,&x\ge0,\\
 \overline{z+w}=\overline z+\overline w,\qquad \overline{zw}=\overline z\,\overline w,\qquad |zw|=|z||w|.
 \]
 
-## 1.7 欧氏空间与 Schwarz 不等式
-
+## 1.7 欧氏空间与 Schwarz 不等式 {#r1-7}
 对 \(x=(x_1,\dots,x_n),y=(y_1,\dots,y_n)\in\mathbb R^n\)，定义
 
 \[
@@ -285,8 +278,7 @@ x\cdot y=\sum_{i=1}^n x_iy_i,\qquad \|x\|=\sqrt{x\cdot x}.
 
 证明：展开 \(\|x+y\|^2\)，用 Schwarz 估计交叉项。
 
-## 1.8 本章证明状态
-
+## 1.8 本章证明状态 {#r1-8}
 | 结论 | 状态 |
 |---|---|
 | 有序域基本后果 | 完整证明 |
@@ -300,7 +292,7 @@ x\cdot y=\sum_{i=1}^n x_iy_i,\qquad \|x\|=\sqrt{x\cdot x}.
 
 > LUB 本身在第 3 层用 Dedekind 分割证明；本章把它作为实数系的完备性性质使用。
 
-## 检查点
+## 检查点 {#r1-check}
 
 - 能证明有序域中“\(x>0\Rightarrow x^{-1}>0\)”。
 - 能写出 Archimedean 性质的反证，并说明为什么需要 LUB。
@@ -319,8 +311,7 @@ x\cdot y=\sum_{i=1}^n x_iy_i,\qquad \|x\|=\sqrt{x\cdot x}.
 
 > 下一章：[第 2 章 · 基础拓扑](02-basic-topology.md)（计划中）。
 
-## 参考
-
+## 参考 {#r1-ref}
 - Walter Rudin, *Principles of Mathematical Analysis*（中文版），第 1 章。
 - [Ordered field](https://en.wikipedia.org/wiki/Ordered_field)
 - [Least-upper-bound property](https://en.wikipedia.org/wiki/Least-upper-bound_property)

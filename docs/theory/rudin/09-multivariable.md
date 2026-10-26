@@ -10,8 +10,7 @@
 - 第 5 卷：度量空间、紧致；
 - 第 4–5 章：连续、微分。
 
-## 9.1 线性变换与范数
-
+## 9.1 线性变换与范数 {#r9-1}
 设 \(A\in\mathbb R^{m\times n}\)，定义算子范数
 
 \[
@@ -36,8 +35,7 @@
 
 取 \(\delta=\varepsilon/\|A\|\)（\(\|A\|=0\) 时平凡）。证毕。
 
-## 9.2 导数
-
+## 9.2 导数 {#r9-2}
 \(f:\Omega\subseteq\mathbb R^n\to\mathbb R^m\) 在 \(x\) 可微，若存在线性映射 \(Df(x):\mathbb R^n\to\mathbb R^m\) 使
 
 \[
@@ -68,8 +66,7 @@ D(g\circ f)(x)=Dg(f(x))\,Df(x).
 
 **证明提纲**：把 \(g(f(x+h))-g(f(x))\) 展开为 \(Dg(f(x))(f(x+h)-f(x))+o(\|f(x+h)-f(x)\|)\)，再用 \(f\) 的可微性。
 
-## 9.3 压缩映射与反函数定理
-
+## 9.3 压缩映射与反函数定理 {#r9-3}
 ### 定理 9.4（压缩映射原理）
 
 若 \((X,d)\) 完备，\(T:X\to X\) 满足 \(d(Tx,Ty)\le qd(x,y)\)（\(0\le q<1\)），则 \(T\) 有唯一不动点。
@@ -106,8 +103,7 @@ F(x,g(x))=0.
 
 **证明状态**：暂缓；需要反函数定理与线性坐标变换。
 
-## 习题
-
+## 习题 {#r9-ex}
 ### 基础
 
 1. 计算 \(f(x,y)=(x^2y,\sin y)\) 的 Jacobian。
@@ -134,8 +130,7 @@ F(x,g(x))=0.
 - 第 5 章：[微分法](05-differentiation.md)
 - 证明状态：[证明状态与核心证明](../proofs.md)
 
-## 参考
-
+## 参考 {#r9-ref}
 - Walter Rudin, *Principles of Mathematical Analysis*（中文版），第 9 章。
 - [Inverse function theorem](https://en.wikipedia.org/wiki/Inverse_function_theorem)
 - [Implicit function theorem](https://en.wikipedia.org/wiki/Implicit_function_theorem)

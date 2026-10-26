@@ -10,8 +10,7 @@
 - 第 2 章：度量空间、紧致性；
 - 第 5 卷：数列收敛的初步语言。
 
-## 3.1 收敛与基本性质
-
+## 3.1 收敛与基本性质 {#r3-1}
 数列 \(\{a_n\}\subseteq\mathbb R\) 收敛到 \(a\)，若
 
 \[
@@ -54,8 +53,7 @@ L-\varepsilon<a_N\le a_n\le L,
 
 所以 \(|a_n-L|<\varepsilon\)。证毕。
 
-## 3.2 子列、Cauchy 与完备性
-
+## 3.2 子列、Cauchy 与完备性 {#r3-2}
 **子列**：\(\{a_{n_k}\}\)，其中 \(n_1<n_2<\cdots\)。
 
 ### 定理 3.4（收敛 ⇒ 子列收敛）
@@ -89,8 +87,7 @@ L-\varepsilon<a_N\le a_n\le L,
 
 **证明状态**：暂缓完整证明。常用证法：反复二分区间，取包含无穷多项的一半，得到嵌套区间；由区间套定理取交点，再取子列。
 
-## 3.3 上极限与下极限
-
+## 3.3 上极限与下极限 {#r3-3}
 \[
 \limsup_{n\to\infty}a_n=\lim_{n\to\infty}\sup_{k\ge n}a_k,
 \qquad
@@ -111,8 +108,7 @@ L-\varepsilon<a_N\le a_n\le L,
 
 **证明提纲**：若收敛到 \(a\)，则尾部上确界与下确界都趋于 \(a\)；反之，若上下极限都等于 \(a\)，用定义夹逼。
 
-## 3.4 级数
-
+## 3.4 级数 {#r3-4}
 级数 \(\sum a_n\) 收敛，若部分和
 
 \[
@@ -164,8 +160,7 @@ s_n=a_1+\cdots+a_n
 
 **证明提纲**：对 \(\sum c_nx^n\) 用根值判别；内闭一致收敛用 Weierstrass 判别法（第 7 章）。
 
-## 习题
-
+## 习题 {#r3-ex}
 ### 基础
 
 1. 求极限：\(\displaystyle \lim_{n\to\infty}\frac{3n^2+2}{n^2-n}\)。
@@ -192,8 +187,7 @@ s_n=a_1+\cdots+a_n
 - 第 7 章：[函数序列与函数项级数](07-function-sequences.md)
 - 证明状态：[证明状态与核心证明](../proofs.md)
 
-## 参考
-
+## 参考 {#r3-ref}
 - Walter Rudin, *Principles of Mathematical Analysis*（中文版），第 3 章。
 - [Limit of a sequence](https://en.wikipedia.org/wiki/Limit_of_a_sequence)
 - [Cauchy sequence](https://en.wikipedia.org/wiki/Cauchy_sequence)

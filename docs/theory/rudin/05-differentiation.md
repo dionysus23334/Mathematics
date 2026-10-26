@@ -9,8 +9,7 @@
 - 第 3–4 卷：数列、连续；
 - 第 5 卷：极限。
 
-## 5.1 导数
-
+## 5.1 导数 {#r5-1}
 \(f:(a,b)\to\mathbb R\) 在 \(x\) 可导，若
 
 \[
@@ -58,8 +57,7 @@ f(x+h)-f(x)=\frac{f(x+h)-f(x)}{h}\cdot h\to f'(x)\cdot0=0.
 
 当 \(f(x+h)\ne f(x)\) 时取极限；若 \(f(x+h)=f(x)\) 需单独处理，或用连续性补定义。
 
-## 5.2 中值定理
-
+## 5.2 中值定理 {#r5-2}
 ### 定理 5.4（Rolle）
 
 若 \(f\) 在 \([a,b]\) 连续、在 \((a,b)\) 可导，且 \(f(a)=f(b)\)，则存在 \(\xi\in(a,b)\) 使 \(f'(\xi)=0\)。
@@ -104,8 +102,7 @@ h(x)=f(x)(g(b)-g(a))-g(x)(f(b)-f(a))
 
 **证明提纲**：设 \(a<b\)，\(f'(a)<\lambda<f'(b)\)。考虑 \(g(x)=f(x)-\lambda x\)；在端点附近 \(g\) 的单调性相反，故 \(g\) 在内部取得极值，Fermat 给出 \(g'=0\)，即 \(f'=\lambda\)。
 
-## 5.3 Taylor 与 L'Hôpital
-
+## 5.3 Taylor 与 L'Hôpital {#r5-3}
 ### 定理 5.8（Taylor 定理，Lagrange 余项）
 
 若 \(f\) 在含 \(a\) 的区间上有 \(n\) 阶导数，则
@@ -125,8 +122,7 @@ f(x)=\sum_{k=0}^{n-1}\frac{f^{(k)}(a)}{k!}(x-a)^k
 
 **证明状态**：暂缓完整证明；关键是 Cauchy 中值定理与端点极限处理。使用前必须检查型与邻域条件。
 
-## 习题
-
+## 习题 {#r5-ex}
 ### 基础
 
 1. 求 \(f(x)=x^3-3x\) 的单调区间与极值。
@@ -153,8 +149,7 @@ f(x)=\sum_{k=0}^{n-1}\frac{f^{(k)}(a)}{k!}(x-a)^k
 - 第 5 卷：[空间、极限与连续](../05-spaces.md)
 - 证明状态：[证明状态与核心证明](../proofs.md)
 
-## 参考
-
+## 参考 {#r5-ref}
 - Walter Rudin, *Principles of Mathematical Analysis*（中文版），第 5 章。
 - [Derivative](https://en.wikipedia.org/wiki/Derivative)
 - [Mean value theorem](https://en.wikipedia.org/wiki/Mean_value_theorem)

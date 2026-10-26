@@ -10,8 +10,7 @@
 - 第 5 章：微分；
 - 第 6–7 章：积分、一致收敛。
 
-## 8.1 指数函数
-
+## 8.1 指数函数 {#r8-1}
 定义
 
 \[
@@ -51,8 +50,7 @@ e^z e^w=\sum_{n=0}^\infty\sum_{k=0}^n\frac{z^k}{k!}\frac{w^{n-k}}{(n-k)!}
 
 证毕。
 
-## 8.2 对数函数
-
+## 8.2 对数函数 {#r8-2}
 对 \(x>0\)，定义
 
 \[
@@ -75,8 +73,7 @@ e^z e^w=\sum_{n=0}^\infty\sum_{k=0}^n\frac{z^k}{k!}\frac{w^{n-k}}{(n-k)!}
 
 其余两式由定义与反函数定理。证毕。
 
-## 8.3 三角函数
-
+## 8.3 三角函数 {#r8-3}
 定义
 
 \[
@@ -95,8 +92,7 @@ e^z e^w=\sum_{n=0}^\infty\sum_{k=0}^n\frac{z^k}{k!}\frac{w^{n-k}}{(n-k)!}
 
 \(\pi\) 定义为 \(2\) 倍的最小正零点；三角函数的周期性由此得到。
 
-## 8.4 Fourier 级数
-
+## 8.4 Fourier 级数 {#r8-4}
 设 \(f\) 以 \(2\pi\) 为周期、在 \([-\pi,\pi]\) Riemann 可积。Fourier 系数：
 
 \[
@@ -132,8 +128,7 @@ f(x)\sim\sum_{n=-\infty}^\infty\hat f(n)e^{inx}.
 
 **证明状态**：暂缓；需要 \(L^2\) 完备性与 Fourier 基。
 
-## 8.5 Gamma 函数
-
+## 8.5 Gamma 函数 {#r8-5}
 对 \(x>0\)，定义
 
 \[
@@ -150,8 +145,7 @@ f(x)\sim\sum_{n=-\infty}^\infty\hat f(n)e^{inx}.
 
 **证明**：分部积分得递推；延拓用 \(\Gamma(x)\Gamma(1-x)=\pi/\sin(\pi x)\) 或 Weierstrass 乘积。证毕。
 
-## 习题
-
+## 习题 {#r8-ex}
 ### 基础
 
 1. 证明 \(e^z\ne0\) 对所有 \(z\in\mathbb C\) 成立。
@@ -176,8 +170,7 @@ f(x)\sim\sum_{n=-\infty}^\infty\hat f(n)e^{inx}.
 - 第 11 章：[Lebesgue 理论](11-lebesgue.md)
 - 证明状态：[证明状态与核心证明](../proofs.md)
 
-## 参考
-
+## 参考 {#r8-ref}
 - Walter Rudin, *Principles of Mathematical Analysis*（中文版），第 8 章。
 - [Exponential function](https://en.wikipedia.org/wiki/Exponential_function)
 - [Fourier series](https://en.wikipedia.org/wiki/Fourier_series)

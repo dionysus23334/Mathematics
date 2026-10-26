@@ -10,8 +10,7 @@
 - 第 2 章：紧致、连通；
 - 第 5 卷：度量空间与连续映射的初步定义。
 
-## 4.1 函数极限
-
+## 4.1 函数极限 {#r4-1}
 设 \(E\subseteq X\)，\(f:E\to Y\)，\(p\) 是 \(E\) 的聚点。称
 
 \[
@@ -35,8 +34,7 @@
 - 连续 ⇒ 序列：用 \(\varepsilon\)-\(\delta\) 定义；
 - 序列 ⇒ 连续：反设存在 \(\varepsilon>0\)，对每个 \(n\) 取 \(x_n\) 使 \(d(x_n,p)<1/n\) 但 \(d(f(x_n),f(p))\ge\varepsilon\)，与序列连续矛盾。
 
-## 4.2 连续映射
-
+## 4.2 连续映射 {#r4-2}
 ### 定理 4.2（复合连续）
 
 若 \(f:X\to Y\) 在 \(p\) 连续，\(g:Y\to Z\) 在 \(f(p)\) 连续，则 \(g\circ f\) 在 \(p\) 连续。
@@ -61,8 +59,7 @@
 
 **证明**：令 \(S=\{x\in[a,b]:f(x)<c\}\)。\(S\) 非空有上界，令 \(\xi=\sup S\)。由连续性，\(f(\xi)\le c\)；若 \(f(\xi)<c\)，则 \(\xi\) 附近仍有 \(f(x)<c\)，与 \(\xi\) 是上界矛盾。故 \(f(\xi)=c\)。证毕。
 
-## 4.3 一致连续
-
+## 4.3 一致连续 {#r4-3}
 \(f:X\to Y\) 一致连续，若
 
 \[
@@ -75,8 +72,7 @@
 
 **证明提纲**：给定 \(\varepsilon>0\)，对每个 \(p\) 取 \(\delta_p\) 使 \(f(B(p,\delta_p))\subseteq B(f(p),\varepsilon/2)\)。球 \(B(p,\delta_p/2)\) 覆盖 \(X\)；取有限子覆盖 \(p_1,\dots,p_m\)，令 \(\delta=\min\delta_{p_i}/2\)。若 \(d(x,y)<\delta\)，取 \(p_i\) 使 \(x\in B(p_i,\delta_{p_i}/2)\)，则 \(y\in B(p_i,\delta_{p_i})\)，于是 \(d(f(x),f(y))<\varepsilon\)。
 
-## 4.4 间断点与单调函数
-
+## 4.4 间断点与单调函数 {#r4-4}
 **第一类间断**：左右极限都存在；**第二类**：至少一个不存在。  
 **跳跃间断**：左右极限存在但不相等。
 
@@ -86,8 +82,7 @@
 
 **证明提纲**：每个间断点 \(x\) 对应一个非空开区间 \((f(x-),f(x+))\)；不同间断点对应不交区间，每个区间含一个有理数，故至多可数。
 
-## 习题
-
+## 习题 {#r4-ex}
 ### 基础
 
 1. 用定义证明 \(f(x)=x^2\) 在 \(\mathbb R\) 上连续。
@@ -114,8 +109,7 @@
 - 第 5 章：[微分法](05-differentiation.md)
 - 证明状态：[证明状态与核心证明](../proofs.md)
 
-## 参考
-
+## 参考 {#r4-ref}
 - Walter Rudin, *Principles of Mathematical Analysis*（中文版），第 4 章。
 - [Continuous function](https://en.wikipedia.org/wiki/Continuous_function)
 - [Uniform continuity](https://en.wikipedia.org/wiki/Uniform_continuity)
