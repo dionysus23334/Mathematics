@@ -39,32 +39,57 @@ theme:
 nav:
   - ← 个人主页: https://dionysus23334.github.io/study-blogs/
   - 首页: index.md
-  - 体系目录:
-      - 常规体系 · 第一卷 · 基础:
-          - 总览: theory/index.md
-          - 1 · 逻辑语言与证明: theory/01-logic.md
-          - 2 · 集合、关系与映射: theory/02-sets.md
-          - 3 · 自然数与数系: theory/03-numbers.md
-          - 4 · 代数结构与线性空间: theory/04-algebra.md
-      - 常规体系 · 第二卷 · 空间:
-          - 5 · 空间、极限与连续: theory/05-spaces.md
-      - 常规体系 · 第三卷 · 分支与深入:
-          - 6 · 核心分支: theory/06-branches.md
-          - 7 · 深入理论: theory/07-advanced.md
-      - 常规体系 · 第四卷 · 附录:
-          - 学习规则: principles.md
-          - 证明状态与核心证明: theory/proofs.md
-          - 术语表: glossary.md
-          - 缩写与英文术语: abbreviations.md
-          - 来源与出处: sources.md
-      - Rudin 体系 · 第一卷:
-          - 第 1 章 · 实数系与复数系: theory/analysis.md
+  - 常规体系:
+      - 总览: theory/index.md
+      - 第一卷 · 逻辑语言与证明:
+          - 本章: theory/01-logic.md
+      - 第二卷 · 集合、关系与映射:
+          - 本章: theory/02-sets.md
+      - 第三卷 · 自然数与数系:
+          - 本章: theory/03-numbers.md
+      - 第四卷 · 代数结构与线性空间:
+          - 本章: theory/04-algebra.md
+      - 第五卷 · 空间、极限与连续:
+          - 本章: theory/05-spaces.md
+      - 第六卷 · 核心分支:
+          - 本章: theory/06-branches.md
+      - 第七卷 · 深入理论:
+          - 本章: theory/07-advanced.md
+  - Rudin 体系:
+      - 第一卷 · 实数系与复数系:
+          - 第 1 章 · 实数系与复数系: theory/rudin/01-real-complex.md
+      - 第二卷 · 基础拓扑:
+          - 第 2 章 · 基础拓扑: theory/rudin/02-basic-topology.md
+      - 第三卷 · 数列与级数:
+          - 第 3 章 · 数列与级数: theory/rudin/03-sequences-series.md
+      - 第四卷 · 连续性:
+          - 第 4 章 · 连续性: theory/rudin/04-continuity.md
+      - 第五卷 · 微分法:
+          - 第 5 章 · 微分法: theory/rudin/05-differentiation.md
+      - 第六卷 · Riemann–Stieltjes 积分:
+          - 第 6 章 · Riemann–Stieltjes 积分: theory/rudin/06-riemann-stieltjes.md
+      - 第七卷 · 函数序列与函数项级数:
+          - 第 7 章 · 函数序列与函数项级数: theory/rudin/07-function-sequences.md
+      - 第八卷 · 特殊函数:
+          - 第 8 章 · 特殊函数: theory/rudin/08-special-functions.md
+      - 第九卷 · 多元函数:
+          - 第 9 章 · 多元函数: theory/rudin/09-multivariable.md
+      - 第十卷 · 微分形式的积分:
+          - 第 10 章 · 微分形式的积分: theory/rudin/10-differential-forms.md
+      - 第十一卷 · Lebesgue 理论:
+          - 第 11 章 · Lebesgue 理论: theory/rudin/11-lebesgue.md
   - 教育阶段体系:
       - 总览: stages/index.md
       - 初等数学: stages/elementary.md
       - 中等数学: stages/secondary.md
       - 数学竞赛: stages/competition.md
       - 高等数学: stages/university.md
+  - 参考:
+      - 学习规则: principles.md
+      - 证明状态与核心证明: theory/proofs.md
+      - 术语表: glossary.md
+      - 缩写与英文术语: abbreviations.md
+      - 来源与出处: sources.md
 
 plugins:
   - search:

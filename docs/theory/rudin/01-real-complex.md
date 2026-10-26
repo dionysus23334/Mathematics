@@ -1,4 +1,4 @@
-# 分析学 · Rudin 第 1 章：实数系与复数系
+# 第 1 章 · 实数系与复数系
 
 > **出处**：Walter Rudin, *Principles of Mathematical Analysis*，第 1 章；本站第 3 层（数系）。
 >
@@ -317,7 +317,7 @@ x\cdot y=\sum_{i=1}^n x_iy_i,\qquad \|x\|=\sqrt{x\cdot x}.
   <a href="../proofs/">证明状态</a>
 </div>
 
-> 下一章：**第 2 章 基础拓扑**（计划中）。
+> 下一章：[第 2 章 · 基础拓扑](02-basic-topology.md)（计划中）。
 
 ## 参考
 

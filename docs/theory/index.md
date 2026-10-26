@@ -91,7 +91,7 @@
 
 第 6 层“分析分支”的深入版本按 Rudin 逐章展开：
 
-- [分析学 · Rudin 第 1 章](analysis.md)：有序域、上确界、Archimedean、有理数稠密、n 次根、复数、Cauchy–Schwarz，含完整证明。
+- [分析学 · Rudin 第 1 章](rudin/01-real-complex.md)：有序域、上确界、Archimedean、有理数稠密、n 次根、复数、Cauchy–Schwarz，含完整证明。
 - 第 2–11 章：计划中，逐章补入。
 
 后续章节按第 3–11 章依次展开；状态表会标明“已展开/计划中”，不把计划中的结论当作已证明。
