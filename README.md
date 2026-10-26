@@ -7,6 +7,8 @@ Math hub for **古典学术体系** and **教育阶段体系**. 古典学术体�
 
 Live: https://dionysus23334.github.io/Mathematics/
 
+English: https://dionysus23334.github.io/Mathematics/en/
+
 ## Structure
 
 ```text

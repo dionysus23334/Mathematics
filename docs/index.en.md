@@ -1,6 +1,6 @@
 # Mathematics
 
-> The main page for Mathematics.  
+> Mathematics hub.  
 > Two entry points: the **Classical Academic System** and the **Educational Stage System**; the Classical Academic System itself comprises the **Regular System** and the **Rudin System**.
 
 <div class="route-grid">

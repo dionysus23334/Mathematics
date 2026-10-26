@@ -95,6 +95,7 @@ plugins:
           site_name: Mathematics
           site_description: Mathematics hub — Classical Academic System (Regular + Rudin) and the Educational Stage System.
           site_url: https://dionysus23334.github.io/Mathematics/en/
+          copyright: Personal study notes · Unofficial · Definitions and proofs follow the stated prerequisites.
           theme:
             language: en
           nav_translations:
