@@ -48,6 +48,7 @@ nav:
       - 5 · 空间、极限与连续: theory/05-spaces.md
       - 6 · 核心分支: theory/06-branches.md
       - 7 · 深入理论: theory/07-advanced.md
+      - 证明状态与核心证明: theory/proofs.md
   - 教育阶段体系:
       - 总览: stages/index.md
       - 初等数学: stages/elementary.md

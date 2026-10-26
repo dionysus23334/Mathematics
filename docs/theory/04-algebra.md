@@ -103,7 +103,7 @@ a(u+v)=au+av,\qquad (a+b)v=av+bv.
 G/\ker\varphi\cong\operatorname{im}\varphi.
 \]
 
-同构由 \(g\ker\varphi\mapsto\varphi(g)\) 给出。这个定理把“同态的像”转化为“商群”，是群论中最早的结构定理之一。
+同构由 \(g\ker\varphi\mapsto\varphi(g)\) 给出。这个定理把“同态的像”转化为“商群”，是群论中最早的结构定理之一；完整证明见[证明页 §8](proofs.md#proof-group-iso)。
 
 **推论**：\(\varphi\) 是单射 \(\iff \ker\varphi=\{e\}\)。
 
@@ -115,7 +115,7 @@ G/\ker\varphi\cong\operatorname{im}\varphi.
 \dim V=\dim\ker T+\dim\operatorname{im}T.
 \]
 
-等价地，\(\operatorname{rank}T+\operatorname{nullity}T=\dim V\)。它说明线性映射“丢失的维数”与“保留的维数”之和等于定义域维数。
+等价地，\(\operatorname{rank}T+\operatorname{nullity}T=\dim V\)。它说明线性映射“丢失的维数”与“保留的维数”之和等于定义域维数；完整证明见[证明页 §9](proofs.md#proof-rank-nullity)。
 
 **推论**：若 \(\dim V=\dim W\)，则 \(T\) 单射 \(\iff\) 满射 \(\iff\) 可逆。
 
@@ -131,7 +131,7 @@ A=Q\Lambda Q^{\mathsf T},
 \]
 其中 \(\Lambda\) 是对角矩阵，对角元为特征值。
 
-也就是说，实对称矩阵有一组正交单位特征向量构成 \(\mathbb R^n\) 的基。复厄米特矩阵有类似的酉对角化。
+也就是说，实对称矩阵有一组正交单位特征向量构成 \(\mathbb R^n\) 的基。复厄米特矩阵有类似的酉对角化。本站**暂缓证明**（需内积空间与归纳）。
 
 ## 4.12 参考
 
