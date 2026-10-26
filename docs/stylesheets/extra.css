@@ -766,3 +766,21 @@ body {
   opacity: .82;
 }
 .rudin-subtoc .md-nav__link:hover { opacity: 1; }
+
+/* wide display math: keep page width, allow local horizontal scroll */
+.md-typeset div.arithmatex {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: .15rem;
+}
+.md-typeset div.arithmatex mjx-container {
+  min-width: max-content;
+}
+.md-typeset div.arithmatex::-webkit-scrollbar {
+  height: 6px;
+}
+.md-typeset div.arithmatex::-webkit-scrollbar-thumb {
+  background: var(--md-default-fg-color--lighter);
+  border-radius: 4px;
+}

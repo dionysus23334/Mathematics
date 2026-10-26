@@ -7,9 +7,9 @@
 > **本章目标**：把“实数完备、复数可运算、欧氏空间有内积”从直观提升为可证明的定理。
 
 <div class="book-nav">
-  <a href="../">← 理论总览</a>
-  <a href="../05-spaces/">第 5 层 · 空间</a>
-  <a href="../proofs/">证明状态</a>
+  <a href="../../">← 理论总览</a>
+  <a href="../../05-spaces/">第 5 层 · 空间</a>
+  <a href="../../proofs/">证明状态</a>
 </div>
 
 
@@ -304,9 +304,9 @@ x\cdot y=\sum_{i=1}^n x_iy_i,\qquad \|x\|=\sqrt{x\cdot x}.
 ## 全书导航
 
 <div class="book-nav">
-  <a href="../">← 理论总览</a>
-  <a href="../05-spaces/">第 5 层 · 空间</a>
-  <a href="../proofs/">证明状态</a>
+  <a href="../../">← 理论总览</a>
+  <a href="../../05-spaces/">第 5 层 · 空间</a>
+  <a href="../../proofs/">证明状态</a>
 </div>
 
 > 下一章：[第 2 章 · 基础拓扑](02-basic-topology.md)（计划中）。
