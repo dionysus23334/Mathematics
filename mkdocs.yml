@@ -111,6 +111,7 @@ validation:
     unrecognized_links: warn
 
 extra_css:
+  - stylesheets/base.css
   - stylesheets/extra.css
 
 extra_javascript:
